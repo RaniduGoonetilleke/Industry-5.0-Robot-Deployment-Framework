@@ -66,7 +66,7 @@
   },
   "files": {
     "LICENSE": "9c427c309c62e7722b0b39a8149d083969ccc33869f1d8f43c1b4ad2434d4f2f",
-    "README.md": "caaec77cf9727e0ec4c1d6c1990a5702e624397052659668ec7a41e0a12ed83a",
+    "README.md": "2cc48b535aa4e060ddd0adb9e9744a3ff1f4c91f93f73684efe2842b0f0514f6",
     "analysis/CANDIDATE_MAPPING.json": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
     "analysis/DEVELOPMENT_EXAMPLES.json": "a65f56cf0b115d48e8ed05e0afb5b27882bce2a6cda9212c23f792aa4abf3fe0",
     "catalogue_r3/CANDIDATE_MAPPING_R3.json": "7d84a94d4ba892dee324bf763092573b5dff1887aae95665fbe31f7579bb10ba",
@@ -99,6 +99,8 @@
     "figures/FIGURE_SOURCES.json": "76896fb3cd9f0b551a3fd68cdc0104f5d8767ec6ef76fb4ff8b27e727c94b07d",
     "figures/figure1_deployment_framework.pptx": "6f0a28000bee095d28446563760e0631772dc142e213996ae48dd0542b1d7cf5",
     "figures/figure1_deployment_framework.svg": "77679f564c3e9eebd031744b33cb20da4aa1ac93bbcf4b24b031e0a217108a21",
+    "figures/figure2_ur3_case.png": "df03c30c4a0c94f1778203d641257ab30daa5725e0ad4597c64a8157418d5804",
+    "figures/figure4_g1_case.png": "83781b8f2ae6bfc637e5d4f3938e8a513c3d6a5e9900d59d5359a83a8a5c26e0",
     "historical/decision_prototype.py": "85a890d2faefc2addc046f94b75c0f67440ffb84d24ff4416344cb7d48d22eef",
     "job_example/CONTRACT.md": "ffa07dc2d73da52fd4ab985d2277033e5c02daff810837268b8d3ee60a79b77f",
     "job_example/author_declarations.py": "196ecce4b6cbeefe5e980486cf2a6c118d9f105a97b8fb25689365e06bacb143",

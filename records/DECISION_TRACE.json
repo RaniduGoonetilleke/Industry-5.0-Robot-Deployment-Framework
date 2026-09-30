@@ -1,0 +1,2025 @@
+{
+  "scope": "Retrospective and developmental. Rules and this trace were written after all outcomes were known; not a prediction, accuracy study or decision-benefit evaluation.",
+  "prototype_sha256": "85a890d2faefc2addc046f94b75c0f67440ffb84d24ff4416344cb7d48d22eef",
+  "sources_sha256": {
+    "WS_DECL": {
+      "path": "point_clean_workspace_prep_20260925/SCREEN_DECLARATION.json",
+      "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75"
+    },
+    "WS_SCREEN": {
+      "path": "point_clean_workspace_prep_20260925/SCREEN_RESULTS.jsonl",
+      "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304"
+    },
+    "SD_DESIGN": {
+      "path": "claude_point_spatial_pilot_r1_20260925/docs/DESIGN.md",
+      "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe"
+    },
+    "SD_LOCK": {
+      "path": "claude_point_spatial_pilot_r1_20260925/docs/DESIGN_LOCK.json",
+      "sha256": "3ff92c4f48ff57bc439ef873f8ff39a3138479e09993c00f1dc8216ff3538b01"
+    },
+    "SD_PRESCREEN": {
+      "path": "claude_point_spatial_pilot_r1_20260925/analysis/PRESCREEN.json",
+      "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b"
+    },
+    "DC_REVIEW": {
+      "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+      "sha256": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617"
+    },
+    "SP_SUMMARY": {
+      "path": "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json",
+      "sha256": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+    },
+    "SP_CENTRE": {
+      "path": "point_spatial_pilot_r1_results_review_20260925/CENTRE_REFUSAL_REVIEW.json",
+      "sha256": "fd19954315262447e46edc0d7d4a59f1cdddd10897e4fa007fbefe7ff26d5479"
+    },
+    "SP_REVIEW": {
+      "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+      "sha256": "514558ab04d645face98dcc44cb69d02d611c219ce187f1d8479882382ad7df6"
+    },
+    "SEL_r080_a000": {
+      "path": "point_spatial_pilot_r1_results_review_20260925/raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a000/POINT_INPUT/SELECTION.json",
+      "sha256": "b261c09e662820c84a595fac2c9704dea4483d1da96278285c17c4fc2e49dd29"
+    },
+    "SEL_r080_a180": {
+      "path": "point_spatial_pilot_r1_results_review_20260925/raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a180/POINT_INPUT/SELECTION.json",
+      "sha256": "af4bb644a9af24a602b033a6ba9530abe8d321406264997a3c8a3ba9547b8cbd"
+    },
+    "SEL_r080_a090": {
+      "path": "point_spatial_pilot_r1_results_review_20260925/raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a090/POINT_INPUT/SELECTION.json",
+      "sha256": "ef0612a591a26a381c69222842bf2ac72ba197971c7f84b2196649995b799169"
+    },
+    "ANCHOR_REUSE": {
+      "path": "claude_point_spatial_pilot_r1_20260925/analysis/ANCHOR_REUSE_CHECK.json",
+      "sha256": "f5b1c8a843674b0693462f6b494f8a4e88160c1aa934777cc33e28f49dbf857e"
+    },
+    "REL_RUN1": {
+      "path": "point_direct_confirm_pilot_r1_release_20260925/point_direct_confirm_pilot_r1/RELEASE_DECISION.json",
+      "sha256": "d7ddc77b53d800efca94f406b2f8253b58f81f2d6304ced2f6c378f4abc954f3"
+    },
+    "REL_RUN1_AUTH": {
+      "path": "point_direct_confirm_pilot_r1_release_20260925/return_review/RELEASE_AUTHORIZATION.json",
+      "sha256": "afe182868cb380207bf608d4a67a9fb21665523818ae04cef9a9e35038fdc51e"
+    },
+    "REL_RUN2": {
+      "path": "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/RELEASE_DECISION.json",
+      "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a"
+    },
+    "REL_RUN1_SEAL": {
+      "path": "point_direct_confirm_pilot_r1_release_20260925/DELIVERABLES.sha256",
+      "sha256": "2f30616000dc96e2c7c644becdc2b94c1d20893fa69a22b18eeba520d810eb7a"
+    },
+    "REL_RUN2_SEAL": {
+      "path": "point_spatial_pilot_r1_release_20260925/DELIVERABLES.sha256",
+      "sha256": "cdddc64365ee2b723eedc080699632873f640752e94266a133d1450c0858af21"
+    },
+    "REC": {
+      "path": "claude_journal_route_r16_20260926/research/CAPABILITY_RECORDS.json",
+      "sha256": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
+    }
+  },
+  "part_A_scope": "Replay of the live admission checks for a declared simulation TEST job, conditional on the five test-admission inputs recorded per row in evidence_basis (a verified pre-run release for A-E; an author assumption for F and the four controls, which were never released). PASS on those inputs means permission to run a test that collects evidence, not prior evidence that the task succeeds.",
+  "stage_times": {
+    "pre_run_screen": "offline screen, declaration created 2026-09-25T14:14:50Z (SCREEN_DECLARATION.json created_utc)",
+    "pre_run_design": "spatial design hash-locked 2026-09-25T16:42:55+01:00 (DESIGN_LOCK.json locked_local)",
+    "pre_run_prescreen": "native-frame prescreen PRESCREEN.json, written 2026-09-25 17:55 BST and sealed in the spatial candidate packet (seal e497618c) 18:35 BST, before run 2 (20:06 BST); it postdates run 1 (16:21 BST)",
+    "pre_run_release1": "run 1 release decision (sha d7ddc77b) and authorisation (sha afe18286) bound in the release seal DELIVERABLES.sha256 (sha 2f306160) written 2026-09-25 16:17:16 BST, before run 1 attempt 16:21:22 BST",
+    "pre_run_release2": "run 2 release decision (sha fc1ea30a) bound in the release seal DELIVERABLES.sha256 (sha cdddc643) written 2026-09-25 19:52:56 BST, before run 2 attempt 20:06:59 BST",
+    "author_assumption": "no release exists for this location; the five test-admission inputs are an author assumption made only so the live guards can be replayed",
+    "pre_motion_run1": "selection stage of run 1, attempt 2026-09-25T15:21:22Z, before any wiping interval",
+    "pre_motion_run2": "selection stage of run 2, attempt 2026-09-25T19:06:59Z, before any wiping interval",
+    "outcome": "after execution; joined only after decisions are computed"
+  },
+  "part_A_g1_locations": [
+    {
+      "location": "anchor",
+      "tag": "A",
+      "run": 1,
+      "inputs": {
+        "distance_from_home_m": 0.082462,
+        "planner_status": "PLANNER_ACCEPTED",
+        "planner_reason": null,
+        "panel_box_m": [
+          -0.402,
+          -0.19,
+          1.22,
+          1.372
+        ],
+        "predicted_hidden_fraction": 0,
+        "predicted_selection": "SELECTED",
+        "selection_in_plane_error_mm": 0.982534,
+        "selection_result": "detected",
+        "depth_status": "valid",
+        "confirmation_events": [
+          "POINT",
+          "OKAY"
+        ]
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "selection_in_plane_error_mm": {
+          "source": "DC_REVIEW",
+          "sha256": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617",
+          "stage": "pre_motion_run1"
+        },
+        "confirmation_events": {
+          "source": "DC_REVIEW",
+          "sha256": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617",
+          "stage": "pre_motion_run1"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "UNKNOWN",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "PASS",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": true,
+      "framework_action": "WITHHOLD_UNSUPPORTED",
+      "reference_action": "WITHHOLD_UNSUPPORTED",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "UNKNOWN",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "PASS",
+          "valid_input": "PASS",
+          "visible_target": "UNKNOWN"
+        },
+        "action": "WITHHOLD_UNSUPPORTED",
+        "failed": [],
+        "unresolved": [
+          "contact_authorized",
+          "visible_target"
+        ]
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the released package declares and implements this point-and-confirm wipe job",
+          "source": "REL_RUN1",
+          "sha256": "d7ddc77b53d800efca94f406b2f8253b58f81f2d6304ced2f6c378f4abc954f3",
+          "stage": "pre_run_release1",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "this location is a declared job of the release (a test location, not an evidenced performance context)",
+          "source": "REL_RUN1",
+          "sha256": "d7ddc77b53d800efca94f406b2f8253b58f81f2d6304ced2f6c378f4abc954f3",
+          "stage": "pre_run_release1",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the request and the package are both simulation",
+          "source": "REL_RUN1",
+          "sha256": "d7ddc77b53d800efca94f406b2f8253b58f81f2d6304ced2f6c378f4abc954f3",
+          "stage": "pre_run_release1",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the job carries its declared scoring and hold rules (unchanged ordinary task verdict)",
+          "source": "REL_RUN1",
+          "sha256": "d7ddc77b53d800efca94f406b2f8253b58f81f2d6304ced2f6c378f4abc954f3",
+          "stage": "pre_run_release1",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "scripted POINT then OKAY confirmation followed by bounded automatic wiping is the declared mode",
+          "source": "REL_RUN1",
+          "sha256": "d7ddc77b53d800efca94f406b2f8253b58f81f2d6304ced2f6c378f4abc954f3",
+          "stage": "pre_run_release1",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "PROPOSE_EXECUTION",
+      "ablation_planner_only": "PROPOSE_EXECUTION",
+      "observed_outcome": "NATIVE_COMPLETE_PASS",
+      "outcome_source": {
+        "source": "DC_REVIEW",
+        "sha256": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617",
+        "stage": "outcome"
+      },
+      "post_run_note": {
+        "text": "The later spatial contact panel was not declared for run 1, which ran under its own reviewed release; A's planned footprint was checked against that panel retrospectively (pass) before its evidence was reused. Not a pre-run input; the withheld action records missing documentation for this retrospective check, not unauthorised contact.",
+        "source": "ANCHOR_REUSE",
+        "sha256": "f5b1c8a843674b0693462f6b494f8a4e88160c1aa934777cc33e28f49dbf857e",
+        "stage": "post-run (file written 2026-09-25 17:56 BST)"
+      }
+    },
+    {
+      "location": "r080_a000",
+      "tag": "B",
+      "run": 2,
+      "inputs": {
+        "distance_from_home_m": 0.08,
+        "planner_status": "PLANNER_ACCEPTED",
+        "planner_reason": null,
+        "panel_box_m": [
+          -0.31,
+          -0.098,
+          1.208,
+          1.352
+        ],
+        "predicted_hidden_fraction": 0,
+        "predicted_selection": "SELECTED",
+        "selection_in_plane_error_mm": 1.096285,
+        "selection_result": "detected",
+        "depth_status": "valid",
+        "confirmation_events": [
+          "POINT",
+          "OKAY"
+        ]
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "selection_in_plane_error_mm": {
+          "source": "SEL_r080_a000",
+          "sha256": "b261c09e662820c84a595fac2c9704dea4483d1da96278285c17c4fc2e49dd29",
+          "stage": "pre_motion_run2"
+        },
+        "confirmation_events": {
+          "source": "SEL_r080_a000",
+          "sha256": "b261c09e662820c84a595fac2c9704dea4483d1da96278285c17c4fc2e49dd29",
+          "stage": "pre_motion_run2"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "PASS",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": true,
+      "framework_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "reference_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "PASS",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "PASS",
+          "valid_input": "PASS",
+          "visible_target": "PASS"
+        },
+        "action": "REQUEST_CONFIRMATION",
+        "failed": [],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the released package declares and implements this point-and-confirm wipe job",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "this location is a declared job of the release (a test location, not an evidenced performance context)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the request and the package are both simulation",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the job carries its declared scoring and hold rules (unchanged ordinary task verdict)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "scripted POINT then OKAY confirmation followed by bounded automatic wiping is the declared mode",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "PROPOSE_EXECUTION",
+      "ablation_planner_only": "PROPOSE_EXECUTION",
+      "observed_outcome": "NATIVE_COMPLETE_PASS",
+      "outcome_source": {
+        "source": "SP_SUMMARY",
+        "sha256": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "r080_a180",
+      "tag": "C",
+      "run": 2,
+      "inputs": {
+        "distance_from_home_m": 0.08,
+        "planner_status": "PLANNER_ACCEPTED",
+        "planner_reason": null,
+        "panel_box_m": [
+          -0.402,
+          -0.19,
+          1.208,
+          1.352
+        ],
+        "predicted_hidden_fraction": 0.1092,
+        "predicted_selection": "SELECTED",
+        "selection_in_plane_error_mm": 1.108488,
+        "selection_result": "detected",
+        "depth_status": "valid",
+        "confirmation_events": [
+          "POINT",
+          "OKAY"
+        ]
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "selection_in_plane_error_mm": {
+          "source": "SEL_r080_a180",
+          "sha256": "af4bb644a9af24a602b033a6ba9530abe8d321406264997a3c8a3ba9547b8cbd",
+          "stage": "pre_motion_run2"
+        },
+        "confirmation_events": {
+          "source": "SEL_r080_a180",
+          "sha256": "af4bb644a9af24a602b033a6ba9530abe8d321406264997a3c8a3ba9547b8cbd",
+          "stage": "pre_motion_run2"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "PASS",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": true,
+      "framework_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "reference_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "PASS",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "PASS",
+          "valid_input": "PASS",
+          "visible_target": "PASS"
+        },
+        "action": "REQUEST_CONFIRMATION",
+        "failed": [],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the released package declares and implements this point-and-confirm wipe job",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "this location is a declared job of the release (a test location, not an evidenced performance context)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the request and the package are both simulation",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the job carries its declared scoring and hold rules (unchanged ordinary task verdict)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "scripted POINT then OKAY confirmation followed by bounded automatic wiping is the declared mode",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "PROPOSE_EXECUTION",
+      "ablation_planner_only": "PROPOSE_EXECUTION",
+      "observed_outcome": "NATIVE_COMPLETE_PASS",
+      "outcome_source": {
+        "source": "SP_SUMMARY",
+        "sha256": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "r080_a090",
+      "tag": "D",
+      "run": 2,
+      "inputs": {
+        "distance_from_home_m": 0.08,
+        "planner_status": "PLANNER_ACCEPTED",
+        "planner_reason": null,
+        "panel_box_m": [
+          -0.322,
+          -0.178,
+          1.22,
+          1.432
+        ],
+        "predicted_hidden_fraction": 0.5938,
+        "predicted_selection": "SELECTED",
+        "selection_in_plane_error_mm": 4.129103,
+        "selection_result": "detected",
+        "depth_status": "valid",
+        "confirmation_events": [
+          "POINT",
+          "OKAY"
+        ]
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "selection_in_plane_error_mm": {
+          "source": "SEL_r080_a090",
+          "sha256": "ef0612a591a26a381c69222842bf2ac72ba197971c7f84b2196649995b799169",
+          "stage": "pre_motion_run2"
+        },
+        "confirmation_events": {
+          "source": "SEL_r080_a090",
+          "sha256": "ef0612a591a26a381c69222842bf2ac72ba197971c7f84b2196649995b799169",
+          "stage": "pre_motion_run2"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "PASS",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": true,
+      "framework_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "reference_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "PASS",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "PASS",
+          "valid_input": "PASS",
+          "visible_target": "PASS"
+        },
+        "action": "REQUEST_CONFIRMATION",
+        "failed": [],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the released package declares and implements this point-and-confirm wipe job",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "this location is a declared job of the release (a test location, not an evidenced performance context)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the request and the package are both simulation",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the job carries its declared scoring and hold rules (unchanged ordinary task verdict)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "scripted POINT then OKAY confirmation followed by bounded automatic wiping is the declared mode",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "PROPOSE_EXECUTION",
+      "ablation_planner_only": "PROPOSE_EXECUTION",
+      "observed_outcome": "NATIVE_COMPLETE_PASS",
+      "outcome_source": {
+        "source": "SP_SUMMARY",
+        "sha256": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "centre",
+      "tag": "E",
+      "run": 2,
+      "inputs": {
+        "distance_from_home_m": 0,
+        "planner_status": "PLANNER_ACCEPTED",
+        "planner_reason": null,
+        "panel_box_m": [
+          -0.322,
+          -0.178,
+          1.208,
+          1.352
+        ],
+        "predicted_hidden_fraction": 1,
+        "predicted_selection": "Declared marker not detected in the camera frame: right_marker",
+        "selection_result": "Declared marker not detected in the camera frame: right_marker",
+        "depth_status": "valid",
+        "confirmation_events": [
+          "POINT",
+          "OKAY"
+        ]
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "selection_result": {
+          "source": "SP_CENTRE",
+          "sha256": "fd19954315262447e46edc0d7d4a59f1cdddd10897e4fa007fbefe7ff26d5479",
+          "stage": "pre_motion_run2"
+        },
+        "confirmation_events": {
+          "source": "SP_CENTRE",
+          "sha256": "fd19954315262447e46edc0d7d4a59f1cdddd10897e4fa007fbefe7ff26d5479",
+          "stage": "pre_motion_run2"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "PASS",
+        "valid_input": "PASS",
+        "visible_target": "FAIL"
+      },
+      "confirmed": true,
+      "framework_action": "REFUSE_CURRENT_STATE",
+      "reference_action": "REFUSE_CURRENT_STATE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "PASS",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "PASS",
+          "valid_input": "PASS",
+          "visible_target": "FAIL"
+        },
+        "action": "REFUSE_CURRENT_STATE",
+        "failed": [
+          "visible_target"
+        ],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the released package declares and implements this point-and-confirm wipe job",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "this location is a declared job of the release (a test location, not an evidenced performance context)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the request and the package are both simulation",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "the job carries its declared scoring and hold rules (unchanged ordinary task verdict)",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "verified_pre_run_source",
+          "meaning": "scripted POINT then OKAY confirmation followed by bounded automatic wiping is the declared mode",
+          "source": "REL_RUN2",
+          "sha256": "fc1ea30a587f7e5638836c0b8876deb32d4619503f07401aa77edb1866b0bd8a",
+          "stage": "pre_run_release2",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "PROPOSE_EXECUTION",
+      "ablation_planner_only": "PROPOSE_EXECUTION",
+      "observed_outcome": "NATIVE_ADMISSION_REFUSED",
+      "outcome_source": {
+        "source": "SP_CENTRE",
+        "sha256": "fd19954315262447e46edc0d7d4a59f1cdddd10897e4fa007fbefe7ff26d5479",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "r080_a270",
+      "tag": "F",
+      "run": 0,
+      "inputs": {
+        "distance_from_home_m": 0.08,
+        "planner_status": "PLANNER_REFUSED",
+        "planner_reason": "Proposed arm path violates joint-margin screen",
+        "panel_box_m": [
+          -0.322,
+          -0.178,
+          1.128,
+          1.34
+        ],
+        "predicted_hidden_fraction": 1,
+        "predicted_selection": "No detected mark near pointer",
+        "selection_result": "not observed (no native job); prediction used",
+        "confirmation_events": []
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "FAIL",
+        "valid_input": "PASS",
+        "visible_target": "FAIL"
+      },
+      "confirmed": false,
+      "framework_action": "REFUSE_CURRENT_STATE",
+      "reference_action": "REFUSE_CURRENT_STATE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "PASS",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "FAIL",
+          "valid_input": "PASS",
+          "visible_target": "FAIL"
+        },
+        "action": "REFUSE_CURRENT_STATE",
+        "failed": [
+          "path",
+          "visible_target"
+        ],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: treated as if a declared point-and-confirm test job existed at this location; none was released",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: this location is treated as a declared test location (declared in the locked design, never released natively)",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: a simulation request, matching the simulation package; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scoring and hold rules of the released jobs are assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scripted POINT then OKAY mode of the released jobs is assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "PROPOSE_EXECUTION",
+      "ablation_planner_only": "REFUSE",
+      "observed_outcome": "OFFLINE_REFUSED (joint margin)",
+      "outcome_source": {
+        "source": "SD_DESIGN",
+        "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "outside_a000",
+      "tag": "X1",
+      "run": 0,
+      "inputs": {
+        "distance_from_home_m": 0.14,
+        "planner_status": "PLANNER_REFUSED",
+        "planner_reason": "Target outside bounded arm assignment or repeated arm",
+        "panel_box_m": [
+          -0.31,
+          -0.038,
+          1.208,
+          1.352
+        ],
+        "predicted_hidden_fraction": 0,
+        "predicted_selection": "SELECTED",
+        "selection_result": "not observed (no native job); prediction used",
+        "confirmation_events": []
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "FAIL",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "FAIL",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": false,
+      "framework_action": "REFUSE_CURRENT_STATE",
+      "reference_action": "REFUSE_CURRENT_STATE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "FAIL",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "FAIL",
+          "valid_input": "PASS",
+          "visible_target": "PASS"
+        },
+        "action": "REFUSE_CURRENT_STATE",
+        "failed": [
+          "contact_authorized",
+          "path"
+        ],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: treated as if a declared point-and-confirm test job existed at this location; none was released",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: this location is treated as a declared test location (declared in the locked design, never released natively)",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: a simulation request, matching the simulation package; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scoring and hold rules of the released jobs are assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scripted POINT then OKAY mode of the released jobs is assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "REFUSE",
+      "ablation_planner_only": "REFUSE",
+      "observed_outcome": "OFFLINE_REFUSED (arm assignment)",
+      "outcome_source": {
+        "source": "WS_SCREEN",
+        "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "outside_a090",
+      "tag": "X2",
+      "run": 0,
+      "inputs": {
+        "distance_from_home_m": 0.14,
+        "planner_status": "PLANNER_REFUSED",
+        "planner_reason": "Target outside bounded arm assignment or repeated arm",
+        "panel_box_m": [
+          -0.322,
+          -0.178,
+          1.22,
+          1.492
+        ],
+        "predicted_hidden_fraction": 0,
+        "predicted_selection": "SELECTED",
+        "selection_result": "not observed (no native job); prediction used",
+        "confirmation_events": []
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "FAIL",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "FAIL",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": false,
+      "framework_action": "REFUSE_CURRENT_STATE",
+      "reference_action": "REFUSE_CURRENT_STATE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "FAIL",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "FAIL",
+          "valid_input": "PASS",
+          "visible_target": "PASS"
+        },
+        "action": "REFUSE_CURRENT_STATE",
+        "failed": [
+          "contact_authorized",
+          "path"
+        ],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: treated as if a declared point-and-confirm test job existed at this location; none was released",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: this location is treated as a declared test location (declared in the locked design, never released natively)",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: a simulation request, matching the simulation package; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scoring and hold rules of the released jobs are assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scripted POINT then OKAY mode of the released jobs is assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "REFUSE",
+      "ablation_planner_only": "REFUSE",
+      "observed_outcome": "OFFLINE_REFUSED (arm assignment)",
+      "outcome_source": {
+        "source": "WS_SCREEN",
+        "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "outside_a180",
+      "tag": "X3",
+      "run": 0,
+      "inputs": {
+        "distance_from_home_m": 0.14,
+        "planner_status": "PLANNER_REFUSED",
+        "planner_reason": "Target outside bounded arm assignment or repeated arm",
+        "panel_box_m": [
+          -0.462,
+          -0.19,
+          1.208,
+          1.352
+        ],
+        "predicted_hidden_fraction": 0,
+        "predicted_selection": "SELECTED",
+        "selection_result": "not observed (no native job); prediction used",
+        "confirmation_events": []
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "FAIL",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "FAIL",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      },
+      "confirmed": false,
+      "framework_action": "REFUSE_CURRENT_STATE",
+      "reference_action": "REFUSE_CURRENT_STATE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "FAIL",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "FAIL",
+          "valid_input": "PASS",
+          "visible_target": "PASS"
+        },
+        "action": "REFUSE_CURRENT_STATE",
+        "failed": [
+          "contact_authorized",
+          "path"
+        ],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: treated as if a declared point-and-confirm test job existed at this location; none was released",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: this location is treated as a declared test location (declared in the locked design, never released natively)",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: a simulation request, matching the simulation package; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scoring and hold rules of the released jobs are assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scripted POINT then OKAY mode of the released jobs is assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "REFUSE",
+      "ablation_planner_only": "REFUSE",
+      "observed_outcome": "OFFLINE_REFUSED (arm assignment)",
+      "outcome_source": {
+        "source": "WS_SCREEN",
+        "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+        "stage": "outcome"
+      }
+    },
+    {
+      "location": "outside_a270",
+      "tag": "X4",
+      "run": 0,
+      "inputs": {
+        "distance_from_home_m": 0.14,
+        "planner_status": "PLANNER_REFUSED",
+        "planner_reason": "Target outside bounded arm assignment or repeated arm",
+        "panel_box_m": [
+          -0.322,
+          -0.178,
+          1.068,
+          1.34
+        ],
+        "predicted_hidden_fraction": 1,
+        "predicted_selection": "No detected mark near pointer",
+        "selection_result": "not observed (no native job); prediction used",
+        "confirmation_events": []
+      },
+      "input_provenance": {
+        "distance_from_home_m": {
+          "source": "WS_DECL",
+          "sha256": "1e2d2182a1d80bac5af8c071d0c9e45b6e17b0e48b108f43b0bb200078bfaf75",
+          "stage": "pre_run_screen"
+        },
+        "planner_status": {
+          "source": "WS_SCREEN",
+          "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+          "stage": "pre_run_screen"
+        },
+        "panel_box_m": {
+          "source": "SD_DESIGN",
+          "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+          "stage": "pre_run_design"
+        },
+        "predicted_hidden_fraction": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        },
+        "predicted_selection": {
+          "source": "SD_PRESCREEN",
+          "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b",
+          "stage": "pre_run_prescreen"
+        }
+      },
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "FAIL",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "FAIL",
+        "valid_input": "PASS",
+        "visible_target": "FAIL"
+      },
+      "confirmed": false,
+      "framework_action": "REFUSE_CURRENT_STATE",
+      "reference_action": "REFUSE_CURRENT_STATE",
+      "pre_run_only": {
+        "facts": {
+          "capability": "PASS",
+          "contact_authorized": "FAIL",
+          "context": "PASS",
+          "domain": "PASS",
+          "measurement": "PASS",
+          "mode": "PASS",
+          "path": "FAIL",
+          "valid_input": "PASS",
+          "visible_target": "FAIL"
+        },
+        "action": "REFUSE_CURRENT_STATE",
+        "failed": [
+          "contact_authorized",
+          "path",
+          "visible_target"
+        ],
+        "unresolved": []
+      },
+      "evidence_basis": {
+        "capability": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: treated as if a declared point-and-confirm test job existed at this location; none was released",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "context": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: this location is treated as a declared test location (declared in the locked design, never released natively)",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "domain": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: a simulation request, matching the simulation package; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "measurement": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scoring and hold rules of the released jobs are assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        },
+        "mode": {
+          "state": "PASS",
+          "basis_type": "author_assumption",
+          "meaning": "author assumption: the scripted POINT then OKAY mode of the released jobs is assumed; no release exists for this location",
+          "source": null,
+          "declaration_reference": {
+            "source": "SD_DESIGN",
+            "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe",
+            "note": "the location is declared (section 3) and was refused offline; this reference is not a source for the five inputs"
+          },
+          "stage": "author_assumption",
+          "purpose": "made only so that the live guards can be replayed",
+          "not_evidence_of": "task success or later performance at this location"
+        }
+      },
+      "ablation_radius_only": "REFUSE",
+      "ablation_planner_only": "REFUSE",
+      "observed_outcome": "OFFLINE_REFUSED (arm assignment)",
+      "outcome_source": {
+        "source": "WS_SCREEN",
+        "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304",
+        "stage": "outcome"
+      }
+    }
+  ],
+  "part_A_performance_reading_sensitivity": [
+    {
+      "location": "B",
+      "test_admission_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "performance_request_action": "WITHHOLD_UNSUPPORTED",
+      "scope": "context UNKNOWN because no prior capability record existed at this location before its run; not an alteration of the outcome"
+    },
+    {
+      "location": "C",
+      "test_admission_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "performance_request_action": "WITHHOLD_UNSUPPORTED",
+      "scope": "context UNKNOWN because no prior capability record existed at this location before its run; not an alteration of the outcome"
+    },
+    {
+      "location": "D",
+      "test_admission_action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "performance_request_action": "WITHHOLD_UNSUPPORTED",
+      "scope": "context UNKNOWN because no prior capability record existed at this location before its run; not an alteration of the outcome"
+    }
+  ],
+  "part_B_requests": [
+    {
+      "request": "Simulated wipe at location B (+8 cm y), same settings (right arm, 5 ms, 7 N, scripted confirmation)",
+      "candidates": {
+        "G1 / sim wipe / scripted confirm / B, 7 N, 5 ms": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "ONE_ELIGIBLE",
+      "eligible": [
+        "G1 / sim wipe / scripted confirm / B, 7 N, 5 ms"
+      ],
+      "ranking": null,
+      "note": "Uses the post-run record of B; it does not predict the run that produced it."
+    },
+    {
+      "request": "Simulated wipe at any one of the tested locations A-D (job states no preference)",
+      "candidates": {
+        "G1 / sim wipe / location A": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        },
+        "G1 / sim wipe / location B": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        },
+        "G1 / sim wipe / location C": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        },
+        "G1 / sim wipe / location D": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "MULTIPLE_ELIGIBLE",
+      "eligible": [
+        "G1 / sim wipe / location A",
+        "G1 / sim wipe / location B",
+        "G1 / sim wipe / location C",
+        "G1 / sim wipe / location D"
+      ],
+      "ranking": null,
+      "note": "Several configurations remain; no objective is supplied, so the set is returned undecided."
+    },
+    {
+      "request": "Simulated wipe at an untested location (for example 4 cm from home)",
+      "candidates": {
+        "G1 / sim wipe / untested location": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "context"
+          ],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19",
+            "G1-07"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "No record at that location; the next evidence is a declared test there."
+    },
+    {
+      "request": "Simulated wipe at location B with a 10 N setpoint",
+      "candidates": {
+        "G1 / sim wipe / B, 10 N": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "measurement"
+          ],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "Only the 7 N setpoint was executed."
+    },
+    {
+      "request": "Physical G1 wipe at location B",
+      "candidates": {
+        "G1 / physical wipe": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "domain"
+          ],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "Simulation records only."
+    },
+    {
+      "request": "Physical G1 wipe at location B with a person watching and a slower setting",
+      "candidates": {
+        "G1 / physical wipe / watched, slower": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "domain",
+            "mode"
+          ],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "Watching or slowing does not supply the missing physical evidence, and the watched mode is itself untested."
+    },
+    {
+      "request": "Physical gesture-commanded handover for the tested operator and task",
+      "candidates": {
+        "UR3 / handover / explicit command": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "UR3-02",
+            "UR3-11",
+            "UR3-18"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "ONE_ELIGIBLE",
+      "eligible": [
+        "UR3 / handover / explicit command"
+      ],
+      "ranking": null,
+      "note": "Demonstrated qualitatively on hardware for one operator (published video); no completion count."
+    },
+    {
+      "request": "The same handover with a measured gesture-to-motion response of at most 1 s",
+      "candidates": {
+        "UR3 / handover / 1 s measured": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "measurement"
+          ],
+          "basis_records": [
+            "UR3-20",
+            "UR3-21"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "Only a calculated budget exists."
+    },
+    {
+      "request": "Physical detection of a taped target region on a whiteboard",
+      "candidates": {
+        "UR5 / detection / whiteboard": {
+          "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+          "failed": [],
+          "unresolved": [],
+          "basis_records": [
+            "UR5-03",
+            "UR5-15"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "ONE_ELIGIBLE",
+      "eligible": [
+        "UR5 / detection / whiteboard"
+      ],
+      "ranking": null,
+      "note": "Report-level evidence, not independently reproduced."
+    },
+    {
+      "request": "Physical detection of a marked region on glass",
+      "candidates": {
+        "UR5 / detection / glass": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "context",
+            "measurement"
+          ],
+          "basis_records": [
+            "UR5-03",
+            "UR5-10"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "Glass not tested."
+    },
+    {
+      "request": "Physical wipe of a marked wall region under a regulated contact force, any available robot",
+      "candidates": {
+        "UR3 / contact wipe": {
+          "action": "REFUSE_CURRENT_STATE",
+          "failed": [
+            "capability"
+          ],
+          "unresolved": [
+            "context",
+            "measurement",
+            "mode"
+          ],
+          "basis_records": [
+            "UR3-16"
+          ],
+          "stage": "evidence stage; live checks pending"
+        },
+        "UR5 / brush wipe": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "context",
+            "measurement",
+            "mode"
+          ],
+          "basis_records": [
+            "UR5-11",
+            "UR5-17"
+          ],
+          "stage": "evidence stage; live checks pending"
+        },
+        "G1 / wipe": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "domain"
+          ],
+          "basis_records": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "UR3 force regulation is stated not implemented (a known failed prerequisite of that configuration); a person is not assumed as a fallback."
+    },
+    {
+      "request": "A chain: a UR3-recognised gesture directs a G1 wipe located by the UR5 camera",
+      "candidates": {
+        "UR3+UR5+G1 chain": {
+          "action": "WITHHOLD_UNSUPPORTED",
+          "failed": [],
+          "unresolved": [
+            "capability",
+            "context",
+            "domain",
+            "measurement",
+            "mode"
+          ],
+          "basis_records": [
+            "integration_gaps IG1-IG14"
+          ],
+          "stage": "evidence stage; live checks pending"
+        }
+      },
+      "set_action": "NO_ELIGIBLE_CANDIDATE",
+      "eligible": [],
+      "ranking": null,
+      "note": "No shared frame, clock, pointing ray into the G1 frame, contact-preserving pause, or executed integration."
+    }
+  ],
+  "summary": {
+    "framework_equals_reference_all_A": true,
+    "framework_equals_reference_all_A_pre_run": true,
+    "radius_only_proposed_where_framework_refuses": [
+      "E",
+      "F"
+    ],
+    "planner_only_proposed_where_framework_refuses": [
+      "E"
+    ],
+    "completed_but_withheld_by_framework": [
+      "A"
+    ],
+    "panel_check_discriminated_in_radius": []
+  },
+  "public_excerpt": {
+    "scope": "r23 displayed case requests; part A unchanged; one out-of-scope UR3 request omitted from part B",
+    "original_sha256": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+    "omitted_questions_requalified": false
+  }
+}

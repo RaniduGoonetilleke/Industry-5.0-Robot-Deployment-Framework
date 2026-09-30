@@ -1,0 +1,213 @@
+{
+  "sites": {
+    "B": {
+      "site": "B",
+      "outcome": "CONTROL_REPRODUCED",
+      "first_difference": null,
+      "reference": {
+        "job": "point_right_dt5_spatial_r080_a000",
+        "review_seal_sha256": "c12af448727cf5b7f43f285b736b27a931fa531c5f27cb5c01eadcb2fb6bec1b",
+        "reduced": "point_right_dt5_spatial_r080_a000_reduced.npz",
+        "reduced_sha256": "6737568384dad71c94107309753d5763845ba72995fc610881465f3dda96c336",
+        "report": "raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a000/WORKER_REPORT.json",
+        "report_sha256": "ad84afd1bcc4688515ab5e7dae825c632a39278bddcaca958334e63a686131c2"
+      },
+      "tool_sha256": "2b12843ee43d8b7e981eaa6f612c2ff50efc2f1a86caa2a370b4423de6004679",
+      "reduction_source": "journal_reduction.py: reference spatial-return reduction with force-specific checks added"
+    },
+    "D": {
+      "site": "D",
+      "outcome": "CONTROL_REPRODUCED",
+      "first_difference": null,
+      "reference": {
+        "job": "point_right_dt5_spatial_r080_a090",
+        "review_seal_sha256": "c12af448727cf5b7f43f285b736b27a931fa531c5f27cb5c01eadcb2fb6bec1b",
+        "reduced": "point_right_dt5_spatial_r080_a090_reduced.npz",
+        "reduced_sha256": "940f91aaf20f64a04cfad07e83fa41000c20980fcfd163c938d927a56ce37f51",
+        "report": "raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a090/WORKER_REPORT.json",
+        "report_sha256": "9443f166982386c74aaf7aa369bd1917994989652378191c4cd62bd2972d4ecb"
+      },
+      "tool_sha256": "2b12843ee43d8b7e981eaa6f612c2ff50efc2f1a86caa2a370b4423de6004679",
+      "reduction_source": "journal_reduction.py: reference spatial-return reduction with force-specific checks added"
+    },
+    "C": {
+      "site": "C",
+      "outcome": "CONTROL_REPRODUCED",
+      "first_difference": null,
+      "reference": {
+        "job": "point_right_dt5_spatial_r080_a180",
+        "review_seal_sha256": "c12af448727cf5b7f43f285b736b27a931fa531c5f27cb5c01eadcb2fb6bec1b",
+        "reduced": "point_right_dt5_spatial_r080_a180_reduced.npz",
+        "reduced_sha256": "f2716f7a5bf82466fe9fbcfb186041c78a4b39bb3c24f09a13d9031ef161bf2e",
+        "report": "raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a180/WORKER_REPORT.json",
+        "report_sha256": "ad76b93d0a8474d3698af678335a5419e261196c6fb8a1cdcf7800200d2ec9d3"
+      },
+      "tool_sha256": "2b12843ee43d8b7e981eaa6f612c2ff50efc2f1a86caa2a370b4423de6004679",
+      "reduction_source": "journal_reduction.py: reference spatial-return reduction with force-specific checks added"
+    },
+    "A": {
+      "site": "A",
+      "outcome": "CONTROL_REPRODUCED",
+      "first_difference": null,
+      "reference": {
+        "job": "point_right_dt5_direct_confirm",
+        "review_seal_sha256": "c902d0fb2db5660c0a568a4f264c391af4d1608560a56f36aa7504702e8f6054",
+        "reduced": "point_right_dt5_direct_confirm_reduced.npz",
+        "reduced_sha256": "d6ec9f5a503c9f6e8fbea3fc402c9cce22b507b15b85d3dd9a5161c04a799a0c",
+        "report": "raw/attempt_20260925T152122_035300Z/point_right_dt5_direct_confirm/WORKER_REPORT.json",
+        "report_sha256": "8ddbe9f01ad53deb137a8ec83b57c31e4cb47ad39a5d3e24466c3e411c31247e"
+      },
+      "tool_sha256": "2b12843ee43d8b7e981eaa6f612c2ff50efc2f1a86caa2a370b4423de6004679",
+      "reduction_source": "journal_reduction.py: reference spatial-return reduction with force-specific checks added"
+    }
+  },
+  "batch_overlay": "CONTROLS_REPRODUCED",
+  "final_cells": {
+    "calibration_dt5": {
+      "global_slot": 1,
+      "label": "CALIBRATION_PASS",
+      "qualifier": null,
+      "status": "CALIBRATION_PASS"
+    },
+    "point_right_dt5_force_a_07n": {
+      "all_failing_criteria": [],
+      "control_reference": {
+        "job": "point_right_dt5_direct_confirm",
+        "reduced": "point_right_dt5_direct_confirm_reduced.npz",
+        "reduced_sha256": "d6ec9f5a503c9f6e8fbea3fc402c9cce22b507b15b85d3dd9a5161c04a799a0c",
+        "report": "raw/attempt_20260925T152122_035300Z/point_right_dt5_direct_confirm/WORKER_REPORT.json",
+        "report_sha256": "8ddbe9f01ad53deb137a8ec83b57c31e4cb47ad39a5d3e24466c3e411c31247e",
+        "review_seal_sha256": "c902d0fb2db5660c0a568a4f264c391af4d1608560a56f36aa7504702e8f6054"
+      },
+      "control_reproduction": "PENDING_RETURN_REVIEW",
+      "global_slot": 5,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 7.0,
+      "scene_id": "spatial_anchor",
+      "site": "A",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_a_08n": {
+      "all_failing_criteria": [],
+      "global_slot": 9,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 8.0,
+      "scene_id": "spatial_anchor",
+      "site": "A",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_b_07n": {
+      "all_failing_criteria": [],
+      "control_reference": {
+        "job": "point_right_dt5_spatial_r080_a000",
+        "reduced": "point_right_dt5_spatial_r080_a000_reduced.npz",
+        "reduced_sha256": "6737568384dad71c94107309753d5763845ba72995fc610881465f3dda96c336",
+        "report": "raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a000/WORKER_REPORT.json",
+        "report_sha256": "ad84afd1bcc4688515ab5e7dae825c632a39278bddcaca958334e63a686131c2",
+        "review_seal_sha256": "c12af448727cf5b7f43f285b736b27a931fa531c5f27cb5c01eadcb2fb6bec1b"
+      },
+      "control_reproduction": "PENDING_RETURN_REVIEW",
+      "global_slot": 2,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 7.0,
+      "scene_id": "spatial_r080_a000",
+      "site": "B",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_b_08n": {
+      "all_failing_criteria": [],
+      "global_slot": 6,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 8.0,
+      "scene_id": "spatial_r080_a000",
+      "site": "B",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_c_07n": {
+      "all_failing_criteria": [],
+      "control_reference": {
+        "job": "point_right_dt5_spatial_r080_a180",
+        "reduced": "point_right_dt5_spatial_r080_a180_reduced.npz",
+        "reduced_sha256": "f2716f7a5bf82466fe9fbcfb186041c78a4b39bb3c24f09a13d9031ef161bf2e",
+        "report": "raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a180/WORKER_REPORT.json",
+        "report_sha256": "ad76b93d0a8474d3698af678335a5419e261196c6fb8a1cdcf7800200d2ec9d3",
+        "review_seal_sha256": "c12af448727cf5b7f43f285b736b27a931fa531c5f27cb5c01eadcb2fb6bec1b"
+      },
+      "control_reproduction": "PENDING_RETURN_REVIEW",
+      "global_slot": 4,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 7.0,
+      "scene_id": "spatial_r080_a180",
+      "site": "C",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_c_08n": {
+      "all_failing_criteria": [],
+      "global_slot": 8,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 8.0,
+      "scene_id": "spatial_r080_a180",
+      "site": "C",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_d_07n": {
+      "all_failing_criteria": [],
+      "control_reference": {
+        "job": "point_right_dt5_spatial_r080_a090",
+        "reduced": "point_right_dt5_spatial_r080_a090_reduced.npz",
+        "reduced_sha256": "940f91aaf20f64a04cfad07e83fa41000c20980fcfd163c938d927a56ce37f51",
+        "report": "raw/attempt_20260925T190659_442474Z/point_right_dt5_spatial_r080_a090/WORKER_REPORT.json",
+        "report_sha256": "9443f166982386c74aaf7aa369bd1917994989652378191c4cd62bd2972d4ecb",
+        "review_seal_sha256": "c12af448727cf5b7f43f285b736b27a931fa531c5f27cb5c01eadcb2fb6bec1b"
+      },
+      "control_reproduction": "PENDING_RETURN_REVIEW",
+      "global_slot": 3,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 7.0,
+      "scene_id": "spatial_r080_a090",
+      "site": "D",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    },
+    "point_right_dt5_force_d_08n": {
+      "all_failing_criteria": [],
+      "global_slot": 7,
+      "label": "PASS_AT_SETTING",
+      "left_setpoint_n": 7.0,
+      "qualifier": null,
+      "right_setpoint_n": 8.0,
+      "scene_id": "spatial_r080_a090",
+      "site": "D",
+      "status": "PASS_AT_SETTING",
+      "controls": "CONTROLS_REPRODUCED",
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING"
+    }
+  }
+}

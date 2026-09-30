@@ -1,0 +1,28 @@
+{
+  "arrays": {
+    "A_8N_reduced.npz": {
+      "sha256": "7e0607873819f28d70766c05a2252ae47228b217acf7bb8608deeec12d1c91ff",
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_a_08n_reduced.npz",
+      "job": "point_right_dt5_force_a_08n"
+    },
+    "B_8N_reduced.npz": {
+      "sha256": "5efe40482c7de0a0a44170cb447a6ffea447fc66c623559c64a82295f145c95b",
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_b_08n_reduced.npz",
+      "job": "point_right_dt5_force_b_08n"
+    },
+    "C_8N_reduced.npz": {
+      "sha256": "44531f4d6dde4374ebbb47c359fd4dd283d1f78e7eb78f0b019fed99be063c24",
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_c_08n_reduced.npz",
+      "job": "point_right_dt5_force_c_08n"
+    },
+    "D_8N_reduced.npz": {
+      "sha256": "b532f0556bfeb02b793137698f607a2e08cb3bcf9cf4066d6a9e9ac01711fca9",
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_d_08n_reduced.npz",
+      "job": "point_right_dt5_force_d_08n"
+    }
+  },
+  "review_seal_sha256": "dc4a8d8859f15ace03927b58ea68ea469ce5d55ea65225de8d86d0dc7b0781dd",
+  "release_manifest_sha256": "ed41306f988527fe84cc5c1674605d1201fd442c2d73f4a935f21a3127436c62",
+  "format": "Same 15 reduced fields and 9,600 rows as data/{A,B,C,D}_reduced.npz. They omit raw images, contact matrices and event journals.",
+  "controls": "The four 7 N control arrays of the same run equal data/{A,B,C,D}_reduced.npz in all 15 fields (checked when this package was built; the review CONTROL_REPRODUCTION.json records the reviewed comparison)."
+}

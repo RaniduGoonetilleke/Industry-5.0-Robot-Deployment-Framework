@@ -1,0 +1,86 @@
+{
+  "title": "UR5 case: operating sequence and human role (author-supplied clarification)",
+  "date": "2026-09-28",
+  "status": "AUTHOR_ACCOUNT",
+  "source": "An earlier team account of the operating sequence and human role, recorded on 28 September 2026. It was not the prototype developer's statement or a reconstruction from trial logs. The public summary does not identify the person who relayed it. The record does not state whether the person who gave the account watched the demonstration in person or only in the recorded video.",
+  "what_this_record_is_not": [
+    "not reconstructed from trial logs (none are available)",
+    "not reconstructed from matched source code (none is available)",
+    "not a statement by the prototype's developer (E. Mgboji)",
+    "not an independent verification of the demonstration"
+  ],
+  "account": [
+    {
+      "id": "C1",
+      "statement": "The operator prepares the marked whiteboard, starts the program and observes, giving no further movement command.",
+      "detail": "After the program was started the developer watched; the earlier account reports no further command or manual guidance. 'Operator' is the account's word for this person; the register names the role the attendant."
+    },
+    {
+      "id": "C2",
+      "statement": "The camera detects the framed (taped) region and its centre.",
+      "report_support": "report sections 3.3 and 4.1: bounding box of the taped target frame and its centre, with RGB-D depth"
+    },
+    {
+      "id": "C3",
+      "statement": "The robot executes a predefined wiping pattern, returns home and checks for remaining marks.",
+      "report_support": "report section 4.2 for the predefined waypoints; the return and re-inspection are from the author account"
+    },
+    {
+      "id": "C4",
+      "statement": "It repeats while the detector classifies the region as dirty and stops when the region is classified as clean.",
+      "note": "'Clean' and 'dirty' are the detector's classification against its 250-pixel threshold (report section 4.1.2), not a measurement that all contamination was removed."
+    },
+    {
+      "id": "C5",
+      "statement": "The board was repositioned before the program was started, and the robot adjusted its approach to the detected position.",
+      "note": "Repositioning before a run. This is not continuous following of a moving board during contact; the report states that full dynamic tracking was not achieved."
+    },
+    {
+      "id": "C6",
+      "statement": "The report describes the system demonstrated in the video.",
+      "note": "Stated by the team member who supplied the earlier account. No identity of implementation bytes between the demonstration and any code copy is claimed."
+    }
+  ],
+  "qualified_by_the_author": [
+    {
+      "statement": "The mark had to be inside the taped boundary.",
+      "qualification": "The earlier account's unverified assumption, not a checked fact. Independently, the report states that red-marker segmentation is applied inside the cropped region of the detected frame, after a 15 % margin is removed (section 4.1.2)."
+    }
+  ],
+  "evidence_available": "The project report and the public demonstration video. No additional trial logs and no matched source code.",
+  "report": {
+    "citation": "Mgboji, E. (2026). Development of an AI Based Robotic Manipulator for Vertical Cleaning: A Feasibility Study on Facade Glass Window Cleaning. Project report, Nottingham Trent University.",
+    "sha256": "e675722c86e50ce2866fd7c584ef13791f6a077e447b83c7cc427f0bc54213e1",
+    "held_by": "the authors; not shipped in this package",
+    "supports": {
+      "section 4.1.2, page 14": "red-marker HSV segmentation inside the cropped target region; a threshold of 250 red pixels separates 'dirty' from 'clean'",
+      "section 4.2, page 15": "predefined waypoints; adjustment of the static waypoint for targets at inclined positions",
+      "sections 5.3 and 6, pages 16-18": "full dynamic tracking was not achieved; cleaning effectiveness and force control were not quantitatively evaluated; force or impedance control is future work"
+    }
+  },
+  "public_demonstration": {
+    "kind": "public post with a demonstration video by the prototype's developer",
+    "video_reviewed_in_this_packet": false,
+    "limit": "An edited demonstration cannot establish the absence of every off-camera intervention.",
+    "post_read": {
+      "when": "2026-09-28, about 16:26 BST",
+      "how": "web fetch of the public post during the preparation of this revision; the tool returns a summary with quotations, and no copy of the page is shipped",
+      "funder_as_quoted": "UK Research Partnership Investment Fund (UKRPIF)",
+      "also_quoted": "centre-based visual servoing"
+    },
+    "description_relayed_by_the_review_handoff": "The video shows physical brushing and differently oriented target set-ups, and its captions describe repeated cleaning and centre-based servoing."
+  },
+  "scope_limits": [
+    "no verified force setpoint, force-tracking accuracy or repeatability estimate",
+    "no quantitative cleaning effectiveness",
+    "no continuous dynamic tracking",
+    "no general deployment safety qualification",
+    "whiteboard surrogate; glass untested"
+  ],
+  "used_by": [
+    "catalogue_r4/CANDIDATE_MAPPING_R4.json: profile UR5_whiteboard_detection and human_roles_by_mode",
+    "records/CASE_CAPABILITY_RECORDS.json: UR5-01, UR5-08, UR5-12, UR5-13"
+  ],
+  "later_correction": "See records/UR5_OPERATION_CONFIRMATION_R37.json for a summary of the developer's answers about the operating sequence and its limitations.",
+  "public_summary": "This record preserves the earlier account used by the catalogue, including its uncertainties. The original account is held privately by the authors. The later summary of the developer's answers in records/UR5_OPERATION_CONFIRMATION_R37.json takes precedence where the accounts differ."
+}

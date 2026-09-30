@@ -1,0 +1,395 @@
+{
+  "controls": {
+    "overlay": "CONTROLS_REPRODUCED",
+    "source": "point_force_first_group_r1_results_review_20260927/CONTROL_REPRODUCTION.json"
+  },
+  "method_check_on_7N_controls": {
+    "A": {
+      "force_max": {
+        "extracted": 0.2148597375311283,
+        "frozen": null,
+        "note": "not recorded in the frozen profile",
+        "ok": true
+      },
+      "force_mean": {
+        "exact": false,
+        "extracted": 7.001171039743358,
+        "frozen": 7.001171,
+        "ok": true
+      },
+      "force_rmse": {
+        "exact": false,
+        "extracted": 0.048504536543857515,
+        "frozen": 0.048505,
+        "ok": true
+      },
+      "path": {
+        "exact": false,
+        "extracted": 68.28741513255275,
+        "frozen": 68.2874,
+        "ok": true
+      },
+      "service": {
+        "exact": true,
+        "extracted": 93.75,
+        "frozen": 93.75,
+        "ok": true
+      },
+      "target": {
+        "exact": false,
+        "extracted": 0.9825339361870162,
+        "frozen": 0.982534,
+        "ok": true
+      }
+    },
+    "B": {
+      "force_max": {
+        "exact": true,
+        "extracted": 0.22620939123324568,
+        "frozen": 0.22620939123324568,
+        "ok": true
+      },
+      "force_mean": {
+        "exact": true,
+        "extracted": 7.005952743600581,
+        "frozen": 7.005952743600581,
+        "ok": true
+      },
+      "force_rmse": {
+        "exact": false,
+        "extracted": 0.04809722559542734,
+        "frozen": 0.048097225595427354,
+        "ok": true
+      },
+      "path": {
+        "exact": true,
+        "extracted": 71.51866766272262,
+        "frozen": 71.51866766272262,
+        "ok": true
+      },
+      "service": {
+        "exact": true,
+        "extracted": 99.125,
+        "frozen": 99.125,
+        "ok": true
+      },
+      "target": {
+        "exact": true,
+        "extracted": 1.0962853346056713,
+        "frozen": 1.0962853346056713,
+        "ok": true
+      }
+    },
+    "C": {
+      "force_max": {
+        "exact": true,
+        "extracted": 0.2412338925507811,
+        "frozen": 0.2412338925507811,
+        "ok": true
+      },
+      "force_mean": {
+        "exact": false,
+        "extracted": 7.001219009601487,
+        "frozen": 7.001219009601492,
+        "ok": true
+      },
+      "force_rmse": {
+        "exact": false,
+        "extracted": 0.05180726394773963,
+        "frozen": 0.05180726394773968,
+        "ok": true
+      },
+      "path": {
+        "exact": true,
+        "extracted": 67.77074921074785,
+        "frozen": 67.77074921074785,
+        "ok": true
+      },
+      "service": {
+        "exact": true,
+        "extracted": 93.875,
+        "frozen": 93.875,
+        "ok": true
+      },
+      "target": {
+        "exact": true,
+        "extracted": 1.1084879605507887,
+        "frozen": 1.1084879605507887,
+        "ok": true
+      }
+    },
+    "D": {
+      "force_max": {
+        "exact": true,
+        "extracted": 0.34485120590670704,
+        "frozen": 0.34485120590670704,
+        "ok": true
+      },
+      "force_mean": {
+        "exact": false,
+        "extracted": 7.004439106798884,
+        "frozen": 7.004439106798887,
+        "ok": true
+      },
+      "force_rmse": {
+        "exact": true,
+        "extracted": 0.04794851230404908,
+        "frozen": 0.04794851230404908,
+        "ok": true
+      },
+      "path": {
+        "exact": true,
+        "extracted": 70.1532426135274,
+        "frozen": 70.1532426135274,
+        "ok": true
+      },
+      "service": {
+        "exact": true,
+        "extracted": 95.75,
+        "frozen": 95.75,
+        "ok": true
+      },
+      "target": {
+        "exact": true,
+        "extracted": 4.12910298134153,
+        "frozen": 4.12910298134153,
+        "ok": true
+      }
+    }
+  },
+  "records": {
+    "G1-8N-CONDITIONS": {
+      "dimension": "surfaces_conditions_tested",
+      "quantity_definition": "Original supported wall, external camera, scripted POINT then OKAY, preauthorised panel, 5 ms, right setpoint 8 N and left setpoint 7 N at the four known sites; no finer timestep, repeat or other force at 8 N.",
+      "status": "SIMULATED"
+    },
+    "G1-8N-FINAL-HOLD": {
+      "dimension": "final_hold_completion",
+      "quantity_definition": "Unchanged ordinary final-hold verdict with the own-state latches; the 1e-5 rad range screen is descriptive.",
+      "status": "SIMULATED"
+    },
+    "G1-8N-FORCE": {
+      "dimension": "contact_force_regulation",
+      "quantity_definition": "Right (active) pad normal force over the declared windows, as error to the profile's own recorded setpoint (8 N): W1 mean and RMS error gate the cell; W2 whole-circle extremes and W3 final-hold mean are recorded beside them. Mean/RMS bounds are window statistics, not a pointwise force band. Left (idle) pad setpoint 7 N; its measured force is an outcome.",
+      "status": "SIMULATED"
+    },
+    "G1-8N-SERVICE": {
+      "dimension": "motion_service_during_wipe",
+      "quantity_definition": "Unchanged ordinary pilot service and qualified-travel measures over the declared 800-sample window.",
+      "status": "SIMULATED"
+    }
+  },
+  "scope": "Exact-site 8 N capability records of the supported, fixed-root G1 simulation from the first force group (release ed41306f..., return archive c6b33e7a..., results review seal dc4a8d88...). One deterministic run per site at 8 N, 5 ms only; matched 7 N controls reproduced their pinned records exactly. Not a maximum, map, requirement, physical capability, cross-robot choice or optimisation result.",
+  "sites": {
+    "A": {
+      "W1_right": {
+        "maximum_abs_error_n": 0.2160272835398871,
+        "maximum_n": 8.216027283539887,
+        "mean_n": 8.00103008393198,
+        "minimum_n": 7.875990733069807,
+        "rms_error_n": 0.05479307667766278
+      },
+      "W2_right_whole_circle": {
+        "maximum_abs_error_n": 0.5045521702974725,
+        "maximum_n": 8.504552170297472,
+        "mean_n": 7.9960792502243585,
+        "minimum_n": 7.6787357704654795,
+        "rms_error_n": 0.08024731670934591
+      },
+      "W3_right_final_hold": {
+        "maximum_n": 8.002885222432578,
+        "mean_n": 8.000896011858798,
+        "minimum_n": 7.999816536904239,
+        "rms_error_n": 0.0010365712406766
+      },
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING",
+      "final_range_limiting_joint": "right_wrist_pitch_joint",
+      "final_studied_position_range_max_rad": 9.119510650634766e-06,
+      "job": "point_right_dt5_force_a_08n",
+      "left_means_n": {
+        "W1": 6.999917440426027,
+        "W3": 7.00000053830066
+      },
+      "left_setpoint_n": 7.0,
+      "panel_margin_m": 0.05915203498099991,
+      "preconditions": {
+        "confirmation": "POINT then OKAY (scripted virtual hand); confirmation_required true",
+        "contact_area": "planned and achieved right-pad footprint inside the preauthorised panel (achieved margin 0.059152 m)",
+        "live_checks_at_request_time": "valid_input, visible_target, path, contact_authorized (unchanged selector live checks)",
+        "visibility": "the declared marker selected in the external camera frame before motion; target error 0.982534 mm"
+      },
+      "profile": "G1_A_8N",
+      "qualified_travel_mm": 66.8392314823505,
+      "raw_request_max_n_by_side": [
+        8.075341397455613,
+        7.058931360812196
+      ],
+      "right_setpoint_n": 8.0,
+      "service_percent": 92.875,
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_a_08n_CHECKS.json",
+      "source_sha256": "ceac0237dd7195ce46e7d188ab79eada413a7f1537ff7034be4f69e13e807550",
+      "status": "PASS_AT_SETTING",
+      "target_error_mm": 0.9825339361870162,
+      "timestep_s": 0.005
+    },
+    "B": {
+      "W1_right": {
+        "maximum_abs_error_n": 0.2704208753530608,
+        "maximum_n": 8.27042087535306,
+        "mean_n": 8.006605302706596,
+        "minimum_n": 7.767242534557283,
+        "rms_error_n": 0.05448105891526277
+      },
+      "W2_right_whole_circle": {
+        "maximum_abs_error_n": 0.38136592232247324,
+        "maximum_n": 8.381365922322473,
+        "mean_n": 8.0015384968413,
+        "minimum_n": 7.739632125168555,
+        "rms_error_n": 0.06717283174988026
+      },
+      "W3_right_final_hold": {
+        "maximum_n": 8.006304144864151,
+        "mean_n": 8.002602808090938,
+        "minimum_n": 8.00040853023529,
+        "rms_error_n": 0.0029100172525145704
+      },
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING",
+      "final_range_limiting_joint": "right_wrist_pitch_joint",
+      "final_studied_position_range_max_rad": 1.2636184692382812e-05,
+      "job": "point_right_dt5_force_b_08n",
+      "left_means_n": {
+        "W1": 7.000004334996964,
+        "W3": 7.000005543639673
+      },
+      "left_setpoint_n": 7.0,
+      "panel_margin_m": 0.05674869246896833,
+      "preconditions": {
+        "confirmation": "POINT then OKAY (scripted virtual hand); confirmation_required true",
+        "contact_area": "planned and achieved right-pad footprint inside the preauthorised panel (achieved margin 0.056749 m)",
+        "live_checks_at_request_time": "valid_input, visible_target, path, contact_authorized (unchanged selector live checks)",
+        "visibility": "the declared marker selected in the external camera frame before motion; target error 1.096285 mm"
+      },
+      "profile": "G1_B_8N",
+      "qualified_travel_mm": 70.52243833241944,
+      "raw_request_max_n_by_side": [
+        8.072477822306153,
+        7.058931360812196
+      ],
+      "right_setpoint_n": 8.0,
+      "service_percent": 99.125,
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_b_08n_CHECKS.json",
+      "source_sha256": "a18541d6f71621ddf5740383a3ea043d11387a2534beac6784694d5cc557cccc",
+      "status": "PASS_AT_SETTING",
+      "target_error_mm": 1.0962853346056713,
+      "timestep_s": 0.005
+    },
+    "C": {
+      "W1_right": {
+        "maximum_abs_error_n": 0.24088058995926076,
+        "maximum_n": 8.24088058995926,
+        "mean_n": 8.00090525764998,
+        "minimum_n": 7.876094859307983,
+        "rms_error_n": 0.05491983449071389
+      },
+      "W2_right_whole_circle": {
+        "maximum_abs_error_n": 0.5987040214948962,
+        "maximum_n": 8.598704021494896,
+        "mean_n": 7.995394839044102,
+        "minimum_n": 7.695995879249267,
+        "rms_error_n": 0.08976771996905852
+      },
+      "W3_right_final_hold": {
+        "maximum_n": 8.007017374045404,
+        "mean_n": 8.003406780803598,
+        "minimum_n": 8.000945329678656,
+        "rms_error_n": 0.0037784714886021442
+      },
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING",
+      "final_range_limiting_joint": "right_wrist_pitch_joint",
+      "final_studied_position_range_max_rad": 8.58306884765625e-06,
+      "job": "point_right_dt5_force_c_08n",
+      "left_means_n": {
+        "W1": 6.999905894183524,
+        "W3": 6.999974967016027
+      },
+      "left_setpoint_n": 7.0,
+      "panel_margin_m": 0.058270914883305935,
+      "preconditions": {
+        "confirmation": "POINT then OKAY (scripted virtual hand); confirmation_required true",
+        "contact_area": "planned and achieved right-pad footprint inside the preauthorised panel (achieved margin 0.058271 m)",
+        "live_checks_at_request_time": "valid_input, visible_target, path, contact_authorized (unchanged selector live checks)",
+        "visibility": "the declared marker selected in the external camera frame before motion; target error 1.108488 mm"
+      },
+      "profile": "G1_C_8N",
+      "qualified_travel_mm": 66.15982801616111,
+      "raw_request_max_n_by_side": [
+        8.078999105616962,
+        7.058931360812196
+      ],
+      "right_setpoint_n": 8.0,
+      "service_percent": 93.0,
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_c_08n_CHECKS.json",
+      "source_sha256": "2c889d823ea943d4761d21ebcd6b0955fdbcd24831c9a71abee5b8ab10b2f047",
+      "status": "PASS_AT_SETTING",
+      "target_error_mm": 1.1084879605507887,
+      "timestep_s": 0.005
+    },
+    "D": {
+      "W1_right": {
+        "maximum_abs_error_n": 0.3939047971025502,
+        "maximum_n": 8.39390479710255,
+        "mean_n": 8.004308058340849,
+        "minimum_n": 7.853492030788175,
+        "rms_error_n": 0.04859991968131821
+      },
+      "W2_right_whole_circle": {
+        "maximum_abs_error_n": 0.3939047971025502,
+        "maximum_n": 8.39390479710255,
+        "mean_n": 7.998665840521275,
+        "minimum_n": 7.7706270734151985,
+        "rms_error_n": 0.06462713097074836
+      },
+      "W3_right_final_hold": {
+        "maximum_n": 7.998741865162322,
+        "mean_n": 7.995686013437325,
+        "minimum_n": 7.991052389150119,
+        "rms_error_n": 0.004780244788305362
+      },
+      "capability": "CAPABILITY_RECORD_AT_THIS_SITE_AND_SETTING",
+      "final_range_limiting_joint": "right_wrist_yaw_joint",
+      "final_studied_position_range_max_rad": 6.4373016357421875e-06,
+      "job": "point_right_dt5_force_d_08n",
+      "left_means_n": {
+        "W1": 7.000019679078187,
+        "W3": 6.999983723205755
+      },
+      "left_setpoint_n": 7.0,
+      "panel_margin_m": 0.05930674170218908,
+      "preconditions": {
+        "confirmation": "POINT then OKAY (scripted virtual hand); confirmation_required true",
+        "contact_area": "planned and achieved right-pad footprint inside the preauthorised panel (achieved margin 0.059307 m)",
+        "live_checks_at_request_time": "valid_input, visible_target, path, contact_authorized (unchanged selector live checks)",
+        "visibility": "the declared marker selected in the external camera frame before motion; target error 4.129103 mm"
+      },
+      "profile": "G1_D_8N",
+      "qualified_travel_mm": 69.32024383200728,
+      "raw_request_max_n_by_side": [
+        8.072477822306153,
+        7.058931360812196
+      ],
+      "right_setpoint_n": 8.0,
+      "service_percent": 95.25,
+      "source": "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_d_08n_CHECKS.json",
+      "source_sha256": "aa62e8984109a07e3aa3a4c3d7e3d13e96bc550bb11db561d3dd73cba042ce47",
+      "status": "PASS_AT_SETTING",
+      "target_error_mm": 4.12910298134153,
+      "timestep_s": 0.005
+    }
+  },
+  "source_pins": {
+    "point_force_first_group_r1_release_20260927/point_force_first_group_r1/point_spec.py": "08e7a7a8c0e9a010a787f84efb006435d7d037b131563ec43c0208e4ebfbf52d",
+    "point_force_first_group_r1_results_review_20260927/CONTROL_REPRODUCTION.json": "6214e590cdbe711836659d07a2f0565d3ebfb70f4280e24417354d5111bae46b",
+    "point_force_first_group_r1_results_review_20260927/RESULTS_SUMMARY.json": "8b236f5d632390df090c8212f8a6a80b0826851264050fe4ad1a6b3495fa84d4",
+    "point_force_first_group_r1_results_review_20260927/REVIEW.md": "2d7405700cf46823c6f50170b91aac5dbb027cf05335ef64c46afa2656d6aca1"
+  }
+}

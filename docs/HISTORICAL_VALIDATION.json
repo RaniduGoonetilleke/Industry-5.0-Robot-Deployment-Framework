@@ -1,0 +1,969 @@
+{
+  "scope": "Historical reports carried unchanged as JSON objects; not rerun by reproduce_all.py.",
+  "reports": {
+    "analysis/FUZZ_INVARIANTS.json": {
+      "original_sha256": "442c9b8e75f28be68b523fffd750873e311d4496b80237d8e22b160bfdf211ab",
+      "record": {
+        "cases": 60000,
+        "decisions": {
+          "ASK": 28,
+          "CONFIRM": 677,
+          "REFUSE": 12614,
+          "SELECT": 147,
+          "WAIT": 288,
+          "WITHHOLD": 46246
+        },
+        "first_violations": [],
+        "metric_outcomes": {
+          "FAIL": 1714,
+          "PASS": 3051,
+          "UNKNOWN": 7320
+        },
+        "requests_with_metric_requirements": 23960,
+        "seed": 20260926,
+        "violations": 0
+      }
+    },
+    "analysis/FUZZ_METRIC_SENSITIVITY.json": {
+      "original_sha256": "0d124de2bef219e7860d8584bddec7736b0688151e72071a2b3f63a5b52e5401",
+      "record": {
+        "mutants": {
+          "all_unresolved": {
+            "change": "every metric requirement left unresolved",
+            "detected": true,
+            "first_violations": [
+              [
+                "I5",
+                "WITHHOLD",
+                "WAIT"
+              ],
+              [
+                "I5",
+                "WITHHOLD",
+                "WITHHOLD"
+              ],
+              [
+                "I5",
+                "WITHHOLD",
+                "REFUSE"
+              ]
+            ],
+            "fuzz_exit_code": 1,
+            "replace": "if len(matches) != 1:",
+            "violations": 579,
+            "with": "if True:"
+          },
+          "bound": {
+            "change": "a recorded metric outside the requested bound is ignored",
+            "detected": true,
+            "first_violations": [
+              [
+                "I5",
+                "WAIT",
+                "WAIT"
+              ],
+              [
+                "I2",
+                "G1_A_7N"
+              ],
+              [
+                "I5",
+                "WITHHOLD",
+                "WITHHOLD"
+              ]
+            ],
+            "fuzz_exit_code": 1,
+            "replace": "failures.append(\"recorded metric outside requested bound:\" + label)",
+            "violations": 557,
+            "with": "pass"
+          },
+          "inclusive": {
+            "change": "bounds made exclusive (a value equal to the bound fails)",
+            "detected": true,
+            "first_violations": [
+              [
+                "I5",
+                "REFUSE",
+                "WITHHOLD"
+              ],
+              [
+                "I3",
+                "refuse"
+              ],
+              [
+                "I5",
+                "REFUSE",
+                "WITHHOLD"
+              ]
+            ],
+            "fuzz_exit_code": 1,
+            "replace": "if (value < bound) if requirement[\"comparison\"] == \"value_at_least\" else (value > bound):",
+            "violations": 692,
+            "with": "if (value <= bound) if requirement[\"comparison\"] == \"value_at_least\" else (value >= bound):"
+          },
+          "missing": {
+            "change": "a missing or ambiguous metric is treated as satisfied",
+            "detected": true,
+            "first_violations": [
+              [
+                "I5",
+                "CONFIRM",
+                "WITHHOLD"
+              ],
+              [
+                "I1",
+                "CONFIRM"
+              ],
+              [
+                "I5",
+                "CONFIRM",
+                "WITHHOLD"
+              ]
+            ],
+            "fuzz_exit_code": 1,
+            "replace": "unknown.append(\"missing or ambiguous metric:\" + label)",
+            "violations": 928,
+            "with": "pass"
+          },
+          "side_ignored": {
+            "change": "the side field ignored when matching a definition",
+            "detected": true,
+            "first_violations": [
+              [
+                "I5",
+                "CONFIRM",
+                "WITHHOLD"
+              ],
+              [
+                "I1",
+                "CONFIRM"
+              ],
+              [
+                "I5",
+                "REFUSE",
+                "WITHHOLD"
+              ]
+            ],
+            "fuzz_exit_code": 1,
+            "replace": "matches = [m for m in c[\"metrics\"] if _definition(m) == definition]",
+            "violations": 56,
+            "with": "matches = [m for m in c[\"metrics\"] if dict(_definition(m), side=0) == dict(definition, side=0)]"
+          },
+          "signed_magnitude": {
+            "change": "a magnitude bound compared with the signed value",
+            "detected": true,
+            "first_violations": [
+              [
+                "I5",
+                "CONFIRM",
+                "REFUSE"
+              ],
+              [
+                "I1",
+                "CONFIRM"
+              ]
+            ],
+            "fuzz_exit_code": 1,
+            "replace": "value = abs(value)",
+            "violations": 2,
+            "with": "value = value"
+          }
+        },
+        "purpose": "sensitivity of repro/fuzz_invariants.py to single changes of the metric guard",
+        "selector_under_test": "temporary copies only; the packet selector.py is unchanged"
+      }
+    },
+    "analysis/REPRO_BEFORE_AFTER.json": {
+      "original_sha256": "eb97506e1f6c55ee9170736c4ed88c52ea55e9684d887b9ac49229ceee5ac1ca",
+      "record": {
+        "mismatches": [],
+        "rows": {
+          "F1a_hazard_at_A_registry_A_only": {
+            "parent": "REFUSE",
+            "parent_required": "REFUSE",
+            "repair": "REFUSE",
+            "repair_required": "REFUSE"
+          },
+          "F1a_hazard_at_A_registry_A_to_D": {
+            "parent": "WITHHOLD",
+            "parent_required": "WITHHOLD",
+            "repair": "REFUSE",
+            "repair_required": "REFUSE"
+          },
+          "F1b_detection_registry_empty": {
+            "parent": "WITHHOLD",
+            "parent_required": "WITHHOLD",
+            "repair": "WITHHOLD",
+            "repair_required": "WITHHOLD"
+          },
+          "F1b_detection_registry_wiping_only": {
+            "parent": "REFUSE",
+            "parent_required": "REFUSE",
+            "repair": "WITHHOLD",
+            "repair_required": "WITHHOLD"
+          },
+          "F1c_untested_requested_mode": {
+            "parent": "REFUSE",
+            "parent_required": "REFUSE",
+            "repair": "WITHHOLD",
+            "repair_required": "WITHHOLD"
+          },
+          "F2_G1_busy": {
+            "parent": [
+              "CONFIRM",
+              "G1_D_7N"
+            ],
+            "parent_required": [
+              "CONFIRM",
+              "G1_D_7N"
+            ],
+            "repair": [
+              "WAIT",
+              null
+            ],
+            "repair_required": [
+              "WAIT",
+              null
+            ]
+          },
+          "F3_signed_mean_minus_0.5_vs_0.1": {
+            "parent": "CONFIRM",
+            "parent_required": "CONFIRM",
+            "repair": "REFUSE",
+            "repair_required": "REFUSE"
+          },
+          "F4_nested_1_vs_True": {
+            "parent": "CONFIRM",
+            "parent_required": "CONFIRM",
+            "repair": "WITHHOLD",
+            "repair_required": "WITHHOLD"
+          },
+          "F6_unhashable": {
+            "parent": "TypeError",
+            "parent_required": "TypeError",
+            "repair": "ValueError",
+            "repair_required": "ValueError"
+          },
+          "F7_UR5_evidence_level": {
+            "parent": null,
+            "parent_required": null,
+            "repair": "physical-report",
+            "repair_required": "physical-report"
+          },
+          "F8_A_basis_differs_from_B": {
+            "parent": false,
+            "parent_required": false,
+            "repair": true,
+            "repair_required": true
+          },
+          "R2_1_C7_only": {
+            "parent": "REFUSE",
+            "parent_required": "REFUSE",
+            "repair": "REFUSE",
+            "repair_required": "REFUSE"
+          },
+          "R2_1_C7_plus_synthetic_C10N": {
+            "parent": "WITHHOLD",
+            "parent_required": "WITHHOLD",
+            "repair": "REFUSE",
+            "repair_required": "REFUSE"
+          }
+        }
+      }
+    },
+    "analysis/VALIDATION.json": {
+      "original_sha256": "4a20af8a46d97df1131f6204cfc8f0d63bd75d42b38ea52745aa471a0f78dee8",
+      "record": {
+        "build_bytes_by_hash_seed": {
+          "0": {
+            "CANDIDATE_MAPPING.json": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
+            "DEVELOPMENT_EXAMPLES.json": "a65f56cf0b115d48e8ed05e0afb5b27882bce2a6cda9212c23f792aa4abf3fe0"
+          },
+          "1": {
+            "CANDIDATE_MAPPING.json": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
+            "DEVELOPMENT_EXAMPLES.json": "a65f56cf0b115d48e8ed05e0afb5b27882bce2a6cda9212c23f792aa4abf3fe0"
+          },
+          "2": {
+            "CANDIDATE_MAPPING.json": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
+            "DEVELOPMENT_EXAMPLES.json": "a65f56cf0b115d48e8ed05e0afb5b27882bce2a6cda9212c23f792aa4abf3fe0"
+          },
+          "3": {
+            "CANDIDATE_MAPPING.json": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
+            "DEVELOPMENT_EXAMPLES.json": "a65f56cf0b115d48e8ed05e0afb5b27882bce2a6cda9212c23f792aa4abf3fe0"
+          }
+        },
+        "build_bytes_deterministic": true,
+        "decision_benefit_established": false,
+        "mutation_count": 82,
+        "mutations": [
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "ignore_shared_hazard",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 6,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "ignore_exact_force",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 11,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "accept_unknown_evidence",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "ignore_mode_requirement",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "ignore_domain_mismatch",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 7,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "ignore_metric_bound",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 11,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "compare_metric_quantity_only",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "accept_stale_choice",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 39,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "skip_confirmation_binding",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 28,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "empty_applicable_set_means_impossible",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 3,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "coerce_setting_types",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 3,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "ignore_busy_platform",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 5,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "arbitrary_tie_break",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "drop_preference_justification",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 17,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R1_target_mismatch_stays_applicable",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 4,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R2_ignore_platform_safety",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R2_unknown_availability_as_available",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R3_ignore_magnitude_comparison",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R4_shallow_nested_equality",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R4_signed_zero_equal",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R5_unhashable_type_error",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R5_non_json_type_error",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R5_huge_integer_overflow",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R6_ignore_evidence_level",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R7_shared_gate_before_evaluation",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R8_mode_mismatch_refuses",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R9_one_token_for_both_kinds",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R9_digest_not_bound_to_pins",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R9_skipped_preference_untraced",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 3,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_shared_unknown_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_capability_mismatch_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_context_mismatch_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_missing_required_setting_accepted",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_confirmation_for_other_candidate_accepted",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 6,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_binding_ignores_assessment_fields",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 5,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_binding_ignores_request_force_metrics_settings",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_metric_bound_exclusive",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 3,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R3_lower_bound_inverted",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R3_lower_bound_exclusive",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_bool_counts_as_number",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_force_basis_not_required",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_non_wipe_force_metric_allowed",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 7,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_local_safety_ignored",
+            "returncode": 1,
+            "side_effect_errors": 1
+          },
+          {
+            "assertion_failures": 0,
+            "caught_by_assertion": true,
+            "converted_exceptions": 2,
+            "name": "P_preference_completeness_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_choice_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_handover_contact_path_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_priority_candidate_validation_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_live_inventory_superset_allowed",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_platform_inventory_superset_allowed",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_metric_ambiguity_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "P_duplicate_candidate_ids_allowed",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 6,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R10_setpoint_scope_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 11,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R10_settings_scope_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R10_level_scope_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R10_magnitude_bound_sign_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 3,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R12_depth_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "R3_2_dict_keys_subset",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_same_list_length_ignored",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_binding_ignores_evidence_level",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 3,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_binding_ignores_request_scope_fields",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_binding_ignores_allowed_targets",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_binding_ignores_accepted_levels",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_binding_ignores_priorities",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_binding_ignores_platforms",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_qualifiers_validation_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_empty_source_pins_allowed",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_source_pin_values_not_hex",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_trace_basis_swapped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_single_ready_trace_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_incomplete_order_trace_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_excluded_choice_reason_merged",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_skip_trace_not_applicable_mislabelled",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_mode_priority_subset_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_force_minimum_positive_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_force_min_le_max_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_candidate_nonwipe_force_allowed",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 4,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_declaration_candidate_id_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_declaration_binding_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 2,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_candidate_positive_setpoint_dropped",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_snapshot_id_text_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_evidence_ids_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          },
+          {
+            "assertion_failures": 1,
+            "caught_by_assertion": true,
+            "converted_exceptions": 0,
+            "name": "Q_priority_basis_type_unchecked",
+            "returncode": 1,
+            "side_effect_errors": 0
+          }
+        ],
+        "mutations_caught": 82,
+        "native_trials": 0,
+        "source_sha256": {
+          "build_examples.py": "b18f519af75684165c3554c775080362ca5f2942b8e0cbc8a51cd23593290539",
+          "selector.py": "8aae7ad86fa494ca450af9ecb6a8c26963ee1e5494f0f1efe9d341209e3d2e17",
+          "test_selector.py": "922ce526e9bef50cb31ddcb98e38000a9d93fb1202690c9543bc7868542bd541"
+        },
+        "status": "LOCAL_VERIFICATION_ONLY",
+        "test_returncode": 0,
+        "tests_ran": 67
+      }
+    }
+  }
+}

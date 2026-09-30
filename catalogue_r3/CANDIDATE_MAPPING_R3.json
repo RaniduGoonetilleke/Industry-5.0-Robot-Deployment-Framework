@@ -1,0 +1,953 @@
+{
+  "native_dispatch": false,
+  "profiles": [
+    {
+      "assessment_basis": "Location A, the anchor, run 1 (direct-confirmation release). r19 part_B evidence-stage assessment. A single deterministic observation. Its evidence was reused after a retrospective check of its planned footprint against the later spatial panel, which was not a pre-run input; its trajectory matches the latch-diagnostic run in every shared reduced field, so it adds no varied-scene or repeat evidence; A lies 20 mm from C. Not a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-10",
+        "G1-12",
+        "G1-15",
+        "G1-19"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "3c40bee37730115465fc5222e831d0604ca50a3b2e7afbf8612680f0cedb9478",
+      "force_setpoint_n": 7.0,
+      "id": "G1_A_7N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.048505,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 7.001171,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 0.982534,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 93.75,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 68.2874,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+        "single deterministic observation; no repeated trials; no claim between tested locations",
+        "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+        "same-host replays matched the worker reports; strict replays on a second machine refused",
+        "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+        "run 1 (direct-confirmation release)",
+        "evidence reused after a retrospective footprint check against the later spatial panel (not a pre-run input)",
+        "trajectory matches the latch-diagnostic run in every shared reduced field; no varied-scene or repeat evidence",
+        "20 mm from C",
+        "no windowed maximum force error reported in the accepted review"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+        "point_direct_confirm_pilot_r1_release_20260925/point_direct_confirm_pilot_r1/point_spec.py": "fbf22b4c9c018e06014372738b12ca8811c92a8f664be0840b543d085f04013a",
+        "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617"
+      },
+      "target": "A"
+    },
+    {
+      "assessment_basis": "Location B (+8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; not a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-10",
+        "G1-12",
+        "G1-15",
+        "G1-19"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "b145bfc17c44483fd2af0bb916c8d24d24f009d3a112dc60104af9efaaf81938",
+      "force_setpoint_n": 7.0,
+      "id": "G1_B_7N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.048097225595427354,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.22620939123324568,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 7.005952743600581,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 1.0962853346056713,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 99.125,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 71.51866766272262,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+        "single deterministic observation; no repeated trials; no claim between tested locations",
+        "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+        "same-host replays matched the worker reports; strict replays on a second machine refused",
+        "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+        "run 2 (spatial release)",
+        "final right-wrist-pitch range 1.1920928955e-5 rad, above the earlier 1e-5 rad diagnostic screen; ordinary hold rule passes"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+        "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+        "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+      },
+      "target": "B"
+    },
+    {
+      "assessment_basis": "Location C (-8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location, 20 mm from A; not a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-10",
+        "G1-12",
+        "G1-15",
+        "G1-19"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "b145bfc17c44483fd2af0bb916c8d24d24f009d3a112dc60104af9efaaf81938",
+      "force_setpoint_n": 7.0,
+      "id": "G1_C_7N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.05180726394773968,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.2412338925507811,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 7.001219009601492,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 1.1084879605507887,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 93.875,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 67.77074921074785,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+        "single deterministic observation; no repeated trials; no claim between tested locations",
+        "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+        "same-host replays matched the worker reports; strict replays on a second machine refused",
+        "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+        "run 2 (spatial release)",
+        "20 mm from A",
+        "marker 11.90 % hidden in the native detector frame"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+        "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+        "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+      },
+      "target": "C"
+    },
+    {
+      "assessment_basis": "Location D (+8 cm z), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; the marker was 58.65 % hidden in the native detector frame and the target error was 4.129 mm; not a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-10",
+        "G1-12",
+        "G1-15",
+        "G1-19"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "b145bfc17c44483fd2af0bb916c8d24d24f009d3a112dc60104af9efaaf81938",
+      "force_setpoint_n": 7.0,
+      "id": "G1_D_7N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.04794851230404908,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.34485120590670704,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 7.004439106798887,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 4.12910298134153,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 95.75,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 70.1532426135274,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+        "single deterministic observation; no repeated trials; no claim between tested locations",
+        "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+        "same-host replays matched the worker reports; strict replays on a second machine refused",
+        "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+        "run 2 (spatial release)",
+        "marker 58.65 % hidden in the native detector frame; target error 4.129 mm, the largest of the four"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+        "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+        "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+      },
+      "target": "D"
+    },
+    {
+      "assessment_basis": "r19 part_B qualitative physical demonstration; no organic fatigue, second deliberate confirmation, measured latency or force-regulation guarantee",
+      "capability": "gesture_handover",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "published_single_operator_registered_cubes",
+      "domain": "physical",
+      "evidence_ids": [
+        "UR3-02",
+        "UR3-11",
+        "UR3-18"
+      ],
+      "evidence_level": "physical-published",
+      "evidence_sha256": "28d4fce6be674d014a0343ec497b0d5cb23685bbfe9c4522db815908d82f016c",
+      "force_setpoint_n": null,
+      "id": "UR3_registered_handover",
+      "metrics": [],
+      "mode": "explicit_command_confirmation_STOP",
+      "platform": "UR3",
+      "qualifiers": [
+        "record status: DEMONSTRATED-QUALITATIVE",
+        "one operator; registered-cube fetch-and-deliver with handover",
+        "transitions verified by live observation of the RViz state display and Gazebo behaviour, so not hardware-only (UR3-02)",
+        "no completion count or success rate reported (UR3-18); no per-transition log (UR3-02)",
+        "fatigue bands and soft-stop on injected inputs",
+        "second confirmation of a fatigued handover not established as a separate action"
+      ],
+      "settings": {
+        "task": "published_registered_cube_handover"
+      },
+      "source_pins": {
+        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
+      },
+      "target": "registered_cube"
+    },
+    {
+      "assessment_basis": "r19 part_B report-level assessment; not independently reproduced, not dynamic tracking, contact execution or interface integration",
+      "capability": "target_detection",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": false,
+      "context": "reported_indoor_whiteboard_taped_target",
+      "domain": "physical",
+      "evidence_ids": [
+        "UR5-03",
+        "UR5-15"
+      ],
+      "evidence_level": "physical-report",
+      "evidence_sha256": "28d4fce6be674d014a0343ec497b0d5cb23685bbfe9c4522db815908d82f016c",
+      "force_setpoint_n": null,
+      "id": "UR5_whiteboard_detection",
+      "metrics": [],
+      "mode": "reported_static_detection",
+      "platform": "UR5",
+      "qualifiers": [
+        "record status: REPORTED",
+        "whiteboard surrogate with a taped frame; glass untested",
+        "evaluation set not named; no held-out test",
+        "not independently reproduced; no logs"
+      ],
+      "settings": {
+        "task": "reported_static_whiteboard_detection"
+      },
+      "source_pins": {
+        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
+      },
+      "target": "taped_region"
+    },
+    {
+      "assessment_basis": "Location A at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-8N-FORCE",
+        "G1-8N-SERVICE",
+        "G1-8N-FINAL-HOLD",
+        "G1-8N-CONDITIONS"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "a62b5a25e2e7f1fc33e07de8a82d255905f5b220f7135f01429ed53d91d5ad7c",
+      "force_setpoint_n": 8.0,
+      "id": "G1_A_8N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.05479307667766278,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.2160272835398871,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 8.00103008393198,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 0.9825339361870162,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 92.875,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 66.8392314823505,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and the external simulated camera; no gesture recognition",
+        "single deterministic run at 8 N at this site; 5 ms only; no repeated, finer-timestep or intermediate-force evidence",
+        "right-pad setpoint 8 N; left-pad setpoint 7 N (force_target_n_by_pad in the pinned executed point_spec.py); measured left W1 mean 6.999917 N, W3 mean 7.000001 N",
+        "W1 mean/RMS are window statistics, not a pointwise band; whole-circle (W2) right-pad force 7.678736 to 8.504552 N",
+        "final-hold (W3) right-pad mean 8.000896 N; ordinary final-hold gate passes under the own-state latches",
+        "matched 7 N control at this site reproduced its pinned record exactly (CONTROLS_REPRODUCED)",
+        "official Brev replay matched the worker report; no full local replay claimed",
+        "maximum right-pad controller request 8.075341 N, below the unchanged 12 N stop; a request is not a measured force or a strength limit",
+        "first force group r1 (release ed41306f...; results review dc4a8d88...)",
+        "20 mm from C; A is the earlier fix-development location (its 7 N evidence repeats the latch-diagnostic setup)"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "point_force_first_group_r1_release_20260927/point_force_first_group_r1/point_spec.py": "08e7a7a8c0e9a010a787f84efb006435d7d037b131563ec43c0208e4ebfbf52d",
+        "point_force_first_group_r1_results_review_20260927/CONTROL_REPRODUCTION.json": "6214e590cdbe711836659d07a2f0565d3ebfb70f4280e24417354d5111bae46b",
+        "point_force_first_group_r1_results_review_20260927/RESULTS_SUMMARY.json": "8b236f5d632390df090c8212f8a6a80b0826851264050fe4ad1a6b3495fa84d4",
+        "point_force_first_group_r1_results_review_20260927/REVIEW.md": "2d7405700cf46823c6f50170b91aac5dbb027cf05335ef64c46afa2656d6aca1",
+        "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_a_08n_CHECKS.json": "ceac0237dd7195ce46e7d188ab79eada413a7f1537ff7034be4f69e13e807550"
+      },
+      "target": "A"
+    },
+    {
+      "assessment_basis": "Location B at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-8N-FORCE",
+        "G1-8N-SERVICE",
+        "G1-8N-FINAL-HOLD",
+        "G1-8N-CONDITIONS"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "5ec444283584dcf59157412ef35ead89caf680423bb227edcc5fb690ef40049b",
+      "force_setpoint_n": 8.0,
+      "id": "G1_B_8N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.05448105891526277,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.2704208753530608,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 8.006605302706596,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 1.0962853346056713,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 99.125,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 70.52243833241944,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and the external simulated camera; no gesture recognition",
+        "single deterministic run at 8 N at this site; 5 ms only; no repeated, finer-timestep or intermediate-force evidence",
+        "right-pad setpoint 8 N; left-pad setpoint 7 N (force_target_n_by_pad in the pinned executed point_spec.py); measured left W1 mean 7.000004 N, W3 mean 7.000006 N",
+        "W1 mean/RMS are window statistics, not a pointwise band; whole-circle (W2) right-pad force 7.739632 to 8.381366 N",
+        "final-hold (W3) right-pad mean 8.002603 N; ordinary final-hold gate passes under the own-state latches",
+        "matched 7 N control at this site reproduced its pinned record exactly (CONTROLS_REPRODUCED)",
+        "official Brev replay matched the worker report; no full local replay claimed",
+        "maximum right-pad controller request 8.072478 N, below the unchanged 12 N stop; a request is not a measured force or a strength limit",
+        "first force group r1 (release ed41306f...; results review dc4a8d88...)",
+        "final right-wrist-pitch range 1.2636184692e-05 rad, above the earlier 1e-5 rad diagnostic screen; ordinary hold rule passes"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "point_force_first_group_r1_release_20260927/point_force_first_group_r1/point_spec.py": "08e7a7a8c0e9a010a787f84efb006435d7d037b131563ec43c0208e4ebfbf52d",
+        "point_force_first_group_r1_results_review_20260927/CONTROL_REPRODUCTION.json": "6214e590cdbe711836659d07a2f0565d3ebfb70f4280e24417354d5111bae46b",
+        "point_force_first_group_r1_results_review_20260927/RESULTS_SUMMARY.json": "8b236f5d632390df090c8212f8a6a80b0826851264050fe4ad1a6b3495fa84d4",
+        "point_force_first_group_r1_results_review_20260927/REVIEW.md": "2d7405700cf46823c6f50170b91aac5dbb027cf05335ef64c46afa2656d6aca1",
+        "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_b_08n_CHECKS.json": "a18541d6f71621ddf5740383a3ea043d11387a2534beac6784694d5cc557cccc"
+      },
+      "target": "B"
+    },
+    {
+      "assessment_basis": "Location C at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-8N-FORCE",
+        "G1-8N-SERVICE",
+        "G1-8N-FINAL-HOLD",
+        "G1-8N-CONDITIONS"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "8e58dc5b593c71a5eb15e6697675df48a0813cd7a89631fb931ecf2d8a4f8c93",
+      "force_setpoint_n": 8.0,
+      "id": "G1_C_8N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.05491983449071389,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.24088058995926076,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 8.00090525764998,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 1.1084879605507887,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 93.0,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 66.15982801616111,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and the external simulated camera; no gesture recognition",
+        "single deterministic run at 8 N at this site; 5 ms only; no repeated, finer-timestep or intermediate-force evidence",
+        "right-pad setpoint 8 N; left-pad setpoint 7 N (force_target_n_by_pad in the pinned executed point_spec.py); measured left W1 mean 6.999906 N, W3 mean 6.999975 N",
+        "W1 mean/RMS are window statistics, not a pointwise band; whole-circle (W2) right-pad force 7.695996 to 8.598704 N",
+        "final-hold (W3) right-pad mean 8.003407 N; ordinary final-hold gate passes under the own-state latches",
+        "matched 7 N control at this site reproduced its pinned record exactly (CONTROLS_REPRODUCED)",
+        "official Brev replay matched the worker report; no full local replay claimed",
+        "maximum right-pad controller request 8.078999 N, below the unchanged 12 N stop; a request is not a measured force or a strength limit",
+        "first force group r1 (release ed41306f...; results review dc4a8d88...)",
+        "20 mm from A (A is the earlier fix-development location)"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "point_force_first_group_r1_release_20260927/point_force_first_group_r1/point_spec.py": "08e7a7a8c0e9a010a787f84efb006435d7d037b131563ec43c0208e4ebfbf52d",
+        "point_force_first_group_r1_results_review_20260927/CONTROL_REPRODUCTION.json": "6214e590cdbe711836659d07a2f0565d3ebfb70f4280e24417354d5111bae46b",
+        "point_force_first_group_r1_results_review_20260927/RESULTS_SUMMARY.json": "8b236f5d632390df090c8212f8a6a80b0826851264050fe4ad1a6b3495fa84d4",
+        "point_force_first_group_r1_results_review_20260927/REVIEW.md": "2d7405700cf46823c6f50170b91aac5dbb027cf05335ef64c46afa2656d6aca1",
+        "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_c_08n_CHECKS.json": "2c889d823ea943d4761d21ebcd6b0955fdbcd24831c9a71abee5b8ab10b2f047"
+      },
+      "target": "C"
+    },
+    {
+      "assessment_basis": "Location D at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "capability": "regulated_wipe",
+      "checks": {
+        "capability": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS"
+      },
+      "confirmation_required": true,
+      "context": "supported_original_wall_point_pilot",
+      "domain": "simulation",
+      "evidence_ids": [
+        "G1-8N-FORCE",
+        "G1-8N-SERVICE",
+        "G1-8N-FINAL-HOLD",
+        "G1-8N-CONDITIONS"
+      ],
+      "evidence_level": "simulation",
+      "evidence_sha256": "40e985853f18fd141b8950ea69651d014076a91daa983247a726562c0123affa",
+      "force_setpoint_n": 8.0,
+      "id": "G1_D_8N",
+      "metrics": [
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "RMSE",
+          "unit": "N",
+          "value": 0.04859991968131821,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "maximum_absolute",
+          "unit": "N",
+          "value": 0.3939047971025502,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "normal_force",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "mean",
+          "unit": "N",
+          "value": 8.004308058340849,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "in_plane_target_error",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "declared_target_marker",
+          "statistic": "single_selection",
+          "unit": "mm",
+          "value": 4.12910298134153,
+          "window": "selection_stage_detector_frame"
+        },
+        {
+          "quantity": "moving_service",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "task_rule_right_active_idle_left_maintained",
+          "statistic": "fraction_of_samples",
+          "unit": "percent",
+          "value": 95.25,
+          "window": "declared_4s_scored_window_800_samples"
+        },
+        {
+          "quantity": "qualified_travel",
+          "scope": "one_recorded_run_not_a_future_guarantee",
+          "side": "right_active_pad",
+          "statistic": "path_length",
+          "unit": "mm",
+          "value": 69.32024383200728,
+          "window": "declared_4s_scored_window_800_samples"
+        }
+      ],
+      "mode": "virtual_confirmation_then_bounded_wipe",
+      "platform": "G1",
+      "qualifiers": [
+        "record status: SIMULATED",
+        "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+        "scripted virtual hand (POINT then OKAY) and the external simulated camera; no gesture recognition",
+        "single deterministic run at 8 N at this site; 5 ms only; no repeated, finer-timestep or intermediate-force evidence",
+        "right-pad setpoint 8 N; left-pad setpoint 7 N (force_target_n_by_pad in the pinned executed point_spec.py); measured left W1 mean 7.000020 N, W3 mean 6.999984 N",
+        "W1 mean/RMS are window statistics, not a pointwise band; whole-circle (W2) right-pad force 7.770627 to 8.393905 N",
+        "final-hold (W3) right-pad mean 7.995686 N; ordinary final-hold gate passes under the own-state latches",
+        "matched 7 N control at this site reproduced its pinned record exactly (CONTROLS_REPRODUCED)",
+        "official Brev replay matched the worker report; no full local replay claimed",
+        "maximum right-pad controller request 8.072478 N, below the unchanged 12 N stop; a request is not a measured force or a strength limit",
+        "first force group r1 (release ed41306f...; results review dc4a8d88...)"
+      ],
+      "settings": {
+        "active_pad": "right",
+        "final_hold": "own_state_latches",
+        "idle_pad_force_n": 7.0,
+        "path": "site_specific_released_point_path",
+        "timestep_s": 0.005
+      },
+      "source_pins": {
+        "point_force_first_group_r1_release_20260927/point_force_first_group_r1/point_spec.py": "08e7a7a8c0e9a010a787f84efb006435d7d037b131563ec43c0208e4ebfbf52d",
+        "point_force_first_group_r1_results_review_20260927/CONTROL_REPRODUCTION.json": "6214e590cdbe711836659d07a2f0565d3ebfb70f4280e24417354d5111bae46b",
+        "point_force_first_group_r1_results_review_20260927/RESULTS_SUMMARY.json": "8b236f5d632390df090c8212f8a6a80b0826851264050fe4ad1a6b3495fa84d4",
+        "point_force_first_group_r1_results_review_20260927/REVIEW.md": "2d7405700cf46823c6f50170b91aac5dbb027cf05335ef64c46afa2656d6aca1",
+        "point_force_first_group_r1_results_review_20260927/point_right_dt5_force_d_08n_CHECKS.json": "aa62e8984109a07e3aa3a4c3d7e3d13e96bc550bb11db561d3dd73cba042ce47"
+      },
+      "target": "D"
+    }
+  ],
+  "scope": "Author-assessed, source-linked DEVELOPMENT mapping; source records are not parsed into truth. Proposed r3: the six r24 profiles unchanged, plus four exact-site 8 N G1 profiles from the accepted first force group return."
+}

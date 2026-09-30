@@ -1,0 +1,8 @@
+{
+  "contract": "Derived public candidate. These pinned files are not shipped because they carry local path strings or are executed release sources; their pinned SHA256 values are listed and they remain unchanged in the private archive. The tests report them as not verifiable from this package and verify every other pin.",
+  "omitted_pins": {
+    "point_force_first_group_r1_release_20260927/point_force_first_group_r1/point_spec.py": "08e7a7a8c0e9a010a787f84efb006435d7d037b131563ec43c0208e4ebfbf52d",
+    "point_force_first_group_r1_results_review_20260927/RESULTS_SUMMARY.json": "8b236f5d632390df090c8212f8a6a80b0826851264050fe4ad1a6b3495fa84d4",
+    "point_force_first_group_r1_results_review_20260927/REVIEW.md": "2d7405700cf46823c6f50170b91aac5dbb027cf05335ef64c46afa2656d6aca1"
+  }
+}

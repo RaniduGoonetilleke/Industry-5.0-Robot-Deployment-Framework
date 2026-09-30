@@ -1,0 +1,358 @@
+{
+  "label": "RETROSPECTIVE_RECONSTRUCTION",
+  "scope": "Reconstructed after the runs. The framework did not control the experiment. The reference program and the selector were both written after the run that tested B. The run was admitted by its reviewed release, so stage 1 reconstructs the admission checks and stage 2 was never an actual decision. Live facts and confirmations in stages 2 and 3 are synthetic software inputs.",
+  "sources": {
+    "register": {
+      "file": "analysis/CANDIDATE_MAPPING.json",
+      "sha256": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
+      "profiles": [
+        "G1_A_7N",
+        "G1_B_7N",
+        "G1_C_7N",
+        "G1_D_7N",
+        "UR3_registered_handover",
+        "UR5_whiteboard_detection"
+      ]
+    },
+    "trace": {
+      "file": "records/DECISION_TRACE.json",
+      "sha256": "8265ca72e8e23aa0d916971bcad31e8620c59fc3fb8fe478cf338ee80a1f9df8"
+    },
+    "selector_sha256": "922cb93fa1265a8cc50987812d3c062345b99aa2b676536173a68f21eef22d1e",
+    "reference_program_sha256": "85a890d2faefc2addc046f94b75c0f67440ffb84d24ff4416344cb7d48d22eef"
+  },
+  "request": {
+    "id": "owner_request_7_N_at_B",
+    "capability": "regulated_wipe",
+    "domain": "simulation",
+    "context": "supported_original_wall_point_pilot",
+    "allowed_targets": [
+      "B"
+    ],
+    "allowed_modes": [
+      "virtual_confirmation_then_bounded_wipe"
+    ],
+    "accepted_evidence_levels": [
+      "simulation"
+    ],
+    "force": {
+      "minimum_n": 7.0,
+      "maximum_n": 7.0,
+      "basis": "Illustrative owner-permitted right-pad setpoint; not a cleaning requirement"
+    },
+    "required_settings": {},
+    "metrics": [],
+    "mode_priority": [],
+    "mode_priority_basis": "",
+    "candidate_priority": [],
+    "candidate_priority_basis": ""
+  },
+  "stage_1_before_the_first_run_at_B": {
+    "question": "May the declared simulation test job run at B? (test admission)",
+    "program": "historical/decision_prototype.py",
+    "run": 2,
+    "before_the_run": {
+      "action": "REQUEST_CONFIRMATION",
+      "failed": [],
+      "unresolved": [],
+      "facts": {
+        "capability": "PASS",
+        "contact_authorized": "PASS",
+        "context": "PASS",
+        "domain": "PASS",
+        "measurement": "PASS",
+        "mode": "PASS",
+        "path": "PASS",
+        "valid_input": "PASS",
+        "visible_target": "PASS"
+      }
+    },
+    "at_selection": {
+      "action": "ELIGIBLE_WITHIN_DECLARED_SCOPE",
+      "confirmed": true,
+      "confirmation_events": [
+        "POINT",
+        "OKAY"
+      ]
+    },
+    "admission_inputs_rest_on": [
+      "pre_run_release2"
+    ],
+    "observed_outcome_joined_afterwards": "NATIVE_COMPLETE_PASS",
+    "reconstructed": "The reference program was written after this run, which its reviewed release admitted.",
+    "meaning": "Permission to run a test that collects evidence; not evidence that the task would succeed."
+  },
+  "stage_2_before_the_record_of_B": {
+    "question": "Is a 7 N wipe at B a supported deployment?",
+    "program": "selector/selector.py",
+    "register": "the six-profile register with G1_B_7N removed",
+    "profiles": [
+      "G1_A_7N",
+      "G1_C_7N",
+      "G1_D_7N",
+      "UR3_registered_handover",
+      "UR5_whiteboard_detection"
+    ],
+    "live_facts_unobserved": {
+      "decision": "WITHHOLD",
+      "configuration": null,
+      "remaining": [],
+      "reason": "shared safety unresolved",
+      "out_of_scope": {
+        "G1_A_7N": [
+          "target"
+        ],
+        "G1_C_7N": [
+          "target"
+        ],
+        "G1_D_7N": [
+          "target"
+        ],
+        "UR3_registered_handover": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ],
+        "UR5_whiteboard_detection": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ]
+      },
+      "candidate_reasons": {}
+    },
+    "synthetic_passing_live_facts": {
+      "decision": "WITHHOLD",
+      "configuration": null,
+      "remaining": [],
+      "reason": "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level",
+      "out_of_scope": {
+        "G1_A_7N": [
+          "target"
+        ],
+        "G1_C_7N": [
+          "target"
+        ],
+        "G1_D_7N": [
+          "target"
+        ],
+        "UR3_registered_handover": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ],
+        "UR5_whiteboard_detection": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ]
+      },
+      "candidate_reasons": {}
+    }
+  },
+  "stage_3_after_review_and_recording": {
+    "question": "Is a 7 N wipe at B a supported deployment?",
+    "program": "selector/selector.py",
+    "register": "the six-profile register",
+    "profiles": [
+      "G1_A_7N",
+      "G1_B_7N",
+      "G1_C_7N",
+      "G1_D_7N",
+      "UR3_registered_handover",
+      "UR5_whiteboard_detection"
+    ],
+    "live_facts_unobserved": {
+      "decision": "WITHHOLD",
+      "configuration": null,
+      "remaining": [],
+      "reason": "shared safety unresolved",
+      "out_of_scope": {
+        "G1_A_7N": [
+          "target"
+        ],
+        "G1_C_7N": [
+          "target"
+        ],
+        "G1_D_7N": [
+          "target"
+        ],
+        "UR3_registered_handover": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ],
+        "UR5_whiteboard_detection": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ]
+      },
+      "candidate_reasons": {
+        "G1_B_7N": {
+          "failed": [],
+          "unresolved": [
+            "live:contact_authorized",
+            "live:path",
+            "live:platform_safety",
+            "live:safety",
+            "live:valid_input",
+            "live:visible_target",
+            "platform availability unknown"
+          ],
+          "platform_busy": false
+        }
+      }
+    },
+    "synthetic_passing_live_facts": {
+      "decision": "CONFIRM",
+      "configuration": "G1_B_7N",
+      "remaining": [
+        "G1_B_7N"
+      ],
+      "reason": "confirm this exact task/configuration and current snapshot",
+      "out_of_scope": {
+        "G1_A_7N": [
+          "target"
+        ],
+        "G1_C_7N": [
+          "target"
+        ],
+        "G1_D_7N": [
+          "target"
+        ],
+        "UR3_registered_handover": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ],
+        "UR5_whiteboard_detection": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ]
+      },
+      "candidate_reasons": {
+        "G1_B_7N": {
+          "failed": [],
+          "unresolved": [],
+          "platform_busy": false
+        }
+      }
+    },
+    "after_synthetic_confirmation": {
+      "decision": "SELECT",
+      "configuration": "G1_B_7N",
+      "remaining": [
+        "G1_B_7N"
+      ],
+      "reason": "offline selection within supplied assessments; no dispatch",
+      "out_of_scope": {
+        "G1_A_7N": [
+          "target"
+        ],
+        "G1_C_7N": [
+          "target"
+        ],
+        "G1_D_7N": [
+          "target"
+        ],
+        "UR3_registered_handover": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ],
+        "UR5_whiteboard_detection": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ]
+      },
+      "candidate_reasons": {
+        "G1_B_7N": {
+          "failed": [],
+          "unresolved": [],
+          "platform_busy": false
+        }
+      }
+    },
+    "same_confirmation_on_a_later_snapshot": {
+      "decision": "CONFIRM",
+      "configuration": "G1_B_7N",
+      "remaining": [
+        "G1_B_7N"
+      ],
+      "reason": "confirm this exact task/configuration and current snapshot",
+      "out_of_scope": {
+        "G1_A_7N": [
+          "target"
+        ],
+        "G1_C_7N": [
+          "target"
+        ],
+        "G1_D_7N": [
+          "target"
+        ],
+        "UR3_registered_handover": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ],
+        "UR5_whiteboard_detection": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "target"
+        ]
+      },
+      "candidate_reasons": {
+        "G1_B_7N": {
+          "failed": [],
+          "unresolved": [],
+          "platform_busy": false
+        }
+      }
+    }
+  },
+  "not_shown": [
+    "a prospective prediction",
+    "a decision benefit",
+    "a permanent permission",
+    "that the framework designed or selected the experiment"
+  ]
+}

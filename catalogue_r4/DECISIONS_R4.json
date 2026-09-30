@@ -1,0 +1,64 @@
+{
+  "catalogue_r3_sha256": "7d84a94d4ba892dee324bf763092573b5dff1887aae95665fbe31f7579bb10ba",
+  "catalogue_r4_sha256": "e6fd8558890ed48625f0e1166ee3613949c9d8fa0bb0377f1c8993e93529e1b0",
+  "fields_changed": [
+    "assessment_basis",
+    "evidence_ids",
+    "evidence_sha256",
+    "mode",
+    "qualifiers",
+    "source_pins"
+  ],
+  "note": "The selector decision for the UR5 profile's own request is unchanged (SELECT with synthetic passing live facts, WITHHOLD with unobserved live facts). The correction changes what the job plan requires of people: the attendant role declared for the mode must be declared by the sub-task and held by a free person.",
+  "profiles_changed": [
+    "UR5_whiteboard_detection"
+  ],
+  "profiles_unchanged": [
+    "G1_A_7N",
+    "G1_B_7N",
+    "G1_C_7N",
+    "G1_D_7N",
+    "UR3_registered_handover",
+    "G1_A_8N",
+    "G1_B_8N",
+    "G1_C_8N",
+    "G1_D_8N"
+  ],
+  "request_in_the_old_mode_on_r4": {
+    "decision": "WITHHOLD",
+    "not_applicable": [
+      "mode"
+    ]
+  },
+  "selector_sha256": "8aae7ad86fa494ca450af9ecb6a8c26963ee1e5494f0f1efe9d341209e3d2e17",
+  "source_pins_added": {
+    "records/CASE_CAPABILITY_RECORDS.json": "fc5111cc434315cbb6330f861152e984d55209554c54fefbfb69a93fc9e32490",
+    "records/UR5_OPERATION_CLARIFICATION.json": "df2764cc0b4a39bf3de417feafe4ce3a9d486beebd6b07e5bf528d07780fe3a2"
+  },
+  "ur5_own_request": {
+    "r3": {
+      "PASS": {
+        "configuration": "UR5_whiteboard_detection",
+        "decision": "SELECT",
+        "reason": "offline selection within supplied assessments; no dispatch"
+      },
+      "UNKNOWN": {
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "reason": "shared safety unresolved"
+      }
+    },
+    "r4": {
+      "PASS": {
+        "configuration": "UR5_whiteboard_detection",
+        "decision": "SELECT",
+        "reason": "offline selection within supplied assessments; no dispatch"
+      },
+      "UNKNOWN": {
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "reason": "shared safety unresolved"
+      }
+    }
+  }
+}

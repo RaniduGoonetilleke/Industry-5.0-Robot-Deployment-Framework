@@ -1,0 +1,168 @@
+{
+  "figure2_ur3_case.png": {
+    "panels": {
+      "a": {
+        "source": "Goonetilleke and Khalid (2026) article PDF, corrected version (3 Sep 2026)",
+        "source_sha256": "58aff852a3a38195cd71df285b571230e65f953709fda26048ac53794d2c8ba7",
+        "page": 7,
+        "pdfimages_file": "img-000.png",
+        "article_figure": "Figure 4 (live UR3 + Robotiq 2F-85 cell, overhead webcam, gamepad fallback)",
+        "pixel_sha256": "8bc6d903aaf2a7e0714de67c213365f40f2a547ec75f471a434a33e12e0970d5",
+        "size": [
+          927,
+          523
+        ]
+      },
+      "b": {
+        "source": "Goonetilleke and Khalid (2026) article PDF, corrected version (3 Sep 2026)",
+        "source_sha256": "58aff852a3a38195cd71df285b571230e65f953709fda26048ac53794d2c8ba7",
+        "page": 6,
+        "pdfimages_file": "img-001.png",
+        "article_figure": "Figure 3 (RViz view during a live STOP-gesture demonstration)",
+        "pixel_sha256": "1a0b2d8f5c7794b8e7d8a43aeaab008b8ee4d48edbc70dfa7918dfe9ac33947d",
+        "size": [
+          1967,
+          1018
+        ]
+      }
+    },
+    "attribution": "Reproduced from Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261, CC BY (corrected version, 3 Sep 2026).",
+    "rights": "CC BY article by two of the authors. The caption gives the attribution, and reuse under CC BY requires no further permission.",
+    "size_px": [
+      2400,
+      720
+    ],
+    "composed_sha256": "df03c30c4a0c94f1778203d641257ab30daa5725e0ad4597c64a8157418d5804"
+  },
+  "figure4_g1_case.png": {
+    "panels": {
+      "a": {
+        "source": "point_force_first_group_r1_results_review_20260927/B7_FRAME_REVIEW.png",
+        "source_sha256": "e4044c6fa08c38b3a7e8b9ae30d3d0bd8441ee9e4b2be598fd2935872a95d83b",
+        "sealed_in": "point_force_first_group_r1_results_review_20260927 (seal dc4a8d88...)",
+        "job": "point_right_dt5_force_b_07n (third run, 7 N control at B; its reduced records reproduced the second run's B record exactly)",
+        "content": "recorded frames: POINT, thumbs-up (OKAY), task frame at 36 s, final task frame",
+        "r27_frames": [
+          {
+            "crop_box_px": [
+              0,
+              28,
+              640,
+              388
+            ],
+            "margin_label": "POINT",
+            "pixel_sha256": "6fee1a6ade09001bb20ecbd6fa90abd0be871ef68b68a6c1a4f963b43b8b2866"
+          },
+          {
+            "crop_box_px": [
+              640,
+              28,
+              1280,
+              388
+            ],
+            "margin_label": "Thumbs up",
+            "pixel_sha256": "a3513fae05bfcb89a50d3eed3237403e2330e443ff3b0e938aaa8141870f3bd5"
+          },
+          {
+            "crop_box_px": [
+              0,
+              418,
+              640,
+              778
+            ],
+            "margin_label": "Task frame at 36 s",
+            "pixel_sha256": "24f90481d0c22c94f849e11eda63b471a3499e69a27fd2b4e21570d79726752a"
+          },
+          {
+            "crop_box_px": [
+              640,
+              418,
+              1280,
+              778
+            ],
+            "margin_label": "Final task frame",
+            "pixel_sha256": "c03fbd612ab508d68ee8124aa9dd05904065d65a05b650d10b38691b61086e72"
+          }
+        ],
+        "r27_note": "the four frames are cropped from the sealed montage without editing (its own small label strips lie outside the crop boxes); the margin labels give the montage labels in sentence case and a larger type"
+      },
+      "b": {
+        "source": "point_spatial_pilot_r1_results_review_20260925/DETECTOR_FRAME_REVIEW.png",
+        "source_sha256": "590da5ab54eb58870ff1bbfd126ae0d677060908609a39cfaf3374427466c676",
+        "sealed_in": "point_spatial_pilot_r1_results_review_20260925",
+        "crop_box_px": [
+          640,
+          400,
+          1280,
+          800
+        ],
+        "job": "point_right_dt5_spatial_centre (second run, location E, refused before wiping)",
+        "content": "saved selection-stage detector image, in which the right-pad marker is not visible"
+      },
+      "c": {
+        "source": "claude_journal_route_r25_20260927/figures/figure2_g1_locations.png",
+        "source_sha256": "ba143225455a25fe8733552fb04f7e9e29b14f3f8aac13dad12a074c64ccf911",
+        "content": "Declared locations and outcomes, plotted from the source records identified here.",
+        "r27_crop_box_px": [
+          1,
+          98,
+          1878,
+          1230
+        ],
+        "r27_note": "blank white margins cropped; placed at the full figure width"
+      }
+    },
+    "attribution": "Simulation renders of the Isaac Lab Unitree G1 asset (G1_INSPIRE_FTP_CFG) by the authors. The asset source and licence are to be recorded (author action list).",
+    "rights": "The authors' own simulation renders. A model-asset licence note is pending.",
+    "r27_layout": {
+      "frame_px": [
+        577,
+        325
+      ],
+      "detector_px": [
+        1158,
+        724
+      ],
+      "locations_px": [
+        2352,
+        1418
+      ],
+      "locations_scale": 1.2531
+    },
+    "r29_margin_note_c": "Declared locations and 7 N outcomes (runs 1–2). Not shown: run 3 later completed 8 N at A–D (Table 5).",
+    "size_px": [
+      2400,
+      2392
+    ],
+    "composed_sha256": "83781b8f2ae6bfc637e5d4f3938e8a513c3d6a5e9900d59d5359a83a8a5c26e0"
+  },
+  "figure1_deployment_framework.png": {
+    "source": "Authors' framework diagram. The source generator and editable-asset identities are recorded below.",
+    "generator_source": "claude_journal_route_r40_20260930/analysis/scripts/make_framework_figure_r40.py",
+    "generator_sha256": "f169a79e5ae8154edb8900e94455b618c9afd2e7e9ccb08989038bb918644f66",
+    "content": "Shows the Layer 3a per-sub-task decision, the Layer 3b conditional job plan, and force-regulated wiping with a final hold after confirmation. The diagram is drawn with Python and contains no generated robot imagery.",
+    "rights": "Authors' framework diagram, supplied under the repository MIT License.",
+    "composed_sha256": "b1e246b16a4db8603bfdc49d2c4b3552ea57fa9cc6db8a482f15ef05f80fe966",
+    "editable_assets": {
+      "figure1_deployment_framework.svg": "77679f564c3e9eebd031744b33cb20da4aa1ac93bbcf4b24b031e0a217108a21",
+      "figure1_deployment_framework.pdf": "0dc8ea45b6c9a6e7754dbec187c709cffce9f8137ac398cb6ce6de936a9554f8",
+      "figure1_deployment_framework.pptx": "6f0a28000bee095d28446563760e0631772dc142e213996ae48dd0542b1d7cf5"
+    }
+  },
+  "figure5_job_plans.png": {
+    "generated_from": {
+      "job_example/results/PLAN_customer_building.json": "91e11eb4403aa38998a65591b3b32cd65328c91e8b55e972fefa3ccb6cbf6ab9",
+      "job_example/results/PLAN_tested_contexts.json": "5105db76811d9f57f5e3889b788dbd1e7f545ec64eec99494be80f4675ffcb50",
+      "job_example/results/PLAN_tested_contexts_with_synthetic_declarations.json": "388cd5214197e37a65fa396b5216b754129cbfd6e6de6dc657aebe37bb191eab"
+    },
+    "generator": "analysis/scripts/make_plan_figure.py of the author packet (matplotlib); layout, short state names and colours only",
+    "content": "Every box, state, reservation and listed human action is read from the generated plans.",
+    "scope": "Planning output from authored scenarios and synthetic live facts. It is not an observation of any robot or person.",
+    "composed_sha256": "7d93c74644f95305ab9c36f61af4ebfc408335ca5e0a077ddef9e2ad991c893b",
+    "size_px": [
+      2220,
+      2244
+    ],
+    "rights": "Authors' own figure."
+  }
+}

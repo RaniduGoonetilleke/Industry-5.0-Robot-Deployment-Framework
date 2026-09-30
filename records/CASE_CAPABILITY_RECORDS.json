@@ -1,0 +1,1494 @@
+{
+  "title": "Capability records used in the manuscript (scope-limited derivative)",
+  "status": "SCOPE_LIMITED_DERIVATIVE_NOT_A_NEW_EXPERIMENT",
+  "scope": "UR3: demonstrated interaction, timing definitions and commanded responses to injected inputs. UR5: source-linked capability records, including the earlier team account in records/UR5_OPERATION_CLARIFICATION.json. The later summary of the developer's answers takes precedence where the accounts differ. G1: original records unchanged. Omitted UR3 questions are not reclassified as supported.",
+  "source_original_sha256": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+  "original_record_status": "The complete historical record and later errata remain preserved with the authors, outside this publication candidate.",
+  "record_counts": {
+    "UR3": 11,
+    "UR5": 18,
+    "G1": 23
+  },
+  "records": [
+    {
+      "id": "UR3-01",
+      "robot": "UR3",
+      "capability": "Five-class gesture classifier",
+      "status": "MEASURED",
+      "value": "518/520 correct (99.62%)",
+      "evidence_scope": "One stratified 80/20 split of 2,600 single-operator, within-session samples",
+      "limits": "Classifier-level evaluation; no claim of live-robot task success or transfer across operators/sessions",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 section 4.1"
+    },
+    {
+      "id": "UR3-02",
+      "robot": "UR3",
+      "capability": "Registered-target indication and OKAY confirmation",
+      "status": "DEMONSTRATED-QUALITATIVE",
+      "value": "Physical fetch-and-deliver demonstration",
+      "evidence_scope": "Registered coloured cubes; one operator; observed state transitions in RViz/Gazebo alongside the physical demonstration",
+      "limits": "No task-completion count or measured success rate",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 Table 6, section 4.4 and Supplementary Video S1"
+    },
+    {
+      "id": "UR3-05",
+      "robot": "UR3",
+      "capability": "Organic operator-state sensing",
+      "status": "NOT_EVALUATED",
+      "value": null,
+      "evidence_scope": "Trial-day operator-state responses used a simulated stream and keyboard triggers",
+      "limits": "No physiological validation from those injected responses",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 operator-state methods and trial limitations"
+    },
+    {
+      "id": "UR3-06",
+      "robot": "UR3",
+      "capability": "Soft-stop response to an injected trigger",
+      "status": "MEASURED-COMMANDED",
+      "value": "Logged post-limiter command in the illustrated soft-stop episode: it ramps down from 0.1485 rad/s at latch entry (initial changes −0.015 rad/s per tick), is at most 0.05 rad/s from about 0.35 s after entry and stays within that bound until release. The published Figure 11 window (released log data rows 4619–4679, header excluded) shows 0.03–0.13 rad/s logged post-limiter command, including transition samples, and up to 2.25 rad/s raw command.",
+      "evidence_scope": "Released command log (slew_log.csv, SHA256 14928763aff0b9d63a4202c27fe091b6dd9bdd5b0098041a91e8160e285edcd0, bound to the archived public repository tree at src/report/data/slew_log.csv); keyboard-triggered trial-day soft-stops. The Figure 11 window holds 59 active-latch samples and 2 post-release samples; the active latch is data rows 4618–4677 (60 samples; header excluded).",
+      "limits": "Commanded values, not measured robot speed; not a certified safety function. The logged command stays above 0.05 rad/s for the first 0.35 s of the latch while it falls by 0.015 rad/s per tick, so 0.05 rad/s is not an instantaneous bound on the outgoing command throughout the latch. The trial-day controller executable is not independently reconstructed.",
+      "source": "Released UR3 command log (slew_log.csv) and the published Figure 11 of Goonetilleke and Khalid (2026). Every retained value is computed from the log (records/CASE_RECORDS_README.md)."
+    },
+    {
+      "id": "UR3-09",
+      "robot": "UR3",
+      "capability": "Fetch duration under injected bands",
+      "status": "MEASURED-COMMANDED",
+      "value": "MILD: 1.497–1.505 times FRESH (9 moves); MODERATE: 2.489–2.508 (15 moves)",
+      "evidence_scope": "Equal move distances; local unreleased trial-day console logs in two/three sessions, respectively",
+      "limits": "Commanded durations; no measured completion times or organic sensing claim",
+      "source": "Checked clarification of 26 September 2026; source document SHA256 7e4fa425dbfd40b5274bb88d1a3d0646137e4402c49c00639c72f00eadc2060a"
+    },
+    {
+      "id": "UR3-11",
+      "robot": "UR3",
+      "capability": "STOP freeze and OKAY resume",
+      "status": "DEMONSTRATED-QUALITATIVE",
+      "value": "Observed recovery in the registered-object task",
+      "evidence_scope": "Single-operator feasibility setting",
+      "limits": "No measured stop latency; research-layer interaction, not a certified safety function",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 section 4.4 and Supplementary Video S1"
+    },
+    {
+      "id": "UR3-16",
+      "robot": "UR3",
+      "capability": "Regulated cleaning contact",
+      "status": "NOT_IMPLEMENTED",
+      "value": null,
+      "evidence_scope": "Tested velocity-controlled configuration",
+      "limits": "A regulated-force wipe request is outside this configuration",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 limitations"
+    },
+    {
+      "id": "UR3-19",
+      "robot": "UR3",
+      "capability": "Gesture-stream update interval",
+      "status": "MEASURED",
+      "value": "Median 64–65 ms per class",
+      "evidence_scope": "Intervals between successive classified output publications",
+      "limits": "Not a gesture-to-motion delay",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 Figure 6"
+    },
+    {
+      "id": "UR3-20",
+      "robot": "UR3",
+      "capability": "Gesture-to-motion design budget",
+      "status": "CALCULATED",
+      "value": "Approximately 830 ms",
+      "evidence_scope": "Component budget against a 1 s design target",
+      "limits": "Not a measured latency bound",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 section 4.5"
+    },
+    {
+      "id": "UR3-21",
+      "robot": "UR3",
+      "capability": "Measured end-to-end gesture-to-motion latency",
+      "status": "NOT_EVALUATED",
+      "value": null,
+      "evidence_scope": "Not established by the component budget or update interval",
+      "limits": "A measured-response request remains withheld",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 timing limitations"
+    },
+    {
+      "id": "UR3-26",
+      "robot": "UR3",
+      "capability": "End-effector",
+      "status": "DESCRIBED",
+      "value": "Robotiq 2F-85 gripper",
+      "evidence_scope": "Physical fetch-and-handover",
+      "limits": "No cleaning tool or contact-force controller is inferred",
+      "source": "Goonetilleke and Khalid (2026), Frontiers in Robotics and AI 13:1897261 hardware setup"
+    },
+    {
+      "id": "UR5-01",
+      "robot": "UR5",
+      "dimension": "human_instruction_intent_input",
+      "capability": "Human instruction / intent input",
+      "status": "AUTHOR_ACCOUNT",
+      "absence_type": null,
+      "quantity_definition": "Any operator command, selection or confirmation channel.",
+      "value": "Set-up, start and observation by a person, whom the account calls the operator and the register calls the attendant: the person prepares the marked whiteboard, starts the program and observes, giving no further movement command. The account reports no per-target confirmation and no manual guidance.",
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-author-account",
+      "constraints": [
+        "The report's 'semi-autonomous' refers to transform-based waypoint adjustment for inclined targets (UR5-08), not to a human interface.",
+        "Earlier team account (28 September 2026; C1 in records/UR5_OPERATION_CLARIFICATION.json). Not reconstructed from trial logs or source code, and not the developer's own statement.",
+        "Three kinds of human involvement are kept apart: set-up, start and observation (present in the account); per-target confirmation (none reported); manual guidance or movement commands (none reported).",
+        "An edited demonstration cannot establish the absence of every off-camera intervention."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "full text"
+      },
+      "quote": null,
+      "absence_basis": "The report itself does not describe a command, selection or confirmation channel: 'operator', 'human' and 'supervision' occur only in its literature review and supervisor line (grep, 25 Sep 2026).",
+      "secondary_sources": [
+        {
+          "path": "records/UR5_OPERATION_CLARIFICATION.json",
+          "anchor": null
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-02",
+      "robot": "UR5",
+      "dimension": "operator_state_sensing_and_response",
+      "capability": "Operator-state sensing and response",
+      "status": "UNKNOWN",
+      "absence_type": null,
+      "quantity_definition": "Any sensing of, or response to, operator state.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-report",
+      "constraints": [],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "full text"
+      },
+      "quote": null,
+      "absence_basis": "Not stated anywhere in the report.",
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-03",
+      "robot": "UR5",
+      "dimension": "target_detection_localisation",
+      "capability": "Taped-region detection (YOLOv11)",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Bounding-box mAP at IoU 0.5 for the taped target-frame region, reported 'from the trained data sets in 50 epochs' (most plausibly the 30 % validation split of the same scene; that split is an inference, SOURCE_NOTES A5).",
+      "value": "99.5 (printed '[99.5]' in sections 4.1.1 and 5.1)",
+      "unit": "%",
+      "aggregation": "mAP50 over the evaluation images of the training run",
+      "window": "511 images, 70 % training / 30 % validation, 50 epochs; no held-out test set",
+      "conditions": "one whiteboard scene with a taped square frame; 'varied laboratory lighting conditions' (not quantified)",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "Not a dirt, glass or cleaning measure; not a processing rate."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.1.1, p.13, lines 436-438"
+      },
+      "quote": "The model achieved a mean Average Precision (mAP₅₀) of [99.5]% in detecting the taped boundary under varied laboratory lighting conditions. This value was gotten from the trained data sets in 50 epochs.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "anchor": "section 3.3, p.10, lines 328-329",
+          "quote": "with the dataset divided into 70% training data and 30% validation data"
+        }
+      ],
+      "verification": null,
+      "comparability": "Case-internal quantity. Not comparable with any other case's percentage or score (UR3 per-sample accuracy, UR5 mAP50 and G1 within-run service fractions are different quantities)."
+    },
+    {
+      "id": "UR5-04",
+      "robot": "UR5",
+      "dimension": "target_detection_localisation",
+      "capability": "Target-centre depth estimate",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Accuracy = (1 - |estimated - ground truth| / ground truth) x 100 for camera-frame depth Z of the target centre.",
+      "value": "98.65 (printed 98.6); |75 - 74| = 1 cm",
+      "unit": "% ; cm",
+      "aggregation": "one displayed comparison (the report says 'average' without a count)",
+      "window": "one static reading",
+      "conditions": "camera frame, static target, whiteboard",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "X and Y have no ground truth.",
+        "1 cm equals the on-screen overlay resolution of 0.01 m (CONTEXT_cases A.5).",
+        "Camera-frame depth, not robot-frame or tool-tip error."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.1.1, p.14, lines 452-453"
+      },
+      "quote": "Accuracy = (1 - |74-75|/74) x 100 % = 98.65%",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "anchor": "section 4.1.1, p.13, lines 441-443",
+          "quote": "The average static localization error between the estimated position and the ground-truth physical measurement was 1cm with an accuracy of 98.6%."
+        },
+        {
+          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "anchor": "abstract, p.2, lines 16-17",
+          "quote": "achieved a mAP₅₀ of 99.5% and a static localisation accuracy of 98.6% within a 1 cm error threshold"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-05",
+      "robot": "UR5",
+      "dimension": "target_detection_localisation",
+      "capability": "Camera-to-base transformation of the target",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "P_robot = R P_camera + T mapping the target from the camera optical centre to the UR5 base frame.",
+      "value": "reported as successful; no calibration method, residual or error reported",
+      "unit": null,
+      "aggregation": "none",
+      "window": "none",
+      "conditions": "eye-in-hand RealSense D435i, 8 cm above the wrist",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "Section 3.5, the abstract and section 6.1 name coordinate-transformation accuracy and camera-to-robot calibration among the causes of the tracking shortfall (SOURCE_NOTES D2).",
+        "How the arm pose enters the transform for an eye-in-hand camera is not reported (CONTEXT_cases A.7)."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.2, p.15, lines 489-490"
+      },
+      "quote": "Coordinate Transformation: The transformation matrix (T) successfully mapped target coordinates from the camera optical center to the UR5 base frame.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-06",
+      "robot": "UR5",
+      "dimension": "target_detection_localisation",
+      "capability": "Red-marker ('dirt') classification (HSV)",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Red-pixel count inside the YOLO ROI after removing a 15 % margin; HSV H 0-10 or 160-180, S and V 50-255; above 250 pixels -> 'dirty' (red box), otherwise 'clean' (blue box); image-moment centroid of the marker pixels.",
+      "value": "clean and dirty example images (Fig. 8); no trial count or error rate",
+      "unit": null,
+      "aggregation": "none",
+      "window": "none",
+      "conditions": "red whiteboard-marker strokes as proof-of-concept 'dirt'",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "Red marker only; no real dirt or other contaminant."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.1.2, p.14, lines 463-466"
+      },
+      "quote": "A threshold of 250 pixels was used to classify the target: detections above this value were labelled dirty and displayed with a red bounding box, while lower detections were treated as clean and displayed in blue.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-07",
+      "robot": "UR5",
+      "dimension": "tool_placement_approach",
+      "capability": "Static waypoint approach with the brush",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "UR5 moves to predefined target boundaries with a perpendicular approach, placing the brush in the target plane.",
+      "value": "reported as successful; no trial count, positioning error or contact confirmation",
+      "unit": null,
+      "aggregation": "none",
+      "window": "none",
+      "conditions": "whiteboard; static target",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "The report calls the subsequent motion 'simulated cleaning routines'."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.2, p.15, lines 491-494"
+      },
+      "quote": "Static Waypoint Trajectory: For static cleaning trials, the UR5 successfully navigated to the predefined target boundaries. The manipulator maintained a perpendicular approach angle, positioning the custom water-fed brush end-effector within the target surface plane before initiating simulated cleaning routines.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-08",
+      "robot": "UR5",
+      "dimension": "path_reach_joint_feasibility",
+      "capability": "Inclined-target adjustment of a static waypoint",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Adjustment of a static waypoint by the camera-to-robot transformation for a target at an inclined position.",
+      "value": "reported as achieved ('semi-autonomous system'); no angles, counts or alignment error",
+      "unit": null,
+      "aggregation": "none",
+      "window": "none",
+      "conditions": "whiteboard target at inclined positions",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "Author-supplied account (C5): the board was repositioned before the program was started, and the robot adjusted its approach to the detected position. This is not continuous following of a moving board during contact (see UR5-09).",
+        "The development video linked in the report and the public demonstration video were not reviewed in this packet."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.2, p.15, lines 495-497"
+      },
+      "quote": "Dynamic centre servoing: The camera to robot transformation was used to adjust the static waypoint for target at inclined positions, hence enabling a semi-autonomous system.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "records/UR5_OPERATION_CLARIFICATION.json",
+          "anchor": null
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-09",
+      "robot": "UR5",
+      "dimension": "path_reach_joint_feasibility",
+      "capability": "Full dynamic tracking",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Continuous visual tracking of the target by the UR5.",
+      "value": "not achieved",
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": "eye-in-hand camera; multiple IK solutions for the same pose",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "Causes named: coordinate-transformation accuracy, IK solution selection, real-time motion control, camera-to-robot calibration."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 3.5, p.12, lines 400-402"
+      },
+      "quote": "stable dynamic tracking was not fully achieved due to challenges associated with coordinate transformation accuracy, inverse kinematic solution selection and real-time motion control.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "anchor": "abstract, p.2, lines 22-23",
+          "quote": "full dynamic tracking was not achieved due to challenges with camera-to-robot calibration, coordinate transformation and inverse kinematics"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-10",
+      "robot": "UR5",
+      "dimension": "visibility",
+      "capability": "Visibility on glass (reflection, transparency) and occlusion",
+      "status": "NOT_EVALUATED",
+      "absence_type": "not evaluated (stated: glass testing is a next step)",
+      "quantity_definition": "Detection and localisation under glass reflection or transparency, or partial occlusion.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": "whiteboard used deliberately to avoid glass reflection and transparency; eye-in-hand D435i 8 cm above the wrist",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "Occlusion at other arm poses is not reported."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.1, p.13, lines 425-427"
+      },
+      "quote": "Because glass facades present severe transparency and reflection challenges, a white board framed with high-contrast tape was utilized to establish a controlled baseline for spatial coordinate validation.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "anchor": "section 5.3, p.16, lines 535-536",
+          "quote": "Testing on realistic glass surfaces would therefore be an important next step."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-11",
+      "robot": "UR5",
+      "dimension": "contact_force_regulation",
+      "capability": "Contact force regulation",
+      "status": "NOT_EVALUATED",
+      "absence_type": "not quantitatively evaluated (stated)",
+      "quantity_definition": "Brush contact force regulation or measurement.",
+      "value": null,
+      "unit": "N",
+      "aggregation": null,
+      "window": null,
+      "conditions": "UR5 CB",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "Force or impedance control is listed as future work (section 6.2)."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 5.3, p.17, lines 542-543"
+      },
+      "quote": "cleaning effectiveness and force control were outside the main scope of this feasibility study and were not quantitatively evaluated.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-12",
+      "robot": "UR5",
+      "dimension": "motion_service_during_wipe",
+      "capability": "Wiping motion service",
+      "status": "AUTHOR_ACCOUNT",
+      "absence_type": null,
+      "quantity_definition": "Any quantity describing the cleaning motion (coverage, speed, contact continuity).",
+      "value": "Operating sequence only: a predefined wiping pattern, a return to the home position and a re-inspection, repeated while the detector classifies the region as dirty. No service, path, speed or contact quantity is available.",
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-author-account",
+      "constraints": [
+        "The report calls the motion 'simulated cleaning routines' without quantifying it.",
+        "Author-supplied account (C3, C4). The report describes no force regulation for the brushing contact: no force setpoint, force-tracking accuracy, repeatability or cleaning effectiveness was evaluated (UR5-11, UR5-17).",
+        "Not registered as a wiping capability in the catalogue."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 4.2, p.15, line 494"
+      },
+      "quote": "before initiating simulated cleaning routines",
+      "absence_basis": "No coverage, speed, path or contact measure is reported.",
+      "secondary_sources": [
+        {
+          "path": "records/UR5_OPERATION_CLARIFICATION.json",
+          "anchor": null
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-13",
+      "robot": "UR5",
+      "dimension": "final_hold_completion",
+      "capability": "Task completion criterion",
+      "status": "AUTHOR_ACCOUNT",
+      "absence_type": null,
+      "quantity_definition": "A completion or stop criterion for the cleaning task.",
+      "value": "Stop condition only: the cycle stops when the detector classifies the region as clean. 'Clean' is the detector's classification against its 250-pixel threshold, not a measurement that all contamination was removed.",
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-author-account",
+      "constraints": [
+        "An Appendix algorithm figure (p.21, image only, not in the text extraction) reads 'Robot stops operation when task completed' per CONTEXT_cases A.1; no criterion or measurement accompanies it.",
+        "Author-supplied account (C4); threshold from report section 4.1.2."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "Appendix 1 (figure, p.21)"
+      },
+      "quote": null,
+      "absence_basis": "No completion criterion or completion measurement in the report text.",
+      "secondary_sources": [
+        {
+          "path": "records/UR5_OPERATION_CLARIFICATION.json",
+          "anchor": null
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-14",
+      "robot": "UR5",
+      "dimension": "latency_timing",
+      "capability": "Latency and rates",
+      "status": "UNKNOWN",
+      "absence_type": null,
+      "quantity_definition": "Detection rate, perception-to-motion latency, control rate.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-report",
+      "constraints": [
+        "'Real time' is asserted qualitatively only."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 3.3, p.10, lines 324-325"
+      },
+      "quote": "localise the target cleaning region in real time",
+      "absence_basis": "No rate, frame rate or latency value in the text (grep for latency, Hz, fps, ms, seconds, 25 Sep 2026).",
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-15",
+      "robot": "UR5",
+      "dimension": "surfaces_conditions_tested",
+      "capability": "Tested surface and conditions",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Surface and environment of the reported experiments.",
+      "value": "whiteboard with a taped square frame; red marker strokes as simulated dirt; indoors; relatively small test surface; not glass",
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": "laboratory",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "Intended application (glass facade) is untested; performance on glass is unestablished, not disproved."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 5.3, p.16, lines 532-533"
+      },
+      "quote": "The main limitation of the experimental validation was the use of a whiteboard rather than real glass.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "anchor": "section 5.3, p.17, lines 544-545",
+          "quote": "The experiments were also conducted indoors on a relatively small test surface."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-16",
+      "robot": "UR5",
+      "dimension": "endurance_thermal_power",
+      "capability": "Endurance, thermal, power",
+      "status": "UNKNOWN",
+      "absence_type": null,
+      "quantity_definition": "Duration, power or temperature data.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-report",
+      "constraints": [],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "full text"
+      },
+      "quote": null,
+      "absence_basis": "Not stated (grep for thermal, temperature, endurance, battery, power, heat, hours matches only a reference title and an RO-machine URL, 25 Sep 2026).",
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-17",
+      "robot": "UR5",
+      "dimension": "cleaning_effectiveness",
+      "capability": "Cleaning effectiveness",
+      "status": "NOT_EVALUATED",
+      "absence_type": "not quantitatively evaluated (stated)",
+      "quantity_definition": "Dirt removal or cleaning quality.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "physical-report",
+      "constraints": [],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 5.3, p.17, lines 542-543"
+      },
+      "quote": "cleaning effectiveness and force control were outside the main scope of this feasibility study and were not quantitatively evaluated.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "UR5-18",
+      "robot": "UR5",
+      "dimension": "cleaning_tool_end_effector",
+      "capability": "Water-fed brush and printed adapter",
+      "status": "REPORTED",
+      "absence_type": null,
+      "quantity_definition": "Mechanical integration and operation of the custom end-effector.",
+      "value": "PLA adapter (4 x M6 to the flange, ACME thread for the brush, 2 x M3 camera mount); water-fed brush with pump; reported as tested for mechanical integration and operation",
+      "unit": null,
+      "aggregation": "none",
+      "window": "none",
+      "conditions": "UR5 CB",
+      "evidence_level": "physical-report",
+      "constraints": [
+        "These entries describe the team’s documented UR5 results. The underlying trial logs and trained model files are not included in this repository, and these results have not been independently reproduced from those files.",
+        "Whether RO water was used in the trials is not stated (CONTEXT_cases A.11).",
+        "No flow, pressure or brush-preload data.",
+        "The Appendix prices a UR3e/5e, whereas a UR5 CB was tested (r14 ledger 2.11)."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "anchor": "section 3.6, p.12, lines 414-416"
+      },
+      "quote": "The water-fed cleaning end effector was also tested to verify its mechanical integration and operation with the robotic manipulator.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-01",
+      "robot": "G1",
+      "dimension": "human_instruction_intent_input",
+      "capability": "Scripted virtual-hand POINT -> OKAY target selection",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Rendered scripted hand points at a camera-detected wall marker and confirms with a direct thumbs-up; selection by the scripted pointing ray against a known wall plane.",
+      "value": "POINT at synthetic input time 1.0 s, OKAY at 1.4 s; detection 1 assigned to the right arm; no NEUTRAL frame; gesture image change 35.2668 % of the union region against a 2 % requirement",
+      "unit": "s; %",
+      "aggregation": "one job (direct-confirmation anchor); the same route in three spatial jobs",
+      "window": "synthetic input clock, separate from the physics clock",
+      "conditions": "original wall, right arm, 5 ms; R13 used POINT -> NEUTRAL -> OKAY for left, right and both targets",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Scripted poses and labels; not gesture recognition. The camera detects red markers, not gestures.",
+        "No real human or live webcam."
+      ],
+      "source": {
+        "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "section 'Direct selection and camera evidence', line 19"
+      },
+      "quote": "The raw input reconstructs POINT at synthetic input time 1.0 s, then OKAY at 1.4 s, confirming camera detection 1 assigned to the right arm. There is no NEUTRAL event or frame.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+          "anchor": "line 21",
+          "quote": "The direct gesture image change is 35.2668% of the union region against the existing 2% requirement"
+        },
+        {
+          "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+          "anchor": "section 'What the pointing jobs actually establish', line 33",
+          "quote": "selection uses the scripted pointing ray against a known wall plane."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-02",
+      "robot": "G1",
+      "dimension": "operator_state_sensing_and_response",
+      "capability": "Operator-state sensing and response",
+      "status": "NOT_EVALUATED",
+      "absence_type": "not tested (stated); no operator-state channel exists in the pilots",
+      "quantity_definition": "Any operator-state input or response.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": "scripted virtual hand only",
+      "evidence_level": "simulation",
+      "constraints": [],
+      "source": {
+        "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+        "anchor": "line 33"
+      },
+      "quote": "No real human, live webcam, Emmanuel detector, autonomous dirt discovery/removal, heat-based handover or hardware transfer was tested.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-03",
+      "robot": "G1",
+      "dimension": "target_detection_localisation",
+      "capability": "Native in-plane target localisation (rendered RGB/depth)",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "In-plane distance between the target selected from rendered RGB/depth by the colour-marker detector and the authored target, on the known wall plane.",
+      "value": "R13: 0.889862 (left), 0.982534 (right); direct-confirmation: 0.982534; spatial: 1.096 (+8 cm y), 1.108 (-8 cm y), 4.129 (+8 cm z)",
+      "unit": "mm",
+      "aggregation": "one selection per job",
+      "window": "selection frame",
+      "conditions": "gate 10 mm; original wall; 5 ms",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Not 3-D localisation; depth is a wall-admission check.",
+        "Synthetic red markers, not dirt.",
+        "The largest error is at the partly hidden +z target; four placements do not establish an occlusion/error law."
+      ],
+      "source": {
+        "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "Task and final-hold results table, line 31"
+      },
+      "quote": "| Selected-target in-plane localisation error | 0.982534 mm, against the unchanged 10 mm identity limit; not 3-D localisation |",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+          "anchor": "line 29",
+          "quote": "Target identity errors are 0.889862 mm for the left mark and 0.982534 mm for the right mark, below the 10 mm in-plane gate."
+        },
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/RESULTS_TABLE.md",
+          "anchor": "table rows",
+          "quote": "| r080_a090 | PASS / PASS | 4.129 | 95.750 | 70.153 | 7.004439 | 0.047949 | 0.344851 |"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-04",
+      "robot": "G1",
+      "dimension": "target_detection_localisation",
+      "capability": "Offline synthetic localisation",
+      "status": "CALCULATED",
+      "absence_type": null,
+      "quantity_definition": "Largest in-plane error of the real red-component detector on ideal synthetic flat-wall rasterisations (offline).",
+      "value": "0.208",
+      "unit": "mm",
+      "aggregation": "maximum over 38 locations",
+      "window": "offline screen (57.7 s)",
+      "conditions": "no robot or hand occlusion",
+      "evidence_level": "simulation-model offline screen (no physics)",
+      "constraints": [
+        "Not native perception accuracy; do not quote as such."
+      ],
+      "source": {
+        "path": "point_clean_workspace_prep_20260925/RESULTS.md",
+        "anchor": "line 23"
+      },
+      "quote": "The largest synthetic in-plane localisation error is 0.208 mm. Do not quote it as native perception accuracy.",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-05",
+      "robot": "G1",
+      "dimension": "visibility",
+      "capability": "Target visibility in the native detector frame",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Fraction of the target marker hidden in the native detector frame; for the centre, depth of the projected marker disc relative to the wall.",
+      "value": "hidden 0 % (+y), 11.90 % (-y), 58.65 % (+z), 100 % (centre); centre: 125/125 finite positive depth samples, all > 5 mm in front of the wall, median 0.925216 m vs wall 1.042389 m",
+      "unit": "% ; m",
+      "aggregation": "per location",
+      "window": "selection frame",
+      "conditions": "original wall, right arm, 5 ms",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "The refusal is reproduced; robot self-occlusion is the review's interpretation, supported by depth and image (SOURCE_NOTES E3).",
+        "Four placements do not establish a visibility map."
+      ],
+      "source": {
+        "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "section 'Centre refusal and camera evidence', line 61"
+      },
+      "quote": "The native detector-frame hidden fractions are **0%, 11.90%, 58.65%, 100%** at +y, −y, +z and centre.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+          "anchor": "line 53",
+          "quote": "The raw image agrees with robot self-occlusion."
+        },
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json",
+          "anchor": "locations.centre",
+          "quote": "\"hidden_fraction\": 1.0"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-06",
+      "robot": "G1",
+      "dimension": "tool_placement_approach",
+      "capability": "Pad approach and press at the selected target",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Planned swept-pad boxes and conservative full-disc envelopes at saved rows inside the preauthorised wall panel; loaded contact reached in the scored window.",
+      "value": "planned boxes recompute exactly and fit the panel; sampled envelopes fit at every saved row; no sample below 1 N in the scored window at the three spatial locations",
+      "unit": null,
+      "aggregation": "every saved row (sampled)",
+      "window": "whole job",
+      "conditions": "pad radius 60 mm; approach and return already in contact",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Sampled, not continuous-time clearance; not permission to contact only the selected mark.",
+        "Pad footprint extends 72.0-189.3 mm from the selected centre across surviving offline sites (offline figure)."
+      ],
+      "source": {
+        "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "section 'Geometry, contact authorization and source checks', line 65"
+      },
+      "quote": "Planned swept-pad boxes recompute exactly and fit the preauthorised wall panel.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_clean_workspace_prep_20260925/PROTOCOL.md",
+          "anchor": "line 44",
+          "quote": "Thumbs-up confirms a planned wipe whose pad is 60 mm in radius and whose approach/return are already in contact."
+        },
+        {
+          "path": "point_clean_workspace_prep_20260925/RESULTS.md",
+          "anchor": "line 42",
+          "quote": "the largest sampled distance from the selected centre to the outer pad footprint ranges from 72.0 to 189.3 mm."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-07",
+      "robot": "G1",
+      "dimension": "path_reach_joint_feasibility",
+      "capability": "Offline planner admission of target locations",
+      "status": "CALCULATED",
+      "absence_type": null,
+      "quantity_definition": "Frozen planner plus offline checks applied to 38 predeclared wall locations (34 inside the 13 cm admission circle, 4 outside at 14 cm).",
+      "value": "21 admitted; 13 refused 'Proposed arm path violates joint-margin screen' (0.020 rad margin); 4 outside controls refused 'Target outside bounded arm assignment or repeated arm'; downward 8 cm location r080_a270 refused",
+      "unit": "count",
+      "aggregation": "counts over 38 locations",
+      "window": "offline screen, 57.7 s, zero native seconds",
+      "conditions": "right arm, nominal model",
+      "evidence_level": "simulation-model offline screen (no physics)",
+      "constraints": [
+        "A refusal is not proof that no other posture or solver could reach the spot.",
+        "The 13 cm circle is an admission filter, not a qualified workspace.",
+        "Smallest continuous arm margin among admitted sites 0.074282 rad (descriptive)."
+      ],
+      "source": {
+        "path": "point_clean_workspace_prep_20260925/RESULTS.md",
+        "anchor": "section 'What changed our understanding', line 7"
+      },
+      "quote": "Thirteen are refused by the bounded IK joint-margin check. All four outside-circle controls are refused.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_clean_workspace_prep_20260925/SCREEN_RESULTS.jsonl",
+          "anchor": "row r080_a270",
+          "quote": "Proposed arm path violates joint-margin screen"
+        },
+        {
+          "path": "point_clean_workspace_prep_20260925/SCREEN_RESULTS.jsonl",
+          "anchor": "rows outside_a000..a270",
+          "quote": "Target outside bounded arm assignment or repeated arm"
+        },
+        {
+          "path": "point_clean_workspace_prep_20260925/PROTOCOL.md",
+          "anchor": "line 25",
+          "quote": "weaken the 0.020 rad arm margin"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-08",
+      "robot": "G1",
+      "dimension": "path_reach_joint_feasibility",
+      "capability": "Native joint margins and clearances during the wipe",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Minimum studied-joint limit margin, minimum non-pad wall clearance and minimum hand-pad separation over recorded rows.",
+      "value": "joint margin 0.064950 / 0.064193 / 0.064950 rad; wall clearance 27.815 / 27.729 / 27.651 mm; hand-pad 8.629 / 8.629 / 8.627 mm (+y, -y, +z)",
+      "unit": "rad; mm",
+      "aggregation": "minimum over recorded rows",
+      "window": "whole 48 s job",
+      "conditions": "original wall, right arm, 5 ms",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Whole-body self-collision not tested."
+      ],
+      "source": {
+        "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "line 67"
+      },
+      "quote": "All recorded hard guards pass. Whole-body self-collision is not tested.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json",
+          "anchor": "locations.r080_a180",
+          "quote": "\"studied_joint_margin_min_rad\": 0.06419271230697632"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-09",
+      "robot": "G1",
+      "dimension": "contact_force_regulation",
+      "capability": "Normal force per pad during the scored circle (U65)",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Mean simulator-reported normal force per pad over the scored circle; target 7 N per pad (normal-force PI).",
+      "value": "7.0011 / 6.9997 (5 ms); 7.0018 / 6.9989 (2.5 ms), left / right; both pads loaded on 1,600/1,600 and 3,200/3,200 circle samples",
+      "unit": "N",
+      "aggregation": "mean over scored circle samples",
+      "window": "8 s scored circle",
+      "conditions": "original wall; physics 5 ms and 2.5 ms; PGS 32/4",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Positive simulated loading is not a validated cleaning-pressure specification.",
+        "The target was not constant on every row.",
+        "Two timesteps are numerical sensitivity checks, not independent trials."
+      ],
+      "source": {
+        "path": "u65_results_review_20260919/REVIEW.md",
+        "anchor": "Task results table, line 32"
+      },
+      "quote": "| Mean circle normal force, left/right | 7.0011 / 6.9997 N | 7.0018 / 6.9989 N |",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "u65_results_review_20260919/REVIEW.md",
+          "anchor": "line 40",
+          "quote": "Positive simulated loading is not a validated cleaning-pressure specification."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-10",
+      "robot": "G1",
+      "dimension": "contact_force_regulation",
+      "capability": "Active-pad normal force in the point pilots",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Mean and RMS error to 7 N of the active pad's normal force over the declared 4 s scored window (800 samples); full-circle context separately.",
+      "value": "direct-confirmation: mean 7.001171, RMSE 0.048505; spatial: means 7.005953 / 7.001219 / 7.004439, RMSE 0.048097 / 0.051807 / 0.047949, max abs error 0.226209 / 0.241234 / 0.344851; full-circle (direct): min 6.700566, max 7.478110",
+      "unit": "N",
+      "aggregation": "mean, RMSE, max over window",
+      "window": "4 s scored window (full circle for min/max)",
+      "conditions": "original wall, right arm, 5 ms",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "The scored-window error is not the whole-trajectory error.",
+        "Sampled; no sample below 1 N is not proof of uninterrupted contact between samples."
+      ],
+      "source": {
+        "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "Task and final-hold results table, line 35"
+      },
+      "quote": "| Full-circle force context | 1,600 samples; mean 6.995928 N, min 6.700566 N, max 7.478110 N. Do not present the 4 s scored-window error as the whole-trajectory error. |",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/RESULTS_TABLE.md",
+          "anchor": "table rows",
+          "quote": "| r080_a000 | PASS / PASS | 1.096 | 99.125 | 71.519 | 7.005953 | 0.048097 | 0.226209 |"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-11",
+      "robot": "G1",
+      "dimension": "motion_service_during_wipe",
+      "capability": "Both-pad wiping service over the scored circle (U65)",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Fraction of scored-circle samples meeting all of: per-pad normal load >= 1 N, tracking error <= 10 mm, tilt <= 5 deg, face gap <= 6 mm, forward speed >= 5 mm/s.",
+      "value": "98.625 (1,578/1,600) at 5 ms; 98.65625 (3,157/3,200) at 2.5 ms; criterion >= 90 %",
+      "unit": "%",
+      "aggregation": "within-run sample fraction",
+      "window": "8 s scored circle",
+      "conditions": "original wall; frozen before execution",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Shortfall was in forward motion, not contact loss (22 and 43 contiguous samples at the circle start).",
+        "A within-run sample fraction, not a success rate over trials.",
+        "Different definition and window from the point-pilot service (G1-12)."
+      ],
+      "source": {
+        "path": "u65_results_review_20260919/REVIEW.md",
+        "anchor": "Task results table, line 29"
+      },
+      "quote": "| Wiping service fraction | 98.625% | 98.65625% |",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "u65_results_review_20260919/REVIEW.md",
+          "anchor": "line 40",
+          "quote": "The service threshold was 90%, with per-pad positive normal loading at least 1 N, tracking error at most 10 mm, tilt at most 5 degrees, face gap at most 6 mm, and forward speed at least 5 mm/s during wiping."
+        }
+      ],
+      "verification": null,
+      "comparability": "Case-internal quantity. Not comparable with any other case's percentage or score (UR3 per-sample accuracy, UR5 mAP50 and G1 within-run service fractions are different quantities)."
+    },
+    {
+      "id": "G1-12",
+      "robot": "G1",
+      "dimension": "motion_service_during_wipe",
+      "capability": "Selected moving service in the point pilots",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Fraction of the 800 samples in the declared 4 s constant-rate window meeting the selected moving-service conditions (load, pose, motion), with the inactive pad maintaining service; plus qualified path length.",
+      "value": "R13: 99.125 (left), 93.750 (right), 93.750 (both); direct-confirmation: 93.75; spatial: 99.125 (+y), 93.875 (-y), 95.750 (+z); qualified path 67.8-71.9 mm against >= 25 mm",
+      "unit": "% ; mm",
+      "aggregation": "within-window sample fraction",
+      "window": "4 s scored window (not the whole run)",
+      "conditions": "original wall, 5 ms; gate >= 90 %",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Service is not the proportion of dirt removed.",
+        "Not a whole-run success fraction."
+      ],
+      "source": {
+        "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+        "anchor": "line 29"
+      },
+      "quote": "of the predeclared constant-rate motion window; they are not whole-run success fractions.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+          "anchor": "line 31",
+          "quote": "Service includes load, pose and motion conditions; it is not the proportion of dirt removed."
+        }
+      ],
+      "verification": null,
+      "comparability": "Case-internal quantity. Not comparable with any other case's percentage or score (UR3 per-sample accuracy, UR5 mAP50 and G1 within-run service fractions are different quantities)."
+    },
+    {
+      "id": "G1-13",
+      "robot": "G1",
+      "dimension": "final_hold_completion",
+      "capability": "Final hold on the original wall (U65)",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "2 s final hold: service on every row and stationarity under the prospective contract (structural representation check on contact-eligible rows; 0.02 rad/s ceilings elsewhere).",
+      "value": "final-hold service 400/400 (5 ms) and 800/800 (2.5 ms); stationarity passes under the prospective contract; the original static comparator still fails on 400/400 and 721/800 rows",
+      "unit": "rows",
+      "aggregation": "all final-hold rows",
+      "window": "2 s",
+      "conditions": "original wall, both timesteps",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Pass is conditional on the prospective contract, which has a contact-aligned blind spot.",
+        "Neither velocity signal is validated as physical speed."
+      ],
+      "source": {
+        "path": "u65_results_review_20260919/REVIEW.md",
+        "anchor": "section 'What changed and what did not', line 58"
+      },
+      "quote": "The original static comparator still fails on 400/400 coarse final-hold rows and 721/800 fine final-hold rows.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "u65_results_review_20260919/REVIEW.md",
+          "anchor": "Verdict, line 5",
+          "quote": "PASS within the prospectively reviewed U65 supported-simulation contract."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-14",
+      "robot": "G1",
+      "dimension": "final_hold_completion",
+      "capability": "Final hold in the R13 point pilot",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Ordinary final-hold stationarity gate: native and position-derived studied-joint speeds <= 0.020 rad/s over the 400-row, 2 s window.",
+      "value": "3/3 jobs refused (measure_press_after:not_stationary): max native speed 0.020489808 / 0.021540739 / 0.021815030 rad/s; max position-derived 0.000345707 / 0.000476837 / 0.000429153 rad/s; joint-position range <= 4.77e-6 rad",
+      "unit": "rad/s",
+      "aggregation": "maximum over the window",
+      "window": "46.005-48.000 s (400 rows)",
+      "conditions": "original wall, 5 ms, left/right/both",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Simulator-reported speed crossed the ceiling while positions barely changed; mechanism not established."
+      ],
+      "source": {
+        "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+        "anchor": "line 5"
+      },
+      "quote": "Each failed the same final two-second stationary check, `measure_press_after:not_stationary`.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+          "anchor": "final-hold table, line 43",
+          "quote": "| point_both_dt5 | 0.021815030 | 0.000429153 | 2.92062759e-06 | right_wrist_roll_joint |"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-15",
+      "robot": "G1",
+      "dimension": "final_hold_completion",
+      "capability": "Final hold with the own-state latch (diagnostic, direct, spatial)",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Ordinary final-hold verdict after releasing sideways pull and twist through an own-state latch (step 9001, 50-tick ramp); diagnostic 1e-5 rad position-range screen reported separately.",
+      "value": "diagnostic combined release: right-wrist native max 0.000119736 rad/s (unchanged control 0.021540739); direct-confirmation: ordinary verdict passes on 400/400 rows, joint range 9.536743164e-6 rad (4.63e-7 rad under the 1e-5 screen); spatial: ordinary pass at +y, -y, +z; +y range 1.1920928955e-5 rad exceeds the 1e-5 diagnostic screen",
+      "unit": "rad/s; rad",
+      "aggregation": "maximum over the window",
+      "window": "steps 9201-9600 (2 s)",
+      "conditions": "original wall, right arm, 5 ms",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "The controller command is re-anchored; the scoring target is unchanged.",
+        "The 1e-5 screen is a diagnostic interpretation criterion, not the ordinary gate.",
+        "whole_run_velocity_clean is false; 6,866 whole-run comparator failures recorded in the direct-confirmation job.",
+        "One scene per location; not robustness evidence."
+      ],
+      "source": {
+        "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "Task and final-hold results table, line 36"
+      },
+      "quote": "| Final hold | All 400 rows (steps 9201–9600) included; ordinary stationary verdict passes |",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_final_hold_orient_diag_r1_results_review_20260925/REVIEW.md",
+          "anchor": "results table, line 28",
+          "quote": "| Release sideways pull and twist | 0.000688147 | +0.000143729 | **0.000119736** | 7.000868889 |"
+        },
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+          "anchor": "line 7",
+          "quote": "the +y location's final right-wrist pitch range is **1.1920928955e-5 rad**, above the **1e-5 rad earlier diagnostic screen**"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-16",
+      "robot": "G1",
+      "dimension": "final_hold_completion",
+      "capability": "Final hold on the higher wall (5 ms)",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Ordinary final-hold stationarity gate (0.02 rad/s ceiling on reported speed).",
+      "value": "failed: reported speed 0.038 rad/s at the left wrist yaw; position rate 0.00013 rad/s on the same row",
+      "unit": "rad/s",
+      "aggregation": "maximum over the window",
+      "window": "2 s final hold",
+      "conditions": "higher wall, 5 ms; task otherwise completed (service 98.69 %)",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Qualified failure of that configured task, not of other configurations."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+        "anchor": "section 6.5, Table 2, line 664"
+      },
+      "quote": "reported speed 0.038 rad/s at the left wrist yaw against a 0.02 rad/s ceiling, position rate 0.00013 rad/s on the same row",
+      "absence_basis": null,
+      "secondary_sources": [],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-17",
+      "robot": "G1",
+      "dimension": "latency_timing",
+      "capability": "Simulated control and task timing",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Declared simulation timing structure.",
+      "value": "10 ms control period; 5 ms and 2.5 ms physics timesteps; 48 s job = 6 s preparation + 42 s task (two circles over 8 s, 2 s final hold)",
+      "unit": "ms; s",
+      "aggregation": null,
+      "window": null,
+      "conditions": "Isaac Lab / PhysX, GPU, PGS 32/4",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "Simulated time, not wall-clock or hardware timing."
+      ],
+      "source": {
+        "path": "u65_results_review_20260919/REVIEW.md",
+        "anchor": "section 'Task results', line 23"
+      },
+      "quote": "Each loaded job ran 48 simulated seconds: six seconds of declared preparation, followed by the unchanged 42-second task including two circles over eight seconds and the two-second final hold.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "anchor": "section 6, T3.2, lines 466-467",
+          "quote": "timesteps of 5 ms and 2.5 ms and a 10 ms control period."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-18",
+      "robot": "G1",
+      "dimension": "latency_timing",
+      "capability": "Perception-to-action latency",
+      "status": "UNKNOWN",
+      "absence_type": null,
+      "quantity_definition": "Delay from a gesture or detection to robot motion.",
+      "value": null,
+      "unit": "ms",
+      "aggregation": null,
+      "window": null,
+      "conditions": "captures run with zero physics callbacks; synthetic input timestamps separate from the physics clock",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "The pilot design cannot represent perception latency; wall-clock worker/replay time (e.g. 30.44 min for the direct-confirmation pair) is compute cost, not robot timing."
+      ],
+      "source": {
+        "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "line 19"
+      },
+      "quote": "These synthetic input timestamps are separate from the subsequent task physics clock.",
+      "absence_basis": "No perception-to-motion latency is measured or modelled in any G1 source read.",
+      "secondary_sources": [
+        {
+          "path": "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md",
+          "anchor": "line 23",
+          "quote": "9,600 physics intervals, no recorded physics callback during capture"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-19",
+      "robot": "G1",
+      "dimension": "surfaces_conditions_tested",
+      "capability": "Surfaces and conditions",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Configurations executed and their completion level.",
+      "value": "original wall qualified at 5 and 2.5 ms (U65, re-executed U66); higher wall 5 ms completed but final hold failed; higher wall 2.5 ms withheld; table: two calibration campaigns held, loaded jobs not admitted (wipe unobserved); point pilots on the original wall at 5 ms: R13 left/right/both completed the wipe but failed the final hold; with the own-state latch, the right-arm anchor, +8 cm y, -8 cm y and +8 cm z passed; centre refused before wiping",
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": "supported (root-fixed) model; right arm for direct/spatial pilots; 5 ms for point pilots",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "No glass, no physical surface; table wiping neither demonstrated nor refuted."
+      ],
+      "source": {
+        "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+        "anchor": "section 'Three complete locations', line 23"
+      },
+      "quote": "All use the supported original wall, right arm, 5 ms timestep, scripted virtual hand, known plane and colour-marker detector.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "anchor": "section 6.5, Table 2, line 666",
+          "quote": "prerequisite hold; wipe unobserved"
+        },
+        {
+          "path": "claude_journal_route_r14_20260922/docs/SUPPLEMENT.md",
+          "anchor": "S1 outcomes table",
+          "quote": "withheld by the frozen planner (coarse task did not pass)"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-20",
+      "robot": "G1",
+      "dimension": "endurance_thermal_power",
+      "capability": "Motor power, heat, endurance",
+      "status": "NOT_EVALUATED",
+      "absence_type": "not established (stated)",
+      "quantity_definition": "Physical motor power, temperature, duty or endurance.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "simulation",
+      "constraints": [
+        "No published torque constant or winding resistance was located in a bounded search (r14 section 6.4)."
+      ],
+      "source": {
+        "path": "u65_results_review_20260919/REVIEW.md",
+        "anchor": "Verdict, line 7"
+      },
+      "quote": "This does not establish physical joint-velocity accuracy, motor power, heat, endurance, free-standing balance, cleaning effectiveness or novelty.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "anchor": "section 6.4, lines 618-619",
+          "quote": "No motor power, heating, duty or endurance figure is reported."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-21",
+      "robot": "G1",
+      "dimension": "endurance_thermal_power",
+      "capability": "Actuator demand in simulation",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Largest commanded joint torque relative to the configured model clip; signed work of the held commands on the recorded displacements.",
+      "value": "waist pitch 23.4739 N·m during the circle (about 67.1 % of the 35 N·m clip configured in the model); arm coordinates <= about 25 % of published module peak torque; signed work 2.6219936232 J (5 ms), 2.6054586605 J (2.5 ms)",
+      "unit": "N·m; J",
+      "aggregation": "peak; sum over intervals",
+      "window": "42 s task",
+      "conditions": "original wall (U65)",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "A ratio to a simulation setting, not a hardware utilisation rating.",
+        "Signed work is not electrical energy, motor-shaft work or thermal load."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+        "anchor": "section 6.3, lines 545-547"
+      },
+      "quote": "a ratio to a simulation setting and not a hardware utilisation rating",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "anchor": "section 6.3, lines 588-589",
+          "quote": "It is **not** electrical energy, physical motor-shaft work, contact work, an internal solver energy balance, or total system energy."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-22",
+      "robot": "G1",
+      "dimension": "cleaning_effectiveness",
+      "capability": "Cleaning effectiveness",
+      "status": "NOT_EVALUATED",
+      "absence_type": "not measured (stated)",
+      "quantity_definition": "Dirt removal or cleaning quality.",
+      "value": null,
+      "unit": null,
+      "aggregation": null,
+      "window": null,
+      "conditions": null,
+      "evidence_level": "simulation",
+      "constraints": [
+        "Marker footprint coverage is descriptive only."
+      ],
+      "source": {
+        "path": "point_clean_pilot_r13_results_review_20260924/REVIEW.md",
+        "anchor": "line 33"
+      },
+      "quote": "Small-marker footprint coverage is descriptive and is not an independent cleaning-success measure.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_spatial_pilot_r1_results_review_20260925/REVIEW.md",
+          "anchor": "line 31",
+          "quote": "it is not the proportion of dirt removed."
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    },
+    {
+      "id": "G1-23",
+      "robot": "G1",
+      "dimension": "cleaning_tool_end_effector",
+      "capability": "Pads",
+      "status": "SIMULATED",
+      "absence_type": null,
+      "quantity_definition": "Simulated end-effector contact model.",
+      "value": "two rigid disc pads meeting the wall through a compliant contact; pad radius 60 mm",
+      "unit": "mm",
+      "aggregation": null,
+      "window": null,
+      "conditions": "supported G1 model",
+      "evidence_level": "simulation",
+      "constraints": [
+        "Simulation only; no physical counterpart. Root fixed to the world; 17 studied upper-body coordinates.",
+        "No brush, sponge material, water or friction validation."
+      ],
+      "source": {
+        "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+        "anchor": "section 6, T3.1, lines 457-458"
+      },
+      "quote": "Two rigid disc pads meet the wall through a compliant contact.",
+      "absence_basis": null,
+      "secondary_sources": [
+        {
+          "path": "point_clean_workspace_prep_20260925/PROTOCOL.md",
+          "anchor": "line 44",
+          "quote": "whose pad is 60 mm in radius"
+        }
+      ],
+      "verification": null,
+      "comparability": null
+    }
+  ],
+  "reproducibility": "The selector continues to load its original digest-checked catalogue. This scoped record is not substituted for historical catalogue source pins."
+}

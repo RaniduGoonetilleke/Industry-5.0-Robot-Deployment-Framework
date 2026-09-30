@@ -1,0 +1,3325 @@
+{
+  "all_new_as_expected": true,
+  "catalogue_r3_sha256": "7d84a94d4ba892dee324bf763092573b5dff1887aae95665fbe31f7579bb10ba",
+  "explanation_of_changes": "A prior decision changes only where a request's force range contains 8 N and an 8 N profile at a requested site is otherwise in scope. In r24 that is the single example owner_range_6_to_8N (site B): r24 recommended G1_B_7N for confirmation; with two tested settings in the owner's range the rule asks the owner to choose (ASK). Every exact 7 N request and every other situation is unchanged; the 8 N profiles only add \"setpoint\" entries to the out-of-scope listing.",
+  "new_examples": [
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_D_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "exact_8N_at_D",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Unobserved now",
+      "name": "exact_8N_at_D_live_unobserved",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "ASK",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "remaining": [
+          "G1_A_8N",
+          "G1_B_8N",
+          "G1_C_8N",
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "exact_8N_A_to_D",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [
+          {
+            "applied": true,
+            "basis": "Illustrative task-owner site order; no efficiency or quality ranking",
+            "field": "id"
+          }
+        ],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "allowed_targets": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_D_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [
+          {
+            "applied": true,
+            "basis": "Illustrative task-owner site order; no efficiency or quality ranking",
+            "field": "id"
+          }
+        ],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "exact_8N_A_to_D_declared_site_order",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "G1_D_8N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "exact_7p5N_at_D",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 7.5,
+        "minimum_n": 7.5
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "G1_D_8N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "range_7p2_to_7p9N_at_D",
+      "request_force": {
+        "basis": "Illustrative owner-authorised setpoint range",
+        "maximum_n": 7.9,
+        "minimum_n": 7.2
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "G1_D_8N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "exact_9N_at_D",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 9.0,
+        "minimum_n": 9.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "ASK",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "remaining": [
+          "G1_D_7N",
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "range_6_to_9N_at_D",
+      "request_force": {
+        "basis": "Illustrative owner-authorised setpoint range",
+        "maximum_n": 9.0,
+        "minimum_n": 6.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [
+          {
+            "applied": true,
+            "basis": "Illustrative owner preference between two tested settings; not a cleaning requirement or an optimisation",
+            "field": "id"
+          }
+        ],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_D_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [
+          {
+            "applied": true,
+            "basis": "Illustrative owner preference between two tested settings; not a cleaning requirement or an optimisation",
+            "field": "id"
+          }
+        ],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "range_6_to_9N_at_D_declared_order",
+      "request_force": {
+        "basis": "Illustrative owner-authorised setpoint range",
+        "maximum_n": 9.0,
+        "minimum_n": 6.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "ASK",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "remaining": [
+          "G1_A_8N",
+          "G1_B_8N",
+          "G1_C_8N",
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "frozen_criteria_8N_A_to_D",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "REFUSE",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [
+              "recorded metric outside requested bound:1142f354acf4"
+            ],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "REFUSE",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "every applicable configuration fails a guard"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "post_hoc_D_8N_max_le_0p3N",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "domain",
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "domain",
+            "target"
+          ],
+          "G1_B_7N": [
+            "domain",
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "domain",
+            "target"
+          ],
+          "G1_C_7N": [
+            "domain",
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "domain",
+            "target"
+          ],
+          "G1_D_7N": [
+            "domain",
+            "setpoint"
+          ],
+          "G1_D_8N": [
+            "domain"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "physical_G1_8N",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "NEW_SITE"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "untested_site_8N",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "A"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Unobserved now",
+      "name": "own_request_G1_A_8N_live_UNKNOWN",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_A_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_A_8N"
+        ]
+      },
+      "allowed_targets": [
+        "A"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_A_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_A_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_A_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_A_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "own_request_G1_A_8N_live_PASS",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "B"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Unobserved now",
+      "name": "own_request_G1_B_8N_live_UNKNOWN",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_B_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_B_8N"
+        ]
+      },
+      "allowed_targets": [
+        "B"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_B_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_B_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_B_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_B_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "own_request_G1_B_8N_live_PASS",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "C"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Unobserved now",
+      "name": "own_request_G1_C_8N_live_UNKNOWN",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_C_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_C_8N"
+        ]
+      },
+      "allowed_targets": [
+        "C"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_C_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_C_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_C_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_8N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_C_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "own_request_G1_C_8N_live_PASS",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "WITHHOLD",
+      "expected_configuration": null,
+      "first": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "remaining": []
+      },
+      "live_semantics": "Unobserved now",
+      "name": "own_request_G1_D_8N_live_UNKNOWN",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "SELECT",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "allowed_targets": [
+        "D"
+      ],
+      "as_expected": true,
+      "expected": "CONFIRM",
+      "expected_configuration": "G1_D_8N",
+      "first": {
+        "candidate_reasons": {
+          "G1_D_8N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": "G1_D_8N",
+        "decision": "CONFIRM",
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_A_8N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_8N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_C_8N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "remaining": [
+          "G1_D_8N"
+        ]
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "own_request_G1_D_8N_live_PASS",
+      "request_force": {
+        "basis": "Illustrative owner-prescribed setpoint; not a cleaning or dirt-removal requirement",
+        "maximum_n": 8.0,
+        "minimum_n": 8.0
+      }
+    }
+  ],
+  "pass": true,
+  "prior_examples": [
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "G1_A_7N_live_UNKNOWN",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_A_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_A_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_A_7N",
+      "example": "G1_A_7N_live_PASS",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "G1_B_7N_live_UNKNOWN",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_B_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_B_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_B_7N",
+      "example": "G1_B_7N_live_PASS",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "G1_C_7N_live_UNKNOWN",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_C_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_C_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_C_7N",
+      "example": "G1_C_7N_live_PASS",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "G1_D_7N_live_UNKNOWN",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_D_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_D_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_D_7N",
+      "example": "G1_D_7N_live_PASS",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "UR3_registered_handover_live_UNKNOWN",
+      "force_request": null,
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_B_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_C_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_D_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "UR3_registered_handover",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "UR3_registered_handover"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "UR3_registered_handover",
+      "example": "UR3_registered_handover_live_PASS",
+      "force_request": null,
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_B_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_C_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_D_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "UR5_whiteboard_detection_live_UNKNOWN",
+      "force_request": null,
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_B_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_C_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_D_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "SELECT",
+      "after_configuration": "UR5_whiteboard_detection",
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "UR5_whiteboard_detection"
+      ],
+      "before": "SELECT",
+      "before_configuration": "UR5_whiteboard_detection",
+      "example": "UR5_whiteboard_detection_live_PASS",
+      "force_request": null,
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_B_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_C_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ],
+        "G1_D_8N": [
+          "capability",
+          "context",
+          "domain",
+          "evidence_level",
+          "mode",
+          "settings",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "ASK",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_A_7N",
+        "G1_B_7N",
+        "G1_C_7N",
+        "G1_D_7N"
+      ],
+      "before": "ASK",
+      "before_configuration": null,
+      "example": "no_preference",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_D_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_D_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_D_7N",
+      "example": "declared_site_preference",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "untested_10N",
+      "force_request": {
+        "basis": "authored exact request",
+        "maximum_n": 10.0,
+        "minimum_n": 10.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "ASK",
+      "after_configuration": null,
+      "after_confirmation": [
+        "SELECT",
+        null
+      ],
+      "after_remaining": [
+        "G1_B_7N",
+        "G1_B_8N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_B_7N",
+      "example": "owner_range_6_to_8N",
+      "force_request": {
+        "basis": "authored owner-authorised setpoint range",
+        "maximum_n": 8.0,
+        "minimum_n": 6.0
+      },
+      "new_profiles_in_scope": [
+        "G1_B_8N"
+      ],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "target"
+        ],
+        "G1_C_8N": [
+          "target"
+        ],
+        "G1_D_8N": [
+          "target"
+        ]
+      },
+      "unchanged": false
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "physical_G1",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "domain",
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "domain",
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "domain",
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "domain",
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "untested_site",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "ASK",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_A_7N",
+        "G1_B_7N",
+        "G1_C_7N",
+        "G1_D_7N"
+      ],
+      "before": "ASK",
+      "before_configuration": null,
+      "example": "frozen_criteria_A_to_D",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_D_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_D_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_D_7N",
+      "example": "post_hoc_D_rmse_le_0p1N",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "REFUSE",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "REFUSE",
+      "before_configuration": null,
+      "example": "post_hoc_D_max_le_0p3N",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "CONFIRM",
+      "after_configuration": "G1_B_7N",
+      "after_confirmation": [
+        "SELECT",
+        "SELECT"
+      ],
+      "after_remaining": [
+        "G1_B_7N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_B_7N",
+      "example": "post_hoc_B_max_le_0p3N",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_A_7N"
+      ],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "post_hoc_A_max_le_0p3N",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint",
+          "target"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "ASK",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_B_7N",
+        "G1_C_7N"
+      ],
+      "before": "ASK",
+      "before_configuration": null,
+      "example": "post_hoc_A_to_D_max_le_0p3N",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_D_7N"
+      ],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "post_hoc_D_whole_job_rmse",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WITHHOLD",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "WITHHOLD",
+      "before_configuration": null,
+      "example": "post_hoc_D_rmse_live_unobserved",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_B_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_C_8N": [
+          "setpoint",
+          "target"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "ASK",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_A_7N",
+        "G1_C_7N",
+        "G1_D_7N"
+      ],
+      "before": "ASK",
+      "before_configuration": null,
+      "example": "local_hazard_at_B",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "WAIT",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [
+        "G1_A_7N",
+        "G1_B_7N",
+        "G1_C_7N",
+        "G1_D_7N"
+      ],
+      "before": "WAIT",
+      "before_configuration": null,
+      "example": "G1_platform_busy",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    },
+    {
+      "after": "REFUSE",
+      "after_configuration": null,
+      "after_confirmation": [
+        null,
+        null
+      ],
+      "after_remaining": [],
+      "before": "REFUSE",
+      "before_configuration": null,
+      "example": "shared_hazard",
+      "force_request": {
+        "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+        "maximum_n": 7.0,
+        "minimum_n": 7.0
+      },
+      "new_profiles_in_scope": [],
+      "new_profiles_out_of_scope": {
+        "G1_A_8N": [
+          "setpoint"
+        ],
+        "G1_B_8N": [
+          "setpoint"
+        ],
+        "G1_C_8N": [
+          "setpoint"
+        ],
+        "G1_D_8N": [
+          "setpoint"
+        ]
+      },
+      "unchanged": true
+    }
+  ],
+  "prior_examples_changed": [
+    {
+      "after": "ASK",
+      "after_remaining": [
+        "G1_B_7N",
+        "G1_B_8N"
+      ],
+      "before": "CONFIRM",
+      "before_configuration": "G1_B_7N",
+      "example": "owner_range_6_to_8N",
+      "force_request": {
+        "basis": "authored owner-authorised setpoint range",
+        "maximum_n": 8.0,
+        "minimum_n": 6.0
+      },
+      "new_profiles_in_scope": [
+        "G1_B_8N"
+      ]
+    }
+  ],
+  "r24_reproduction_unchanged": {
+    "exit": 0,
+    "pass": true,
+    "stderr_tail": [
+      "Ran 67 tests in 0.280s",
+      "",
+      "OK"
+    ],
+    "stdout_tail": [
+      " \"ok\": true",
+      "}",
+      "{\"trace_snapshots\": 20, \"all_match\": true}",
+      "PASS: offline selector tests, 29 examples, Table 2 and 20 saved trace snapshots. No native simulation was launched."
+    ]
+  },
+  "scope": "Offline software on author-assessed records; synthetic live states; no robot, simulator or dispatch.",
+  "selector_sha256": "8aae7ad86fa494ca450af9ecb6a8c26963ee1e5494f0f1efe9d341209e3d2e17",
+  "table2_with_8N_profiles": {
+    "decision_changes": [],
+    "situations": 288
+  },
+  "trace_snapshots": "catalogue-free prototype; covered unchanged by the r24 reproduction above"
+}

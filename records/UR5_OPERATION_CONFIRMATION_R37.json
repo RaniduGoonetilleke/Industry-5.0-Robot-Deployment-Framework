@@ -1,0 +1,46 @@
+{
+  "record": "UR5 operating sequence: summary of the prototype developer's answers, Emmanuel Mgboji",
+  "date": "2026-09-29",
+  "status": "Author-written summary of the developer's answers. Approval of this summary's wording is not recorded. It is not independent verification or manuscript approval.",
+  "source": "Factual summary of the developer's answers retained privately by the authors. Informal messages are not reproduced.",
+  "confirmed_points": [
+    {
+      "id": "C1",
+      "statement": "After the program starts, the system detects the framed area and its centre, executes a predefined wiping pattern, returns home and checks for remaining red marks. It repeats if needed and stops when its visual check indicates completion."
+    },
+    {
+      "id": "C2",
+      "statement": "After starting the program, the person observes. No further movement commands or target approvals were required in the described demonstration."
+    },
+    {
+      "id": "C3",
+      "statement": "The intended cleaning target is stationary. Trials involving board movement worked only partly. The account does not establish when the movement occurred or whether the board was tracked reliably during contact."
+    },
+    {
+      "id": "C4",
+      "statement": "The stopping decision uses HSV-based detection of the remaining red marks. This confirmation does not establish the exact comparison operator at the pixel threshold."
+    },
+    {
+      "id": "C5",
+      "statement": "Active contact-force regulation was not implemented and no contact-force value was measured."
+    },
+    {
+      "id": "C6",
+      "statement": "The final report describes the implementation demonstrated in the video. This rests on the developer's confirmation, without any comparison of executed source-code bytes."
+    }
+  ],
+  "interpretation": [
+    "the detect-wipe-return-inspect-repeat loop is confirmed, with automatic HSV-based stopping",
+    "after starting, the person only watched and gave no further command or target approval (the attendant role)",
+    "the intended task uses a static target, board-movement tests worked only partly, and when the movement happened is not specified",
+    "active contact-force regulation was not implemented and no force value was measured, although a brush in contact still exerts force",
+    "according to the developer's confirmation, the final report and the video describe the same implementation (no byte-level code comparison was made)"
+  ],
+  "not_established": [
+    "a measured cleaning effectiveness",
+    "a success rate over repeated runs",
+    "reliable tracking of a moving target",
+    "a glass-surface trial",
+    "the exact comparison operator of the pixel threshold, which stays with its original source"
+  ]
+}

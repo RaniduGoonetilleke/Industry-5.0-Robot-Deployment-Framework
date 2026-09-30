@@ -1,0 +1,141 @@
+{
+  "package": "reviewer_individual_files_20260930",
+  "status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "commands": [
+    [
+      "scripts/reproduce.py"
+    ],
+    [
+      "-m",
+      "unittest",
+      "-v",
+      "catalogue_r3/test_catalogue_r3.py"
+    ],
+    [
+      "catalogue_r3/example_evidence_growth.py"
+    ],
+    [
+      "catalogue_r3/reproduce_8N_metrics.py"
+    ],
+    [
+      "-m",
+      "unittest",
+      "-v",
+      "catalogue_r4/test_catalogue_r4.py"
+    ],
+    [
+      "lifecycle_example/lifecycle_b.py"
+    ],
+    [
+      "-m",
+      "unittest",
+      "-v",
+      "lifecycle_example/test_lifecycle_b.py"
+    ],
+    [
+      "job_example/run_example.py"
+    ],
+    [
+      "-m",
+      "unittest",
+      "-v",
+      "job_example/test_job_plan.py"
+    ],
+    [
+      "job_example/author_declarations.py"
+    ],
+    [
+      "job_example/negative_controls.py"
+    ],
+    [
+      "scripts/reproduce_metrics.py"
+    ]
+  ],
+  "expected_generated_files": {
+    "catalogue_r3/EVIDENCE_GROWTH.json": "6e08596670f72fd1cd308787085b0c85b8c2108d49c48850536dc682577f6909",
+    "job_example/results/JOB_PLAN_TABLE.md": "41f98d40743d002d1c665887c364969fc59f1cffc6da34396e5686f6594d5c87",
+    "job_example/results/PLAN_customer_building.json": "44184bc7ca66cf30dc83f550f3a56300e5e6245c8d8fb765d432c219388d78a9",
+    "job_example/results/PLAN_tested_contexts.json": "910a5ac3f9462fe4c744f4a59c34f4869eaa97f765652b69178f5d0fef04c5d7",
+    "job_example/results/PLAN_tested_contexts_with_synthetic_declarations.json": "08c91811c4579155aa1aed14fd47dcb9984b94a1c0813049c56600c86fbcf469"
+  },
+  "source_package_manifest_sha256": "5996db402c5ae046c692a32ceb6cb211eace620ce7619fde033929319b7941a8",
+  "code_identity_update": {
+    "selector_original_sha256": "8aae7ad86fa494ca450af9ecb6a8c26963ee1e5494f0f1efe9d341209e3d2e17",
+    "selector_supplied_sha256": "922cb93fa1265a8cc50987812d3c062345b99aa2b676536173a68f21eef22d1e",
+    "reason": "Comments and docstrings edited; executable operations checked unchanged."
+  },
+  "files": {
+    "LICENSE": "9c427c309c62e7722b0b39a8149d083969ccc33869f1d8f43c1b4ad2434d4f2f",
+    "README.md": "caaec77cf9727e0ec4c1d6c1990a5702e624397052659668ec7a41e0a12ed83a",
+    "analysis/CANDIDATE_MAPPING.json": "89fdbfda7e9529fe965ac76e25ff256855f9223346d407e1206f4a657470aea0",
+    "analysis/DEVELOPMENT_EXAMPLES.json": "a65f56cf0b115d48e8ed05e0afb5b27882bce2a6cda9212c23f792aa4abf3fe0",
+    "catalogue_r3/CANDIDATE_MAPPING_R3.json": "7d84a94d4ba892dee324bf763092573b5dff1887aae95665fbe31f7579bb10ba",
+    "catalogue_r3/DECISIONS_R3.json": "45dcf7ef5e0dcc7e37ea3e53c7403ed03c2c8929cd9ea18f3d143a1d8fe8bbea",
+    "catalogue_r3/FORCE_8N_RECORDS.json": "dee940179a0a61e2e2727562c04ec4e861955b967813a2e97739a94a1ffa404d",
+    "catalogue_r3/PUBLIC_OMISSIONS.json": "7366d949d76839a5e64ef9b8615e68faa2ef1b6363c9997a923fe0ed9c430b6e",
+    "catalogue_r3/data/A_8N_reduced.npz": "7e0607873819f28d70766c05a2252ae47228b217acf7bb8608deeec12d1c91ff",
+    "catalogue_r3/data/B_8N_reduced.npz": "5efe40482c7de0a0a44170cb447a6ffea447fc66c623559c64a82295f145c95b",
+    "catalogue_r3/data/C_8N_reduced.npz": "44531f4d6dde4374ebbb47c359fd4dd283d1f78e7eb78f0b019fed99be063c24",
+    "catalogue_r3/data/DATA_PROVENANCE_8N.json": "6b5d75dfdb83e10f38b1e09518dc54e7c1aabcadfa0b4b816bbccdc626509a80",
+    "catalogue_r3/data/D_8N_reduced.npz": "b532f0556bfeb02b793137698f607a2e08cb3bcf9cf4066d6a9e9ac01711fca9",
+    "catalogue_r3/example_evidence_growth.py": "12e47ec34db290e77f08932e7614580443747cd857ded38d1427f4ab28754303",
+    "catalogue_r3/reproduce_8N_metrics.py": "a9d83194858ed4c8b94a69d7764ac62821d8b55d522c91be94c8913ac25c9c31",
+    "catalogue_r3/source/CONTROL_REPRODUCTION.json": "6214e590cdbe711836659d07a2f0565d3ebfb70f4280e24417354d5111bae46b",
+    "catalogue_r3/source/RESULTS_TABLE.md": "461739255a8d55f769ba4554402c63b9d5373275ba3f38169e76fa86b45cbfb8",
+    "catalogue_r3/source/point_right_dt5_force_a_08n_CHECKS.json": "ceac0237dd7195ce46e7d188ab79eada413a7f1537ff7034be4f69e13e807550",
+    "catalogue_r3/source/point_right_dt5_force_b_08n_CHECKS.json": "a18541d6f71621ddf5740383a3ea043d11387a2534beac6784694d5cc557cccc",
+    "catalogue_r3/source/point_right_dt5_force_c_08n_CHECKS.json": "2c889d823ea943d4761d21ebcd6b0955fdbcd24831c9a71abee5b8ab10b2f047",
+    "catalogue_r3/source/point_right_dt5_force_d_08n_CHECKS.json": "aa62e8984109a07e3aa3a4c3d7e3d13e96bc550bb11db561d3dd73cba042ce47",
+    "catalogue_r3/test_catalogue_r3.py": "632d879b7e9f7606e8487b5d3925d5f9f42ec028b53c65d9dbcd5709ee1dd692",
+    "catalogue_r4/CANDIDATE_MAPPING_R4.json": "e6fd8558890ed48625f0e1166ee3613949c9d8fa0bb0377f1c8993e93529e1b0",
+    "catalogue_r4/DECISIONS_R4.json": "bd511f47a1c16bed2d229b82fff8c387ec2cbe334f90f12d4a24ac444d100ea7",
+    "catalogue_r4/test_catalogue_r4.py": "0a9698e9ce4a8eca5655b40f2df0ae8d44c2a1ba78c0c385c8487cc839aebf0f",
+    "data/A_reduced.npz": "d6ec9f5a503c9f6e8fbea3fc402c9cce22b507b15b85d3dd9a5161c04a799a0c",
+    "data/B_reduced.npz": "6737568384dad71c94107309753d5763845ba72995fc610881465f3dda96c336",
+    "data/C_reduced.npz": "f2716f7a5bf82466fe9fbcfb186041c78a4b39bb3c24f09a13d9031ef161bf2e",
+    "data/DATA_PROVENANCE.json": "943b38d7c71c112eb0af19a7696900ff106387a30ab64c76ba7158bef0d9e949",
+    "data/D_reduced.npz": "940f91aaf20f64a04cfad07e83fa41000c20980fcfd163c938d927a56ce37f51",
+    "docs/HISTORICAL_VALIDATION.json": "11a36fec06c702050156f6e7c8bfe98ea9e160cd7267ed94e426df17e595a2e9",
+    "figures/FIGURE_SOURCES.json": "76896fb3cd9f0b551a3fd68cdc0104f5d8767ec6ef76fb4ff8b27e727c94b07d",
+    "figures/figure1_deployment_framework.pptx": "6f0a28000bee095d28446563760e0631772dc142e213996ae48dd0542b1d7cf5",
+    "figures/figure1_deployment_framework.svg": "77679f564c3e9eebd031744b33cb20da4aa1ac93bbcf4b24b031e0a217108a21",
+    "historical/decision_prototype.py": "85a890d2faefc2addc046f94b75c0f67440ffb84d24ff4416344cb7d48d22eef",
+    "job_example/CONTRACT.md": "ffa07dc2d73da52fd4ab985d2277033e5c02daff810837268b8d3ee60a79b77f",
+    "job_example/author_declarations.py": "196ecce4b6cbeefe5e980486cf2a6c118d9f105a97b8fb25689365e06bacb143",
+    "job_example/job_plan.py": "de498e9b1a18765a25a5754b67cfdcbbb29e91b72386e23153b33d99e0d17bca",
+    "job_example/negative_controls.py": "1f5bbfa3f687bc6a6bc06bbef454f0638bd810aa5ce8841ab5bc287cf55a02f9",
+    "job_example/run_example.py": "f09d9211dd0615ae4120626dc9a90f1ba67f96fcc951bf2ab3e889f603853ca7",
+    "job_example/scenarios/customer_building.json": "7dc7de4967a9ca3ac990de2d4da870c1806f3a194ac601e9bcd6cfbf28c2677c",
+    "job_example/scenarios/tested_contexts.json": "66880147b023d9a9d2cadd257b0ddc490f9d6b8fc62403d56b3340299e1ce570",
+    "job_example/test_job_plan.py": "4df50ad307ed3a0aa3a7f3448905ed6525fc0b8c07140f19ac9ddbf4efe75760",
+    "lifecycle_example/LIFECYCLE_B.json": "98e6544125d7009c22dc11d7df441b8b9b7f23a846106348f931f3381b7e086f",
+    "lifecycle_example/lifecycle_b.py": "c685b2b48facbbda9d5b930a88f8cd6a805bf21ccd5e46d0032a09e499d136ad",
+    "lifecycle_example/test_lifecycle_b.py": "37d82fc2ce46763e2d01f317b9e7c042ab221817ee3cba87f0294f8d0f4e95f2",
+    "records/CASE_CAPABILITY_RECORDS.json": "fc5111cc434315cbb6330f861152e984d55209554c54fefbfb69a93fc9e32490",
+    "records/DECISION_TRACE.json": "8265ca72e8e23aa0d916971bcad31e8620c59fc3fb8fe478cf338ee80a1f9df8",
+    "records/SPATIAL_RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa",
+    "records/TABLE2.md": "2ecfb158d2af583a3afcf75bd66b48cf348f9164a5e9155ed8bba38e41903dfd",
+    "records/TABLE2_OLD_REFUSAL_CONTROL.md": "5e9a234b09c3c851fe8d6d1bf615212457f5ad64fdd0a6aa2952cbee3e4e1c8b",
+    "records/UR5_OPERATION_CLARIFICATION.json": "df2764cc0b4a39bf3de417feafe4ce3a9d486beebd6b07e5bf528d07780fe3a2",
+    "records/UR5_OPERATION_CONFIRMATION_R37.json": "9ced2b592dcf583bc967c46800120d6b7b52f2b8844799d4936a6a2db9812e2b",
+    "repro/fuzz_invariants.py": "59d4301e5ddfec7b20d93cf3b04b4e047bee819425432f75c564528a9fd509ab",
+    "reproduce_all.py": "d0d3e83453df0bffb9d3bfcd0601855331434ee3332d59090200ee8dd2868374",
+    "scripts/check_table2.py": "a165f84c4c5e240849251e070e82b696ab17fcc8a24141cba895f2a4a286aee2",
+    "scripts/reproduce.py": "f4b4c0f2a95d29a1b15cf6593410ae090190f2e61fa21dc5af1d685c1010cf79",
+    "scripts/reproduce_metrics.py": "4b53c1bb1f22e9aef86d3464b93a13f335977bca0d65eadd267af0c73d92edbf",
+    "selector/build_examples.py": "ee07f9ba5a696899477d48a8c4ead40efd777407a975dd8fc40348812c53b2ec",
+    "selector/selector.py": "922cb93fa1265a8cc50987812d3c062345b99aa2b676536173a68f21eef22d1e",
+    "selector/test_selector.py": "a3409efb94c1495adf996167fa30936e4f63fca4cb567b97e0ac66cc373f220a",
+    "selector/validate_and_attack_original.py": "653a3a524fff8b15672321a77dffef55b09df3194d0be6261c4a1ea8d6df4f4a"
+  },
+  "license": "MIT",
+  "optional_commands": [
+    [
+      "repro/fuzz_invariants.py",
+      "verification/FUZZ_INVARIANTS.json"
+    ],
+    [
+      "selector/validate_and_attack_original.py"
+    ]
+  ]
+}

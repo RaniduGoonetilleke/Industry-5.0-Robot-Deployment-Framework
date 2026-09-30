@@ -1,0 +1,29 @@
+{
+  "scope": "Derived arrays copied unchanged from accepted reviews, not full raw returns.",
+  "arrays": [
+    {
+      "site": "A",
+      "source": "point_direct_confirm_pilot_r1_results_review_20260925/point_right_dt5_direct_confirm_reduced.npz",
+      "sha256": "d6ec9f5a503c9f6e8fbea3fc402c9cce22b507b15b85d3dd9a5161c04a799a0c",
+      "bytes": 4992829
+    },
+    {
+      "site": "B",
+      "source": "point_spatial_pilot_r1_results_review_20260925/point_right_dt5_spatial_r080_a000_reduced.npz",
+      "sha256": "6737568384dad71c94107309753d5763845ba72995fc610881465f3dda96c336",
+      "bytes": 4990218
+    },
+    {
+      "site": "C",
+      "source": "point_spatial_pilot_r1_results_review_20260925/point_right_dt5_spatial_r080_a180_reduced.npz",
+      "sha256": "f2716f7a5bf82466fe9fbcfb186041c78a4b39bb3c24f09a13d9031ef161bf2e",
+      "bytes": 5004544
+    },
+    {
+      "site": "D",
+      "source": "point_spatial_pilot_r1_results_review_20260925/point_right_dt5_spatial_r080_a090_reduced.npz",
+      "sha256": "940f91aaf20f64a04cfad07e83fa41000c20980fcfd163c938d927a56ce37f51",
+      "bytes": 4966450
+    }
+  ]
+}

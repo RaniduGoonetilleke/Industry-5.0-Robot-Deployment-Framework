@@ -1,0 +1,362 @@
+{
+  "id": "tested_contexts",
+  "description": "Rehearsal in each case's own tested context. Each task is judged against its own case's context; the three systems were never co-located or connected. Every value is authored for this example; live facts are synthetic.",
+  "tally": {
+    "tested_whiteboard_regions": 1,
+    "simulated_wall_locations": 2,
+    "registered_handover_items": 1
+  },
+  "places": {
+    "g1_wall_between_A_and_B": {
+      "area": "g1_simulated_wall",
+      "targets": [
+        {
+          "domain": "simulation",
+          "context": "supported_original_wall_point_pilot",
+          "target": "between_A_and_B"
+        }
+      ]
+    },
+    "g1_wall_location_D": {
+      "area": "g1_simulated_wall",
+      "targets": [
+        {
+          "domain": "simulation",
+          "context": "supported_original_wall_point_pilot",
+          "target": "D"
+        }
+      ]
+    },
+    "ur3_handover_point": {
+      "area": "ur3_cell",
+      "targets": [
+        {
+          "domain": "physical",
+          "context": "published_single_operator_registered_cubes",
+          "target": "registered_cube"
+        }
+      ]
+    },
+    "ur5_tested_whiteboard": {
+      "area": "ur5_whiteboard_cell",
+      "targets": [
+        {
+          "domain": "physical",
+          "context": "reported_indoor_whiteboard_taped_target",
+          "target": "taped_region"
+        }
+      ]
+    }
+  },
+  "slots": [
+    "slot-1",
+    "slot-2"
+  ],
+  "conditions": {
+    "slot-1": {
+      "shared_safety": "PASS",
+      "areas": {
+        "ur5_whiteboard_cell": "PASS",
+        "g1_simulated_wall": "PASS",
+        "ur3_cell": "PASS"
+      },
+      "locations": {
+        "g1_wall_between_A_and_B": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        },
+        "g1_wall_location_D": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        },
+        "ur3_handover_point": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        },
+        "ur5_tested_whiteboard": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        }
+      }
+    },
+    "slot-2": {
+      "shared_safety": "PASS",
+      "areas": {
+        "ur5_whiteboard_cell": "PASS",
+        "g1_simulated_wall": "PASS",
+        "ur3_cell": "PASS"
+      },
+      "locations": {
+        "g1_wall_between_A_and_B": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        },
+        "g1_wall_location_D": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        },
+        "ur3_handover_point": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        },
+        "ur5_tested_whiteboard": {
+          "safety": "PASS",
+          "contact_permission": "PASS"
+        }
+      }
+    }
+  },
+  "team": {
+    "robots": [
+      "UR3",
+      "UR5",
+      "G1"
+    ],
+    "people": [
+      {
+        "id": "H1",
+        "training": [
+          "glass_wiping",
+          "whiteboard_wiping"
+        ],
+        "roles": [
+          "attendant",
+          "confirmer",
+          "operator"
+        ],
+        "availability": {
+          "slot-1": "AVAILABLE",
+          "slot-2": "AVAILABLE"
+        }
+      },
+      {
+        "id": "H2",
+        "training": [
+          "glass_wiping"
+        ],
+        "roles": [],
+        "availability": {
+          "slot-1": "AVAILABLE",
+          "slot-2": "AVAILABLE"
+        }
+      }
+    ]
+  },
+  "live": {
+    "snapshot_id": "AUTHORED_SYNTHETIC_TESTED_CONTEXTS",
+    "platform_availability": {
+      "UR3": "AVAILABLE",
+      "UR5": "AVAILABLE",
+      "G1": "AVAILABLE"
+    }
+  },
+  "tasks": [
+    {
+      "id": "T-WB-L",
+      "label": "Locate the taped region on the tested whiteboard (UR5 case context)",
+      "slot": "slot-1",
+      "area": "ur5_whiteboard_cell",
+      "location": "ur5_tested_whiteboard",
+      "produces": [
+        "located_region"
+      ],
+      "request": {
+        "id": "T-WB-L",
+        "capability": "target_detection",
+        "domain": "physical",
+        "context": "reported_indoor_whiteboard_taped_target",
+        "allowed_targets": [
+          "taped_region"
+        ],
+        "allowed_modes": [
+          "attended_start_automatic_detection"
+        ],
+        "accepted_evidence_levels": [
+          "physical-report"
+        ],
+        "force": null,
+        "required_settings": {},
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "candidate_priority": [],
+        "candidate_priority_basis": ""
+      },
+      "robot_roles": [
+        "attendant"
+      ]
+    },
+    {
+      "id": "T-WS-D",
+      "label": "Wipe at simulated wall location D, owner range 6-8 N (G1 case context)",
+      "slot": "slot-1",
+      "area": "g1_simulated_wall",
+      "location": "g1_wall_location_D",
+      "request": {
+        "id": "T-WS-D",
+        "capability": "regulated_wipe",
+        "domain": "simulation",
+        "context": "supported_original_wall_point_pilot",
+        "allowed_targets": [
+          "D"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "force": {
+          "minimum_n": 6.0,
+          "maximum_n": 8.0,
+          "basis": "Illustrative owner-authorised setpoint range authored for this example; not a cleaning requirement"
+        },
+        "required_settings": {},
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "candidate_priority": [],
+        "candidate_priority_basis": ""
+      },
+      "robot_roles": [
+        "operator"
+      ]
+    },
+    {
+      "id": "T-WS-AB",
+      "label": "Wipe at an untested simulated location between A and B (G1 case context)",
+      "slot": "slot-1",
+      "area": "g1_simulated_wall",
+      "location": "g1_wall_between_A_and_B",
+      "request": {
+        "id": "T-WS-AB",
+        "capability": "regulated_wipe",
+        "domain": "simulation",
+        "context": "supported_original_wall_point_pilot",
+        "allowed_targets": [
+          "between_A_and_B"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "force": {
+          "minimum_n": 6.0,
+          "maximum_n": 8.0,
+          "basis": "Illustrative owner-authorised setpoint range authored for this example; not a cleaning requirement"
+        },
+        "required_settings": {},
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "candidate_priority": [],
+        "candidate_priority_basis": ""
+      },
+      "robot_roles": [
+        "operator"
+      ]
+    },
+    {
+      "id": "T-SH",
+      "label": "Registered-cube fetch-and-handover on gesture command (UR3 case context)",
+      "slot": "slot-2",
+      "area": "ur3_cell",
+      "location": "ur3_handover_point",
+      "robot_roles": [
+        "operator"
+      ],
+      "request": {
+        "id": "T-SH",
+        "capability": "gesture_handover",
+        "domain": "physical",
+        "context": "published_single_operator_registered_cubes",
+        "allowed_targets": [
+          "registered_cube"
+        ],
+        "allowed_modes": [
+          "explicit_command_confirmation_STOP"
+        ],
+        "accepted_evidence_levels": [
+          "physical-published"
+        ],
+        "force": null,
+        "required_settings": {},
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "candidate_priority": [],
+        "candidate_priority_basis": ""
+      }
+    },
+    {
+      "id": "T-WB-W",
+      "label": "Wipe the region located by T-WB-L",
+      "slot": "slot-2",
+      "area": "ur5_whiteboard_cell",
+      "location": "ur5_tested_whiteboard",
+      "needs": [
+        [
+          "T-WB-L",
+          "located_region"
+        ]
+      ],
+      "request": {
+        "id": "T-WB-W",
+        "capability": "regulated_wipe",
+        "domain": "physical",
+        "context": "reported_indoor_whiteboard_taped_target",
+        "allowed_targets": [
+          "taped_region"
+        ],
+        "allowed_modes": [
+          "confirmation_then_bounded_wipe"
+        ],
+        "accepted_evidence_levels": [
+          "physical-report"
+        ],
+        "force": {
+          "minimum_n": 6.0,
+          "maximum_n": 8.0,
+          "basis": "Illustrative owner-authorised setpoint range authored for this example; not a cleaning requirement"
+        },
+        "required_settings": {},
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "candidate_priority": [],
+        "candidate_priority_basis": ""
+      }
+    }
+  ],
+  "synthetic_declarations": {
+    "T-WS-D": {
+      "snapshot_id": "AUTHORED_SYNTHETIC_TESTED_CONTEXTS",
+      "job_context": "5bb4882f9c7f53ce6a67179dca682341b877395a7a8c8075ac3366aa92f51f42",
+      "basis": "Illustrative owner choice and a synthetic confirmation by H1, carrying the binding and job context of the pre-declaration plan; applied only in the declarations pass",
+      "authored_from": "pre-declaration plan of this scenario (results/PLAN_tested_contexts.json), task T-WS-D: selector binding and job context",
+      "choice": {
+        "candidate_id": "G1_D_8N",
+        "by": "owner",
+        "binding": "ea93e791ae10ecb373e35cf98361549d76a17c22ef04eb7c993bce473f2202d5"
+      },
+      "confirm": {
+        "candidate_id": "G1_D_8N",
+        "by": "H1",
+        "binding": "ea93e791ae10ecb373e35cf98361549d76a17c22ef04eb7c993bce473f2202d5"
+      }
+    },
+    "T-SH": {
+      "snapshot_id": "AUTHORED_SYNTHETIC_TESTED_CONTEXTS",
+      "job_context": "237f78720442bfa6cb7f30e8414cf3eb75f110e9abbb01ec67163e5e78b811ef",
+      "basis": "Synthetic confirmation by the operator H1, carrying the binding and job context of the pre-declaration plan; applied only in the declarations pass",
+      "authored_from": "pre-declaration plan of this scenario (results/PLAN_tested_contexts.json), task T-SH: selector binding and job context",
+      "confirm": {
+        "candidate_id": "UR3_registered_handover",
+        "by": "H1",
+        "binding": "1b833ae49549b5bea33fb704ccba7064831c8d8a0f4fb4e5044c6e1dfdcc57d1"
+      }
+    }
+  }
+}

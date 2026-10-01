@@ -95,8 +95,8 @@
         "timestep_s": 0.005
       },
       "source_pins": {
-        "claude_journal_route_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
-        "claude_journal_route_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+        "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+        "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
         "point_direct_confirm_pilot_r1_release_20260925/point_direct_confirm_pilot_r1/point_spec.py": "fbf22b4c9c018e06014372738b12ca8811c92a8f664be0840b543d085f04013a",
         "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617"
       },

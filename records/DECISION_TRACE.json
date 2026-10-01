@@ -11,15 +11,15 @@
       "sha256": "d474514febdfec3ed23985f9a84df363511e9181f870ccda2c3f83a7082d8304"
     },
     "SD_DESIGN": {
-      "path": "claude_point_spatial_pilot_r1_20260925/docs/DESIGN.md",
+      "path": "point_spatial_pilot_r1_20260925/docs/DESIGN.md",
       "sha256": "e32cac01fd4c138d22e5ecd9f10bcd7dfbf586384ab06e79a4684ad619f291fe"
     },
     "SD_LOCK": {
-      "path": "claude_point_spatial_pilot_r1_20260925/docs/DESIGN_LOCK.json",
+      "path": "point_spatial_pilot_r1_20260925/docs/DESIGN_LOCK.json",
       "sha256": "3ff92c4f48ff57bc439ef873f8ff39a3138479e09993c00f1dc8216ff3538b01"
     },
     "SD_PRESCREEN": {
-      "path": "claude_point_spatial_pilot_r1_20260925/analysis/PRESCREEN.json",
+      "path": "point_spatial_pilot_r1_20260925/analysis/PRESCREEN.json",
       "sha256": "46dd695cd4a8a90eb0c056e0fbe2855b9441bf8ff3d6351ce2b6cbd47087c41b"
     },
     "DC_REVIEW": {
@@ -51,7 +51,7 @@
       "sha256": "ef0612a591a26a381c69222842bf2ac72ba197971c7f84b2196649995b799169"
     },
     "ANCHOR_REUSE": {
-      "path": "claude_point_spatial_pilot_r1_20260925/analysis/ANCHOR_REUSE_CHECK.json",
+      "path": "point_spatial_pilot_r1_20260925/analysis/ANCHOR_REUSE_CHECK.json",
       "sha256": "f5b1c8a843674b0693462f6b494f8a4e88160c1aa934777cc33e28f49dbf857e"
     },
     "REL_RUN1": {

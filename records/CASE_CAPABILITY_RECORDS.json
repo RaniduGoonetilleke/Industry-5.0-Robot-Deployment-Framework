@@ -141,7 +141,7 @@
         "An edited demonstration cannot establish the absence of every off-camera intervention."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "full text"
       },
       "quote": null,
@@ -171,7 +171,7 @@
       "evidence_level": "physical-report",
       "constraints": [],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "full text"
       },
       "quote": null,
@@ -199,14 +199,14 @@
         "Not a dirt, glass or cleaning measure; not a processing rate."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.1.1, p.13, lines 436-438"
       },
       "quote": "The model achieved a mean Average Precision (mAP₅₀) of [99.5]% in detecting the taped boundary under varied laboratory lighting conditions. This value was gotten from the trained data sets in 50 epochs.",
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
           "anchor": "section 3.3, p.10, lines 328-329",
           "quote": "with the dataset divided into 70% training data and 30% validation data"
         }
@@ -235,19 +235,19 @@
         "Camera-frame depth, not robot-frame or tool-tip error."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.1.1, p.14, lines 452-453"
       },
       "quote": "Accuracy = (1 - |74-75|/74) x 100 % = 98.65%",
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
           "anchor": "section 4.1.1, p.13, lines 441-443",
           "quote": "The average static localization error between the estimated position and the ground-truth physical measurement was 1cm with an accuracy of 98.6%."
         },
         {
-          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
           "anchor": "abstract, p.2, lines 16-17",
           "quote": "achieved a mAP₅₀ of 99.5% and a static localisation accuracy of 98.6% within a 1 cm error threshold"
         }
@@ -275,7 +275,7 @@
         "How the arm pose enters the transform for an eye-in-hand camera is not reported (CONTEXT_cases A.7)."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.2, p.15, lines 489-490"
       },
       "quote": "Coordinate Transformation: The transformation matrix (T) successfully mapped target coordinates from the camera optical center to the UR5 base frame.",
@@ -303,7 +303,7 @@
         "Red marker only; no real dirt or other contaminant."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.1.2, p.14, lines 463-466"
       },
       "quote": "A threshold of 250 pixels was used to classify the target: detections above this value were labelled dirty and displayed with a red bounding box, while lower detections were treated as clean and displayed in blue.",
@@ -331,7 +331,7 @@
         "The report calls the subsequent motion 'simulated cleaning routines'."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.2, p.15, lines 491-494"
       },
       "quote": "Static Waypoint Trajectory: For static cleaning trials, the UR5 successfully navigated to the predefined target boundaries. The manipulator maintained a perpendicular approach angle, positioning the custom water-fed brush end-effector within the target surface plane before initiating simulated cleaning routines.",
@@ -360,7 +360,7 @@
         "The development video linked in the report and the public demonstration video were not reviewed in this packet."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.2, p.15, lines 495-497"
       },
       "quote": "Dynamic centre servoing: The camera to robot transformation was used to adjust the static waypoint for target at inclined positions, hence enabling a semi-autonomous system.",
@@ -392,14 +392,14 @@
         "Causes named: coordinate-transformation accuracy, IK solution selection, real-time motion control, camera-to-robot calibration."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 3.5, p.12, lines 400-402"
       },
       "quote": "stable dynamic tracking was not fully achieved due to challenges associated with coordinate transformation accuracy, inverse kinematic solution selection and real-time motion control.",
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
           "anchor": "abstract, p.2, lines 22-23",
           "quote": "full dynamic tracking was not achieved due to challenges with camera-to-robot calibration, coordinate transformation and inverse kinematics"
         }
@@ -425,14 +425,14 @@
         "Occlusion at other arm poses is not reported."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.1, p.13, lines 425-427"
       },
       "quote": "Because glass facades present severe transparency and reflection challenges, a white board framed with high-contrast tape was utilized to establish a controlled baseline for spatial coordinate validation.",
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
           "anchor": "section 5.3, p.16, lines 535-536",
           "quote": "Testing on realistic glass surfaces would therefore be an important next step."
         }
@@ -458,7 +458,7 @@
         "Force or impedance control is listed as future work (section 6.2)."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 5.3, p.17, lines 542-543"
       },
       "quote": "cleaning effectiveness and force control were outside the main scope of this feasibility study and were not quantitatively evaluated.",
@@ -487,7 +487,7 @@
         "Not registered as a wiping capability in the catalogue."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 4.2, p.15, line 494"
       },
       "quote": "before initiating simulated cleaning routines",
@@ -520,7 +520,7 @@
         "Author-supplied account (C4); threshold from report section 4.1.2."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "Appendix 1 (figure, p.21)"
       },
       "quote": null,
@@ -552,7 +552,7 @@
         "'Real time' is asserted qualitatively only."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 3.3, p.10, lines 324-325"
       },
       "quote": "localise the target cleaning region in real time",
@@ -579,14 +579,14 @@
         "Intended application (glass facade) is untested; performance on glass is unestablished, not disproved."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 5.3, p.16, lines 532-533"
       },
       "quote": "The main limitation of the experimental validation was the use of a whiteboard rather than real glass.",
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+          "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
           "anchor": "section 5.3, p.17, lines 544-545",
           "quote": "The experiments were also conducted indoors on a relatively small test surface."
         }
@@ -610,7 +610,7 @@
       "evidence_level": "physical-report",
       "constraints": [],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "full text"
       },
       "quote": null,
@@ -635,7 +635,7 @@
       "evidence_level": "physical-report",
       "constraints": [],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 5.3, p.17, lines 542-543"
       },
       "quote": "cleaning effectiveness and force control were outside the main scope of this feasibility study and were not quantitatively evaluated.",
@@ -665,7 +665,7 @@
         "The Appendix prices a UR3e/5e, whereas a UR5 CB was tested (r14 ledger 2.11)."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/research/primary/UR5_UKRPF_report.txt",
+        "path": "journal_revision_r14_20260922/research/primary/UR5_UKRPF_report.txt",
         "anchor": "section 3.6, p.12, lines 414-416"
       },
       "quote": "The water-fed cleaning end effector was also tested to verify its mechanical integration and operation with the robotic manipulator.",
@@ -1238,7 +1238,7 @@
         "Qualified failure of that configured task, not of other configurations."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+        "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
         "anchor": "section 6.5, Table 2, line 664"
       },
       "quote": "reported speed 0.038 rad/s at the left wrist yaw against a 0.02 rad/s ceiling, position rate 0.00013 rad/s on the same row",
@@ -1273,7 +1273,7 @@
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
           "anchor": "section 6, T3.2, lines 466-467",
           "quote": "timesteps of 5 ms and 2.5 ms and a 10 ms control period."
         }
@@ -1341,12 +1341,12 @@
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
           "anchor": "section 6.5, Table 2, line 666",
           "quote": "prerequisite hold; wipe unobserved"
         },
         {
-          "path": "claude_journal_route_r14_20260922/docs/SUPPLEMENT.md",
+          "path": "journal_revision_r14_20260922/docs/SUPPLEMENT.md",
           "anchor": "S1 outcomes table",
           "quote": "withheld by the frozen planner (coarse task did not pass)"
         }
@@ -1379,7 +1379,7 @@
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
           "anchor": "section 6.4, lines 618-619",
           "quote": "No motor power, heating, duty or endurance figure is reported."
         }
@@ -1407,14 +1407,14 @@
         "Signed work is not electrical energy, motor-shaft work or thermal load."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+        "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
         "anchor": "section 6.3, lines 545-547"
       },
       "quote": "a ratio to a simulation setting and not a hardware utilisation rating",
       "absence_basis": null,
       "secondary_sources": [
         {
-          "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+          "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
           "anchor": "section 6.3, lines 588-589",
           "quote": "It is **not** electrical energy, physical motor-shaft work, contact work, an internal solver energy balance, or total system energy."
         }
@@ -1474,7 +1474,7 @@
         "No brush, sponge material, water or friction validation."
       ],
       "source": {
-        "path": "claude_journal_route_r14_20260922/draft/MANUSCRIPT.md",
+        "path": "journal_revision_r14_20260922/draft/MANUSCRIPT.md",
         "anchor": "section 6, T3.1, lines 457-458"
       },
       "quote": "Two rigid disc pads meet the wall through a compliant contact.",

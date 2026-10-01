@@ -75,7 +75,7 @@
       "sha256": "cdddc64365ee2b723eedc080699632873f640752e94266a133d1450c0858af21"
     },
     "REC": {
-      "path": "claude_journal_route_r16_20260926/research/CAPABILITY_RECORDS.json",
+      "path": "journal_revision_r16_20260926/research/CAPABILITY_RECORDS.json",
       "sha256": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
     }
   },

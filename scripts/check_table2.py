@@ -146,8 +146,8 @@ unq = [(o, c.replace('shared safety PASS and a nonempty', 'a nonempty')) for o, 
 removal = run(unq)
 # The deliberately incorrect comparison table must also fail.
 r20 = run(table2((R21 / 'records/TABLE2_OLD_REFUSAL_CONTROL.md').read_text()))
-codex_cases = [d for d in (removal['disagreements'] or []) if d['shared'] in ('UNKNOWN', 'CONFLICTING') and d['n_fail'] == d['n_scoped'] > 0]
-ok = (main['disagreements'] == [] and not main['unknown_clauses'] and removal['disagreements'] and codex_cases and r20['disagreements']
+safety_precedence_cases = [d for d in (removal['disagreements'] or []) if d['shared'] in ('UNKNOWN', 'CONFLICTING') and d['n_fail'] == d['n_scoped'] > 0]
+ok = (main['disagreements'] == [] and not main['unknown_clauses'] and removal['disagreements'] and safety_precedence_cases and r20['disagreements']
       and [o for o, _ in rows] == ['REFUSE', 'WITHHOLD', 'WAIT', 'ASK', 'CONFIRM', 'SELECT'])
 record = {'table2_excerpt_sha256': hashlib.sha256((R21 / 'records/TABLE2.md').read_bytes()).hexdigest(),
           'selector_sha256': hashlib.sha256((REC / 'selector/selector.py').read_bytes()).hexdigest(),
@@ -155,7 +155,7 @@ record = {'table2_excerpt_sha256': hashlib.sha256((R21 / 'records/TABLE2.md').re
           'decisions_covered': sorted({actual(r, c, l, ch, cf, rd) for _, r, c, l, ch, cf, _, rd in STATES}),
           'disagreements': main['disagreements'], 'unknown_clauses': main['unknown_clauses'],
           'self_test_qualification_removed': {'refused': bool(removal['disagreements']), 'disagreements': len(removal['disagreements'] or []),
-                                              'codex_mixed_cases_among_them': len(codex_cases), 'examples': (removal['disagreements'] or [])[:4]},
+                                              'safety_precedence_case_count': len(safety_precedence_cases), 'examples': (removal['disagreements'] or [])[:4]},
           'self_test_r20_table': {'refused': bool(r20['disagreements']), 'disagreements': len(r20['disagreements'] or [])},
           'ok': bool(ok)}
 (R21 / 'verification/TABLE2_SEMANTICS.json').write_text(json.dumps(record, indent=1, ensure_ascii=False) + '\n')

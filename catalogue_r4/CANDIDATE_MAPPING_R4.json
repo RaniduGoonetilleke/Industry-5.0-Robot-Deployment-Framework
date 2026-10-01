@@ -534,7 +534,7 @@
       "target": "taped_region"
     },
     {
-      "assessment_basis": "Location A at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "assessment_basis": "Location A at a right-pad setpoint of 8 N (left 7 N), first force group r1. Results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
       "capability": "regulated_wipe",
       "checks": {
         "capability": "PASS",
@@ -645,7 +645,7 @@
       "target": "A"
     },
     {
-      "assessment_basis": "Location B at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "assessment_basis": "Location B at a right-pad setpoint of 8 N (left 7 N), first force group r1. Results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
       "capability": "regulated_wipe",
       "checks": {
         "capability": "PASS",
@@ -756,7 +756,7 @@
       "target": "B"
     },
     {
-      "assessment_basis": "Location C at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "assessment_basis": "Location C at a right-pad setpoint of 8 N (left 7 N), first force group r1. Results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
       "capability": "regulated_wipe",
       "checks": {
         "capability": "PASS",
@@ -867,7 +867,7 @@
       "target": "C"
     },
     {
-      "assessment_basis": "Location D at a right-pad setpoint of 8 N (left 7 N), first force group r1. Codex results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
+      "assessment_basis": "Location D at a right-pad setpoint of 8 N (left 7 N), first force group r1. Results-review assessment: PASS_AT_SETTING under the unchanged ordinary task and final-hold gates and the prospectively declared W1/W3 force criteria; matched 7 N controls reproduced. A single deterministic observation at this tested site and setting; not a maximum, a continuous map or a future success guarantee; live facts separate.",
       "capability": "regulated_wipe",
       "checks": {
         "capability": "PASS",

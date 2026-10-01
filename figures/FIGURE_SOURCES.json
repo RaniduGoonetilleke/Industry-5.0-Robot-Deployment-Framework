@@ -100,7 +100,7 @@
         "content": "saved selection-stage detector image, in which the right-pad marker is not visible"
       },
       "c": {
-        "source": "claude_journal_route_r25_20260927/figures/figure2_g1_locations.png",
+        "source": "journal_revision_r25_20260927/figures/figure2_g1_locations.png",
         "source_sha256": "ba143225455a25fe8733552fb04f7e9e29b14f3f8aac13dad12a074c64ccf911",
         "content": "Declared locations and outcomes, plotted from the source records identified here.",
         "r27_crop_box_px": [
@@ -138,7 +138,7 @@
   },
   "figure1_deployment_framework.png": {
     "source": "Authors' framework diagram. The source generator and editable-asset identities are recorded below.",
-    "generator_source": "claude_journal_route_r40_20260930/analysis/scripts/make_framework_figure_r40.py",
+    "generator_source": "journal_revision_r40_20260930/analysis/scripts/make_framework_figure_r40.py",
     "generator_sha256": "f169a79e5ae8154edb8900e94455b618c9afd2e7e9ccb08989038bb918644f66",
     "content": "Shows the Layer 3a per-sub-task decision, the Layer 3b conditional job plan, and force-regulated wiping with a final hold after confirmation. The diagram is drawn with Python and contains no generated robot imagery.",
     "rights": "Authors' framework diagram, supplied under the repository MIT License.",
